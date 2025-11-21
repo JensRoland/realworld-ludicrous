@@ -1,0 +1,5186 @@
+users:
+  # Pied Piper crew
+  - username: richardhendricks
+    email: richard@piedpiper.com
+    password: password
+    bio: CEO of Pied Piper. Built middle-out compression. This guy f***s.
+    image: /img/avatars/richardhendricks.jpg
+
+  - username: dinesh
+    email: dinesh@piedpiper.com
+    password: password
+    bio: Java engineer at Pied Piper. Better than Gilfoyle at everything except being a jerk.
+    image: /img/avatars/dinesh.jpg
+
+  - username: gilfoyle
+    email: gilfoyle@piedpiper.com
+    password: password
+    bio: Systems architect. Satanist. I run the servers that run your life.
+    image: /img/avatars/gilfoyle.jpg
+
+  - username: jared
+    email: jared@piedpiper.com
+    password: password
+    bio: COO, Pied Piper. "I've been told I'm a very nurturing person." - Donald "Jared" Dunn
+    image: /img/avatars/jared.jpg
+
+  - username: bighead
+    email: bighead@hooli.com
+    password: password
+    bio: Former Pied Piper, now at Hooli. Failing upward since 2014.
+    image: /img/avatars/bighead.jpg
+
+  # Investors & VCs
+  - username: russhanneman
+    email: russ@russfest.com
+    password: password
+    bio: "Billionaire. This guy f***s. ROI, Russ Hanneman. Tres Commas Club (temporarily)."
+    image: /img/avatars/russhanneman.jpg
+
+  - username: petergregory
+    email: peter@raveniga.com
+    password: password
+    bio: Founder of Raviga Capital. Sesame seeds are the bugs of the food world.
+    image: /img/avatars/petergregory.jpg
+
+  - username: monica
+    email: monica@raveniga.com
+    password: password
+    bio: Partner at Raviga Capital. Actually knows what she's doing.
+    image: /img/avatars/monica.jpg
+
+  - username: lauriebream
+    email: laurie@breem-hall.com
+    password: password
+    bio: Managing Partner, Bream-Hall. Cold, calculating, and usually right.
+    image: /img/avatars/laurieb.jpg
+
+  # Hooli
+  - username: gavinbelson
+    email: gavin@hooli.com
+    password: password
+    bio: "CEO of Hooli. Visionary. Dreamer. Thinker. I don't want to live in a world where someone else makes the world a better place better than we do."
+    image: /img/avatars/gavin.jpg
+
+  - username: theendframe
+    email: endframe@hooli.com
+    password: password
+    bio: Head of Hooli XYZ. Spiritual leader. Box enthusiast.
+    image: null
+
+  - username: jaredpatakian
+    email: jpatakian@hooli.com
+    password: password
+    bio:  The other Jared. Hooli's Chief of Staff.
+    image: /img/avatars/jackbarker.jpg
+
+  - username: johnstafford
+    email: john@hooli.com
+    password: password
+    bio: Server operations. Hooli.
+    image: /img/avatars/johnstafford.jpg
+
+  # Erlich's incubator residents
+  - username: erlichbachman
+    email: erlich@aviato.com
+    password: password
+    bio: "Founder of Aviato. My Aviato? This is my incubator. I own 10% of Pied Piper."
+    image: /img/avatars/erlich.jpg
+
+  # Raviga team
+  - username: ronlaflamme
+    email: ron@raveniga.com
+    password: password
+    bio: Partner at Raviga. Corporate law specialist. I make problems go away.
+    image: /img/avatars/ronlaflamme.jpg
+
+  # Pied Piper extended
+  - username: jian-yang
+    email: jianyang@nothotdog.com
+    password: password
+    bio: "Errich Bachman, this is you as an old man. I'm ugly and I'm dead. Alone."
+    image: /img/avatars/jian-yang.jpg
+
+  # Other tech personalities
+  - username: colincollins
+    email: colin@colincreations.com
+    password: password
+    bio: Serial entrepreneur. Exit strategist. Professional bridge burner.
+    image: null
+
+  - username: denpatel
+    email: den@chatapp.com
+    password: password
+    bio: Spiritual advisor and mindfulness coach. Helping tech leaders find their inner peace.
+    image: /img/avatars/denpok.jpg
+
+  # Journalist & Media
+  - username: jackbarker
+    email: jack@thebarkermethod.com
+    password: password
+    bio: "Action Jack Barker, creator of The Barker Method: Conjoined Triangles of Success. Professional CEO."
+    image: /img/avatars/jackbarker.jpg
+
+  - username: cjthorsen
+    email: cj@techmedia.com
+    password: password
+    bio: Tech journalist. CrunchPad enthusiast. Covering the Valley's biggest stories.
+    image: null
+
+  # Engineers & Developers
+  - username: carlagentleman
+    email: carla@optimoji.com
+    password: password
+    bio: Platform engineer.
+    image: /img/avatars/carla.jpg
+
+  - username: kevinashoka
+    email: kevin@piedpiper.com
+    password: password
+    bio: Software engineer. Pied Piper's secret weapon (at least I think so).
+    image: /img/avatars/keenan.jpg
+
+  - username: dannygillette
+    email: danny@gillettecode.com
+    password: password
+    bio: Full stack developer. Ex-Hooli. Available for consulting.
+    image: null
+
+  - username: holdenmagroin
+    email: holden@codeworks.com
+    password: password
+    bio: Agile coach. Scrum master. Stand-up comedy enthusiast.
+    image: null
+
+  - username: blaine
+    email: blaine@aol.com
+    password: password
+    bio: Professional daredevil and stunt driver.
+    image: null
+
+  # Startup founders
+  - username: michaelbolton
+    email: michael@notthatsinger.com
+    password: password
+    bio: "Yes, like the singer. No, I'm not him. Founder of TechSymphony."
+    image: null
+
+  - username: bertramgilfoyle-sr
+    email: bertram@oldsecurity.com
+    password: password
+    bio: Cybersecurity consultant. Gilfoyle's inspiration (he won't admit it).
+    image: null
+
+  - username: davedesk
+    email: dave@standingdesk.com
+    password: password
+    bio: Invented the standing desk desk. Pivot expert.
+    image: null
+
+  - username: sandrasmith
+    email: sandra@cloudqueue.com
+    password: password
+    bio: Cloud infrastructure specialist. Making queues fast since 2011.
+    image: null
+
+  - username: markzuckerman
+    email: mark@totallynotfacebook.com
+    password: password
+    bio: Not that guy. Different spelling. Building social networks nobody asked for.
+    image: null
+
+  # VCs & Business people
+  - username: jeffbyington
+    email: jeff@ravenspoint.com
+    password: password
+    bio: Angel investor. Seed stage specialist. Coffee meeting enthusiast.
+    image: null
+
+  - username: aaronanderson
+    email: aaron@techfund.com
+    password: password
+    bio: Series A or bust. I write checks and ask tough questions.
+    image: null
+
+  - username: samanthastewart
+    email: samantha@stewartventures.com
+    password: password
+    bio: VC partner focused on B2B SaaS. No consumer apps, please.
+    image: null
+
+  # More engineers
+  - username: evanlawson
+    email: evan@machinelearningthings.com
+    password: password
+    bio: ML engineer. Training models and crushing hopes since 2015.
+    image: null
+
+  - username: tiffanychen
+    email: tiffany@cryptostuff.com
+    password: password
+    bio: Blockchain developer. Decentralizing everything whether you like it or not.
+    image: null
+
+  - username: bradjordan
+    email: brad@frontendfirst.com
+    password: password
+    bio: React specialist. CSS Grid evangelist. "It looks fine on my machine."
+    image: null
+
+  - username: emilyrodriguez
+    email: emily@apidesign.com
+    password: password
+    bio: API architect. REST is dead, long live GraphQL. (Just kidding, both are fine.)
+    image: null
+
+  - username: chriswong
+    email: chris@mobileapps.com
+    password: password
+    bio: iOS developer. Swift only, no Objective-C. Dark mode is life.
+    image: null
+
+  - username: jessicaparker
+    email: jessica@qaforever.com
+    password: password
+    bio: QA engineer. I break things so users don't have to.
+    image: null
+
+  - username: mikethompson
+    email: mike@databases.com
+    password: password
+    bio: Database administrator. Your queries are slow and you should feel bad.
+    image: null
+
+  - username: ashleymartinez
+    email: ashley@uxmatters.com
+    password: password
+    bio: UX designer. No, I don't "make things pretty." I solve problems.
+    image: null
+
+  - username: jasonlee
+    email: jason@productguy.com
+    password: password
+    bio: Product manager. Translating engineer speak to human since 2012.
+    image: null
+
+  - username: sarahbrown
+    email: sarah@growthmarketing.com
+    password: password
+    bio: Growth hacker. A/B testing everything. Even this bio (Version B).
+    image: null
+
+  - username: davidkim
+    email: david@securitymatters.com
+    password: password
+    bio: Security researcher. Your password is weak and you should change it.
+    image: null
+
+  - username: lauranelson
+    email: laura@contentcreator.com
+    password: password
+    bio: Technical writer. Making documentation people actually want to read.
+    image: null
+
+  - username: ryanwilliams
+    email: ryan@cloudnative.com
+    password: password
+    bio: Kubernetes wizard. If it doesn't run in a container, why bother?
+    image: null
+
+follows:
+  # Dinesh follows a lot of people
+  - follower: dinesh
+    followee: richardhendricks
+  - follower: dinesh
+    followee: gilfoyle
+  - follower: dinesh
+    followee: jared
+  - follower: dinesh
+    followee: bighead
+  - follower: dinesh
+    followee: russhanneman
+  - follower: dinesh
+    followee: petergregory
+  - follower: dinesh
+    followee: monica
+  - follower: dinesh
+    followee: lauriebream
+  - follower: dinesh
+    followee: gavinbelson
+  - follower: dinesh
+    followee: erlichbachman
+  - follower: dinesh
+    followee: jian-yang
+
+  # John Stafford follows only Gilfoyle and Gavin
+  - follower: johnstafford
+    followee: gilfoyle
+  - follower: johnstafford
+    followee: gavinbelson
+
+  # Gilfoyle follows no one (empty - no entries)
+
+  # Other reasonable follows
+  - follower: richardhendricks
+    followee: jared
+  - follower: richardhendricks
+    followee: gilfoyle
+  - follower: richardhendricks
+    followee: dinesh
+  - follower: richardhendricks
+    followee: petergregory
+  - follower: richardhendricks
+    followee: monica
+
+  - follower: jared
+    followee: richardhendricks
+  - follower: jared
+    followee: petergregory
+  - follower: jared
+    followee: monica
+  - follower: jared
+    followee: lauriebream
+  - follower: jared
+    followee: gavinbelson
+  - follower: jared
+    followee: erlichbachman
+  - follower: jared
+    followee: dinesh
+  - follower: jared
+    followee: gilfoyle
+  - follower: jared
+    followee: carlagentleman
+
+  - follower: bighead
+    followee: richardhendricks
+  - follower: bighead
+    followee: gilfoyle
+  - follower: bighead
+    followee: dinesh
+
+  - follower: petergregory
+    followee: richardhendricks
+  - follower: petergregory
+    followee: monica
+  - follower: petergregory
+    followee: lauriebream
+
+  # Monica follows people but NOT Russ Hanneman
+  - follower: monica
+    followee: richardhendricks
+  - follower: monica
+    followee: petergregory
+  - follower: monica
+    followee: lauriebream
+  - follower: monica
+    followee: jared
+
+  # Laurie Bream follows people but NOT Russ Hanneman
+  - follower: lauriebream
+    followee: petergregory
+  - follower: lauriebream
+    followee: monica
+  - follower: lauriebream
+    followee: gavinbelson
+
+  - follower: russhanneman
+    followee: richardhendricks
+  - follower: russhanneman
+    followee: petergregory
+  - follower: russhanneman
+    followee: gavinbelson
+
+  - follower: gavinbelson
+    followee: petergregory
+  - follower: gavinbelson
+    followee: lauriebream
+
+  - follower: erlichbachman
+    followee: richardhendricks
+  - follower: erlichbachman
+    followee: russhanneman
+
+  - follower: jian-yang
+    followee: erlichbachman
+  - follower: jian-yang
+    followee: richardhendricks
+
+articles:
+  - author: richardhendricks
+    title: "Middle-Out Compression: The Algorithm That Changed Everything"
+    description: A deep dive into the Weissman Score and why middle-out is the future
+    body: |
+      # Middle-Out Compression: A Revolution in Data Storage
+
+      When we started Pied Piper, everyone told us lossless compression was a solved problem. They were wrong.
+
+      ## The Problem With Traditional Compression
+
+      Traditional compression algorithms work from the **outside-in** or use dictionary-based methods that require massive lookup tables. The result? Mediocre compression ratios and high computational overhead.
+
+      ## Enter Middle-Out
+
+      Our approach is fundamentally different:
+
+      1. **Start from the middle** of the data structure
+      2. **Work outward** in both directions simultaneously
+      3. **Use predictive modeling** to eliminate redundancy
+      4. **Achieve optimal Weissman Scores** consistently above 5.0
+
+      ### The Math Behind It
+
+      Without getting too technical, middle-out compression leverages the natural symmetry in most data structures. By identifying the centroid of information density and radiating outward, we can:
+
+      - Reduce file sizes by up to 80%
+      - Maintain perfect lossless fidelity
+      - Process data faster than any competing algorithm
+
+      ## Real-World Applications
+
+      The applications are endless:
+
+      - **Video streaming** - 4K content at 720p bandwidth
+      - **Cloud storage** - Reduce infrastructure costs by 75%
+      - **Mobile apps** - Smaller downloads, faster load times
+      - **IoT devices** - Efficient data transmission on limited bandwidth
+
+      ## The Weissman Score
+
+      We consistently achieve a Weissman Score of **5.2** on the Weissman test. For context, the previous industry best was 2.89. That's not an improvement—that's a revolution.
+
+      ## What's Next?
+
+      We're not stopping here. The Pied Piper team is working on:
+
+      - Real-time video compression for live streaming
+      - Edge computing implementations
+      - A decentralized internet powered by middle-out compression
+
+      The future of data is smaller, faster, and more efficient. The future is **middle-out**.
+
+      ---
+
+      *Want to learn more? Check out our whitepaper at piedpiper.com or reach out to our team.*
+    tags:
+      - compression
+      - algorithms
+      - piedpiper
+      - middleout
+      - tech
+
+  - author: gilfoyle
+    title: "Why Your Security is Garbage"
+    description: A technical analysis of common security failures in modern web applications
+    body: |
+      Your security is garbage. Let me explain why.
+
+      ## Authentication
+
+      If you're still using MD5 for passwords, you deserve to be hacked. Even SHA-1 is pathetic at this point. Use bcrypt or Argon2, or just give up now.
+
+      ## SQL Injection
+
+      It's 2024 and people are still concatenating SQL strings. Use prepared statements. It's not that hard.
+
+      ## HTTPS
+
+      If your site doesn't use HTTPS everywhere, you're broadcasting your users' data to anyone with Wireshark. Let's Encrypt is free. You have no excuse.
+
+      ## Conclusion
+
+      Security isn't optional. It's the foundation. Build it right or don't build at all.
+    tags:
+      - security
+      - web
+      - backend
+
+  - author: dinesh
+    title: "Why Java is Still Relevant in 2024"
+    description: Defending the enterprise language everyone loves to hate
+    body: |
+      ## Java Gets a Bad Rap
+
+      Sure, everyone wants to write in Go or Rust these days. But Java is still powering half the internet for good reasons:
+
+      - **Mature ecosystem** - Libraries for everything
+      - **JVM performance** - Actually really fast
+      - **Strong typing** - Catches bugs at compile time
+      - **Enterprise support** - Jobs everywhere
+
+      ## Modern Java is Better
+
+      Java 17+ with records, pattern matching, and virtual threads? It's actually pretty nice now.
+
+      Don't sleep on Java just because it's not trendy.
+    tags:
+      - java
+      - programming
+      - enterprise
+
+  - author: dinesh
+    title: "Why Python is Overrated"
+    description: Unpopular opinion - Python's popularity doesn't match its capabilities
+    body: |
+      ## The Python Hype Machine
+
+      Everyone acts like Python is the answer to everything. It's not.
+
+      ### Problems Nobody Talks About
+
+      - **Slow as hell** - Seriously, have you profiled your code?
+      - **Whitespace syntax** - One tab/space mistake breaks everything
+      - **GIL limitations** - True parallelism? Not happening
+      - **Type system** - Type hints are lipstick on a pig
+      - **Packaging nightmare** - pip, conda, poetry, pipenv... make up your mind
+
+      ### Performance Comparison
+
+      Here's a simple Fibonacci benchmark. Look at this Python code:
+
+      ```python
+      def fibonacci(n):
+          if n <= 1:
+              return n
+          return fibonacci(n-1) + fibonacci(n-2)
+
+      result = fibonacci(35)
+      print(f"Result: {result}")
+      ```
+
+      This takes **forever**. Now compare to Java:
+
+      ```java
+      public class Fibonacci {
+          public static int fibonacci(int n) {
+              if (n <= 1) return n;
+              return fibonacci(n - 1) + fibonacci(n - 2);
+          }
+
+          public static void main(String[] args) {
+              int result = fibonacci(35);
+              System.out.println("Result: " + result);
+          }
+      }
+      ```
+
+      Java runs this 10x faster. Facts.
+
+      ### The Type System Joke
+
+      Python's type hints don't actually do anything at runtime:
+
+      ```python
+      def process_data(items: List[str]) -> Dict:
+          result = {}
+          for item in items:
+              result[item] = len(item)
+          return result
+
+      # This "works" even though it's wrong
+      data = process_data([1, 2, 3])  # Should be strings!
+      ```
+
+      The type hints are just comments with extra steps. No compile-time checking, no guarantees.
+
+      ### When Python Makes Sense
+
+      - Quick scripts
+      - Data science (but only because of NumPy/Pandas, which are C anyway)
+      - Prototyping
+
+      ### When It Doesn't
+
+      Everything else. Use a real compiled language.
+
+      ## The Truth
+
+      Python is popular because it's easy to learn, not because it's good. There's a difference.
+
+      If you're building production systems at scale, you need something better. Java, Go, Rust - literally anything with actual performance.
+    tags:
+      - python
+      - programming
+      - opinion
+      - performance
+
+  - author: jared
+    title: "Creating a Positive Company Culture"
+    description: How nurturing leadership drives startup success
+    body: |
+      # The Power of Positivity
+
+      At Pied Piper, we've learned that technical excellence isn't enough. You need a **supportive environment** where people feel valued.
+
+      ## Key Principles
+
+      1. **Listen actively** - Your team has good ideas
+      2. **Celebrate wins** - Even small ones matter
+      3. **Support during failures** - This is when leadership counts
+      4. **Work-life balance** - Burnout helps nobody
+
+      A happy team is a productive team. Invest in your people and they'll invest in your mission.
+    tags:
+      - culture
+      - management
+      - startups
+
+  - author: russhanneman
+    title: "Tres Commas: What It Really Means to Be a Billionaire"
+    description: Life lessons from the top of the mountain
+    body: |
+      # Tres Commas Club
+
+      Let me tell you something - once you hit that three-comma net worth, everything changes. The cars, the doors that open upward, the respect.
+
+      ## The Journey
+
+      I built my fortune on radio on the internet. People laughed. Then I sold for **1.4 BILLION dollars**.
+
+      ## Staying on Top
+
+      It's not about the money. It's about the **validation**. It's about knowing you've made it.
+
+      This guy f***s.
+    tags:
+      - wealth
+      - entrepreneurship
+      - motivation
+
+  - author: gavinbelson
+    title: "Hooli's Vision for the Future"
+    description: How we're making the world a better place
+    body: |
+      # Making the World a Better Place
+
+      At Hooli, we don't just build products. We build the **future**.
+
+      ## Our Mission
+
+      I don't want to live in a world where someone else makes the world a better place better than we do.
+
+      ## Innovation at Scale
+
+      - HooliPhone
+      - HooliSearch
+      - Nucleus
+      - The Box
+
+      We're not just a company. We're a movement. Join us.
+    tags:
+      - hooli
+      - vision
+      - innovation
+
+  - author: erlichbachman
+    title: "My Aviato? MY Aviato."
+    description: The story of building and selling Aviato
+    body: |
+      Let me tell you about **Aviato**.
+
+      ## The Beginning
+
+      I built Aviato from the ground up. An aggregation platform for on-demand air travel. Revolutionary.
+
+      ## The Exit
+
+      Sold it for enough to buy this house and run an incubator. Now I own 10% of the next generation of tech companies.
+
+      ## My Aviato
+
+      When someone says "Aviato," you know they're talking about MY Aviato. Because there's only one Aviato.
+    tags:
+      - aviato
+      - entrepreneurship
+      - success
+
+  - author: monica
+    title: "What VCs Actually Look For in Startups"
+    description: Real talk about getting funded
+    body: |
+      ## The Truth About Funding
+
+      I've seen hundreds of pitches at Raviga. Here's what actually matters:
+
+      ### 1. The Team
+
+      Can you execute? Have you built something before?
+
+      ### 2. The Market
+
+      Is it big enough? Is timing right?
+
+      ### 3. Traction
+
+      Show me users, revenue, or growth. Anything real.
+
+      ### 4. The Product
+
+      Does it solve a real problem elegantly?
+
+      Skip the buzzwords. Show me data.
+    tags:
+      - vc
+      - funding
+      - startups
+
+  - author: lauriebream
+    title: "Why Most Startups Fail"
+    description: A data-driven analysis of startup mortality
+    body: |
+      # The Failure Rate
+
+      90% of startups fail. Let's talk about why.
+
+      ## Common Mistakes
+
+      - **No market need** - You built something nobody wants
+      - **Ran out of cash** - Poor financial planning
+      - **Wrong team** - Co-founder conflicts kill companies
+      - **Got outcompeted** - You weren't unique enough
+
+      ## What Works
+
+      The 10% that succeed have three things: product-market fit, sufficient runway, and team cohesion.
+
+      Everything else is noise.
+    tags:
+      - startups
+      - failure
+      - analysis
+
+  - author: richardhendricks
+    title: "Pivoting Pied Piper: Lessons Learned"
+    description: How we almost became a different company
+    body: |
+      ## We Almost Lost Everything
+
+      There was a moment when Pied Piper could have become just another copyright detection tool. We would have made money, but we would have lost our soul.
+
+      ## Staying True to the Vision
+
+      Middle-out compression was always the real innovation. Sometimes you have to bet on what you believe in, even when the easy money is right there.
+
+      ## Trust Your Instincts
+
+      If you know you've built something revolutionary, don't compromise. The market will catch up.
+    tags:
+      - piedpiper
+      - startups
+      - pivots
+
+  - author: jian-yang
+    title: "Not Hotdog: How I Built a $1M App"
+    description: The technology behind my food recognition app
+    body: |
+      # Not Hotdog App
+
+      You point phone at food. It tells you: hotdog or not hotdog.
+
+      ## The Algorithm
+
+      Very simple. Machine learning. Two categories. Works perfectly.
+
+      ## The Business
+
+      Sell to food companies. Sell to restaurants. Sell to everyone. Make one million dollar.
+
+      ## Next Step
+
+      Expand to other foods. "Not Pizza" coming soon.
+    tags:
+      - ml
+      - apps
+      - foodtech
+
+  - author: gilfoyle
+    title: "Server Architecture for Dummies"
+    description: How to not embarrass yourself with infrastructure
+    body: |
+      ## If You're Running Servers in 2024
+
+      Let me save you from yourself.
+
+      ### Use Docker
+
+      If you're not containerizing, you're wasting time and money.
+
+      ### Automate Everything
+
+      Manual deployments are for people who hate themselves.
+
+      ### Monitor Everything
+
+      If you can't measure it, you can't fix it.
+
+      ### Backup Everything
+
+      Your data will be lost. It's not if, it's when.
+
+      You're welcome.
+    tags:
+      - devops
+      - servers
+      - infrastructure
+
+  - author: dinesh
+    title: "The Great Tabs vs Spaces Debate"
+    description: Why this argument matters more than you think
+    body: |
+      ## Let's Settle This
+
+      I'm team **spaces**. Four spaces. Always.
+
+      ### Why Spaces?
+
+      - Consistent across all editors
+      - Professional standard
+      - What tabs look like varies
+
+      ### The Counterargument
+
+      Gilfoyle uses tabs. That should tell you everything you need to know about tabs.
+
+      ### Conclusion
+
+      Use spaces. Be a professional.
+    tags:
+      - coding
+      - standards
+      - debate
+
+  - author: jackbarker
+    title: "The Conjoined Triangles of Success"
+    description: My proven methodology for scaling tech companies
+    body: |
+      # The Barker Method
+
+      I've been brought in as CEO to fix dozens of companies. My method works.
+
+      ## The Triangles
+
+      Three conjoined triangles. Each represents a key business pillar:
+
+      1. **Product**
+      2. **Sales**
+      3. **Operations**
+
+      They must work in harmony. That's the secret.
+
+      ## Results
+
+      Every company I've run has achieved systematic growth. The method works.
+    tags:
+      - management
+      - methodology
+      - growth
+
+  - author: carlagentleman
+    title: "Optimoji: Making Emojis Efficient"
+    description: How we reduced emoji file sizes by 90%
+    body: |
+      # The Emoji Problem
+
+      Emojis are everywhere. But they're also **huge** files. We fixed that.
+
+      ## Our Solution
+
+      Optimoji compresses emoji data using vector optimization and color palette reduction.
+
+      - 90% smaller files
+      - Zero quality loss
+      - Universal compatibility
+
+      ## The Market
+
+      Every messaging app, every social platform. The savings add up to billions.
+    tags:
+      - optimization
+      - emojis
+      - compression
+
+  - author: petergregory
+    title: "Why I Don't Eat Sesame Seeds"
+    description: An analysis of food risk management
+    body: |
+      ## Risk Assessment
+
+      Sesame seeds are unnecessary. They add no nutritional value. They're just there to look nice.
+
+      But they **get everywhere**. In your teeth. On your clothes. Unpredictable.
+
+      ## The Principle
+
+      Eliminate unnecessary risks. This applies to investing too.
+
+      Why take a risk that offers no upside? Remove the sesame seeds from your portfolio.
+    tags:
+      - philosophy
+      - risk
+      - investing
+
+  - author: richardhendricks
+    title: "Why We Turned Down Hooli's Acquisition Offer"
+    description: The hardest decision we ever made
+    body: |
+      # $10 Million on the Table
+
+      Gavin Belson offered us ten million dollars for Pied Piper. We said no.
+
+      ## The Reasoning
+
+      Our technology is worth **billions**, not millions. We knew if we sold, Hooli would bury our platform.
+
+      ## The Risk
+
+      We could have failed. We could have ended up with nothing. But we believed.
+
+      ## The Result
+
+      Still fighting, still building. The journey continues.
+    tags:
+      - piedpiper
+      - acquisitions
+      - decisions
+
+  - author: jared
+    title: "Work-Life Balance at a Startup"
+    description: Is it possible? How to find harmony
+    body: |
+      ## The Struggle
+
+      Startups demand everything. But burnout serves no one.
+
+      ## My Approach
+
+      - Set boundaries (try to)
+      - Sleep matters
+      - Exercise helps
+      - Friends outside work
+
+      ## The Reality
+
+      Sometimes you pull all-nighters. Sometimes you skip meals. But make it the exception, not the rule.
+
+      Your health is the business's most important asset.
+    tags:
+      - wellbeing
+      - startups
+      - balance
+
+  - author: gilfoyle
+    title: "Cryptocurrency: Not as Stupid as You Think"
+    description: A practical look at blockchain technology
+    body: |
+      ## Beyond the Hype
+
+      Yes, crypto bros are annoying. But the **technology** is interesting.
+
+      ### What's Real
+
+      - Decentralized systems
+      - Cryptographic verification
+      - Distributed consensus
+
+      ### What's Nonsense
+
+      - Most NFTs
+      - Most altcoins
+      - Most crypto "investing"
+
+      ### The Future
+
+      Blockchain will power some infrastructure. Just not your monkey JPEGs.
+    tags:
+      - crypto
+      - blockchain
+      - technology
+
+  - author: russhanneman
+    title: "ROI: Russ Hanneman Index"
+    description: My personal investment philosophy
+    body: |
+      # The ROI System
+
+      **R**uss Hanneman **I**ndex. My way of evaluating investments.
+
+      ## The Criteria
+
+      1. Is it cool?
+      2. Will it make me look smart?
+      3. Can I tell people about it at parties?
+
+      ## Examples
+
+      - Radio on the internet ✓
+      - That tequila company ✗
+      - Pied Piper ✓
+
+      Follow the ROI. Trust your gut. This guy f***s.
+    tags:
+      - investing
+      - philosophy
+      - roi
+
+  - author: dinesh
+    title: "Code Review Best Practices"
+    description: How to review code without being a jerk
+    body: |
+      ## The Problem
+
+      Code reviews are necessary but can become toxic. Here's how to do them right.
+
+      ### Be Constructive
+
+      - "Consider using X" not "This is garbage"
+      - Explain the why
+      - Offer to pair program on complex issues
+
+      ### Focus on What Matters
+
+      - Logic errors: Yes
+      - Security issues: Definitely
+      - Personal style preferences: No
+
+      ### Remember
+
+      We're all on the same team. Unlike Gilfoyle might suggest.
+    tags:
+      - coding
+      - teams
+      - practices
+
+  - author: gavinbelson
+    title: "The Importance of Corporate Spirituality"
+    description: How meditation transformed Hooli
+    body: |
+      # Finding Balance
+
+      In tech, we move fast. But we must also find our center.
+
+      ## Hooli's Approach
+
+      - Meditation rooms on every floor
+      - Mindfulness training
+      - Spiritual advisors (like my friend who lived in a box)
+
+      ## The Results
+
+      Employee satisfaction up 12%. Innovation up 8%. Enlightenment: immeasurable.
+
+      ## Join Us
+
+      Hooli isn't just a workplace. It's a spiritual journey.
+    tags:
+      - wellness
+      - culture
+      - hooli
+
+  - author: monica
+    title: "Red Flags in Startup Pitches"
+    description: Warning signs VCs watch for
+    body: |
+      ## When to Walk Away
+
+      Here are the red flags that make me end meetings early:
+
+      ### 1. Vague Answers
+
+      "What's your business model?"
+      "We'll figure it out."
+
+      No.
+
+      ### 2. No Differentiation
+
+      "We're like Uber but for X" - Everyone says this.
+
+      ### 3. Delusional Projections
+
+      "$1B revenue in year 2" with no users today.
+
+      ### 4. Team Conflicts
+
+      Co-founders who disagree in the pitch room? Hard pass.
+
+      Do your homework before wasting our time.
+    tags:
+      - vc
+      - pitching
+      - startups
+
+  - author: lauriebream
+    title: "Portfolio Optimization Strategy"
+    description: How Bream-Hall picks winners
+    body: |
+      # Data-Driven Investing
+
+      Feelings don't matter. Data does.
+
+      ## Our Process
+
+      1. Quantitative screening
+      2. Market analysis
+      3. Team evaluation
+      4. Risk modeling
+
+      ## The Numbers
+
+      42% of our investments reach Series B. Industry average is 18%.
+
+      ## The Secret
+
+      Remove emotion. Trust the model. Execute relentlessly.
+    tags:
+      - vc
+      - investing
+      - strategy
+
+  - author: richardhendricks
+    title: "Building a Decentralized Internet"
+    description: The vision behind PiperNet
+    body: |
+      # The Problem With the Internet
+
+      It's centralized. A few companies control everything. This gives them too much power.
+
+      ## PiperNet
+
+      Our vision: a **peer-to-peer internet** using middle-out compression. Every phone becomes a node.
+
+      ### Benefits
+
+      - No central control
+      - Impossible to censor
+      - Free and open
+      - Fast and efficient
+
+      ## The Challenge
+
+      Building it without killing battery life. That's where our compression comes in.
+
+      The future is decentralized.
+    tags:
+      - piedpiper
+      - decentralization
+      - internet
+
+  - author: gilfoyle
+    title: "My Favorite Ransomware Techniques"
+    description: For educational purposes only
+    body: |
+      ## Disclaimer
+
+      This is educational. Don't actually do this.
+
+      ## How It Works
+
+      1. Encrypt the target's files
+      2. Demand payment for the key
+      3. Hope they don't have backups (they usually don't)
+
+      ## Defense
+
+      - Backup everything (I mentioned this before)
+      - Don't click suspicious links
+      - Keep systems updated
+      - Air-gap critical systems
+
+      ## Why I'm Telling You
+
+      Because you're all vulnerable and I'm tired of fixing your mistakes.
+    tags:
+      - security
+      - ransomware
+      - education
+
+  - author: erlichbachman
+    title: "How to Run a Successful Incubator"
+    description: Lessons from Erlich Bachman's Hacker Hostel
+    body: |
+      # The Model
+
+      Entrepreneurs need three things: space, support, and someone to believe in them.
+
+      ## My Approach
+
+      - Provide housing
+      - Take 10% equity
+      - Offer mentorship (that's me)
+      - Create community
+
+      ## The Results
+
+      Pied Piper came out of my incubator. That alone validates everything.
+
+      ## The Secret
+
+      Find hungry people with big ideas. Get out of their way. Collect equity.
+    tags:
+      - incubator
+      - startups
+      - aviato
+
+  - author: jian-yang
+    title: "New Internet Who Dis"
+    description: PiperNet after hostile takeover
+    body: |
+      # Erlich Bachman Is Dead
+
+      I own house now. I own everything.
+
+      ## New Plan
+
+      Turn PiperNet into best platform for internet business. Make lots of money.
+
+      ## You All Pay Me Now
+
+      This is my company. My rules. You don't like? Too bad.
+
+      Special offer: "New Internet Who Dis" t-shirts. $50. Buy now.
+    tags:
+      - pipernet
+      - business
+      - humor
+
+  - author: dinesh
+    title: "Imposter Syndrome in Tech"
+    description: How I deal with self-doubt
+    body: |
+      ## The Struggle is Real
+
+      Even at Pied Piper, working on revolutionary tech, I sometimes feel like I don't belong.
+
+      ### Why It Happens
+
+      - Comparing yourself to others (like watching Gilfoyle work)
+      - The pace of change in tech
+      - High expectations
+
+      ### How I Cope
+
+      - Focus on growth, not perfection
+      - Celebrate small wins
+      - Remember: everyone feels this way sometimes
+      - Keep learning
+
+      You're probably better than you think.
+    tags:
+      - career
+      - mental-health
+      - tech
+
+  - author: jackbarker
+    title: "Why Platform Beats Product"
+    description: The strategic shift every company must make
+    body: |
+      # The Platform Play
+
+      Single products are dead. The future is **platforms**.
+
+      ## The Difference
+
+      - Product: You build one thing
+      - Platform: Others build on your thing
+
+      ## Why It Matters
+
+      Platforms scale infinitely. They create ecosystems. They become essential infrastructure.
+
+      ## The Shift
+
+      This is why I pushed Pied Piper toward a platform strategy. It's business 101.
+    tags:
+      - strategy
+      - platforms
+      - business
+
+  - author: carlagentleman
+    title: "Raising Your First Round"
+    description: How I got Optimoji funded
+    body: |
+      # My Fundraising Journey
+
+      Raising money as a first-time founder is hard. Here's what worked for me.
+
+      ## Preparation
+
+      - Solid deck (10 slides max)
+      - Working prototype
+      - Early user feedback
+      - Financial projections
+
+      ## The Pitch
+
+      I pitched 47 investors. Got 3 term sheets.
+
+      ## Key Lessons
+
+      - Rejection is normal
+      - Fit matters more than terms
+      - Your first investor is crucial
+
+      Optimoji raised $2M seed. Now we're scaling.
+    tags:
+      - fundraising
+      - startups
+      - founder
+
+  - author: petergregory
+    title: "The Value of Patience in Venture Capital"
+    description: Why I wait while others rush
+    body: |
+      # The Long Game
+
+      Most VCs panic when they see competition. I wait.
+
+      ## My Philosophy
+
+      Good companies take time. Great founders are patient. The market reveals truth eventually.
+
+      ## Examples
+
+      I passed on social networks in 2008. Everyone thought I was wrong. Most of those companies are dead now.
+
+      I invested in Pied Piper when others hesitated. Now look at them.
+
+      ## The Principle
+
+      Trust your analysis. Ignore the noise. Wait for quality.
+    tags:
+      - vc
+      - patience
+      - investing
+
+  - author: richardhendricks
+    title: "When Your CTO is Also Your Best Friend"
+    description: The unique challenge of co-founding with friends
+    body: |
+      # Working With Gilfoyle
+
+      He's brilliant. He's also difficult. And we're building a company together.
+
+      ## The Good
+
+      - Deep trust
+      - Shared vision
+      - No BS communication
+
+      ## The Bad
+
+      - He doesn't respect my authority
+      - We argue about everything
+      - Personal and professional blur
+
+      ## Making It Work
+
+      Set boundaries. Be honest. Remember why you started. And accept that he's always going to be kind of a jerk.
+
+      But he's our jerk.
+    tags:
+      - cofounders
+      - relationships
+      - startups
+
+  - author: jared
+    title: "The Art of the Pivot"
+    description: When and how to change direction
+    body: |
+      # Knowing When to Change
+
+      Pied Piper has pivoted several times. Each time was necessary.
+
+      ## Warning Signs
+
+      - Users aren't engaging
+      - Revenue isn't growing
+      - Market isn't responding
+
+      ## The Process
+
+      1. Analyze what's not working
+      2. Identify what IS working
+      3. Double down on strengths
+      4. Communicate clearly with team
+
+      ## The Risk
+
+      Every pivot could be the last. But staying on a failing path guarantees failure.
+
+      Trust your instincts. Act decisively.
+    tags:
+      - pivots
+      - startups
+      - strategy
+
+  - author: gilfoyle
+    title: "Why I Use Arch Linux"
+    description: And why you probably shouldn't
+    body: |
+      # The Superior Choice
+
+      I use Arch. I compile my own kernels. You probably use Ubuntu like a normie.
+
+      ## Why Arch?
+
+      - Complete control
+      - Minimal bloat
+      - Rolling releases
+      - AUR
+
+      ## Why You Shouldn't
+
+      You'll break things. You'll spend hours fixing them. You'll question your life choices.
+
+      ## The Truth
+
+      Use whatever works for you. But just know that I'm judging you.
+    tags:
+      - linux
+      - dev-tools
+      - opinions
+
+  - author: monica
+    title: "Board Meetings That Don't Suck"
+    description: How to run effective board meetings
+    body: |
+      # The Problem
+
+      Most board meetings waste everyone's time.
+
+      ## Best Practices
+
+      - Send materials 48 hours ahead
+      - Stick to agenda
+      - Focus on decisions, not updates
+      - Keep it under 2 hours
+
+      ## What to Cover
+
+      - Financial performance
+      - Key metrics
+      - Strategic decisions
+      - Major risks
+
+      ## What NOT to Cover
+
+      - Operational minutiae
+      - Stuff that could be an email
+      - Your feelings
+
+      Respect everyone's time.
+    tags:
+      - boards
+      - management
+      - efficiency
+
+  - author: russhanneman
+    title: "My Car Collection"
+    description: The cars that make the statement
+    body: |
+      # Doors That Go Like This
+
+      Not like this. Like **this**.
+
+      ## The Collection
+
+      - McLaren 650S
+      - LaFerrari
+      - Bugatti Veyron
+      - Pagani Huayra
+
+      ## Why It Matters
+
+      A man is his car. Your car tells the world who you are.
+
+      ## The Message
+
+      When you pull up in a supercar, people know: this guy made it. This guy f***s.
+
+      You can't put a price on that. (Actually you can, it's about $3M.)
+    tags:
+      - cars
+      - lifestyle
+      - wealth
+
+  - author: gavinbelson
+    title: "Leadership Lessons from the Top"
+    description: What I've learned as CEO of Hooli
+    body: |
+      # The Weight of Leadership
+
+      Being CEO of Hooli means carrying the dreams of 15,000 employees.
+
+      ## Key Lessons
+
+      ### Decisiveness
+
+      Make the call. Right or wrong, indecision is worse.
+
+      ### Vision
+
+      Paint the future. Make people believe.
+
+      ### Resilience
+
+      You'll face attacks. Criticism. Failure. Keep going.
+
+      ## The Burden
+
+      It's lonely at the top. But someone has to make the world a better place.
+
+      That someone is me.
+    tags:
+      - leadership
+      - hooli
+      - ceo
+
+  - author: dinesh
+    title: "Debugging Techniques That Actually Work"
+    description: Stop print-debugging and do this instead
+    body: |
+      ## The Problem
+
+      Everyone just throws print statements everywhere. There's a better way.
+
+      ### Use a Debugger
+
+      Learn your IDE's debugger. Set breakpoints. Inspect variables. Step through code.
+
+      ### Binary Search the Bug
+
+      Comment out half the code. Still broken? Bug is in the other half. Repeat.
+
+      ### Rubber Duck Debugging
+
+      Explain the problem out loud. You'll often solve it yourself.
+
+      ### Git Bisect
+
+      When did it break? Use git bisect to find the exact commit.
+
+      ## The Reality
+
+      Sometimes you still just add print statements. But at least try the proper tools first.
+    tags:
+      - debugging
+      - programming
+      - tips
+
+  - author: lauriebream
+    title: "Why I Don't Do Follow-On Rounds"
+    description: My contrarian investment approach
+    body: |
+      # One and Done
+
+      I invest in a company once. If they need more money later, they go elsewhere.
+
+      ## The Reasoning
+
+      - Forces capital efficiency
+      - Reduces my risk exposure
+      - Tests the founders' ability to execute
+
+      ## The Results
+
+      Companies I fund either succeed spectacularly or fail fast. No zombies.
+
+      ## The Criticism
+
+      People say I'm not "supportive." I say I'm realistic. The market doesn't care about your feelings.
+    tags:
+      - vc
+      - investing
+      - strategy
+
+  - author: richardhendricks
+    title: "The Day We Almost Lost Everything"
+    description: How a server failure nearly killed Pied Piper
+    body: |
+      # Disaster Strikes
+
+      Our servers went down during the biggest demo of our lives. Anton was hosting them, and he... died.
+
+      ## The Scramble
+
+      We had hours to rebuild the entire infrastructure. Gilfoyle led the charge. Dinesh helped. I mostly panicked.
+
+      ## The Lesson
+
+      - Redundancy is not optional
+      - Single points of failure will fail
+      - Have a backup plan for your backup plan
+
+      ## The Outcome
+
+      We pulled it off. Barely. And now we have proper infrastructure.
+
+      Never again.
+    tags:
+      - piedpiper
+      - failure
+      - lessons
+
+  - author: jared
+    title: "Dealing with Difficult Investors"
+    description: How to manage board dynamics
+    body: |
+      # The Challenge
+
+      Investors often have conflicting visions. Managing those relationships is crucial.
+
+      ## Strategies
+
+      - Regular communication
+      - Transparency about challenges
+      - Frame issues with potential solutions
+      - Know when to push back
+
+      ## When to Fire an Investor
+
+      Yes, you can. If they're actively harmful, buy them out or find someone else to take their seat.
+
+      ## The Balance
+
+      They're partners, not bosses. But they also own part of your company. Navigate carefully.
+    tags:
+      - investors
+      - startups
+      - relationships
+
+  - author: gilfoyle
+    title: "The Satanic Philosophy of System Administration"
+    description: Embrace the darkness of ops work
+    body: |
+      # Chaos is the Natural State
+
+      Everything tends toward entropy. Your servers will fail. Accept it.
+
+      ## The Satanic Approach
+
+      - Expect the worst
+      - Plan for it
+      - Laugh when it happens anyway
+      - Fix it coldly and efficiently
+
+      ## Tools of the Trade
+
+      - Monitoring: Prometheus
+      - Logging: ELK stack
+      - Automation: Ansible
+      - Container orchestration: Kubernetes
+
+      ## The Truth
+
+      You're not a hero. You're a janitor cleaning up other people's messes. Embrace it.
+
+      Hail Satan.
+    tags:
+      - devops
+      - philosophy
+      - satanism
+
+  - author: erlichbachman
+    title: "Why I'm Leaving Silicon Valley"
+    description: The end of an era
+    body: |
+      # The Valley Changed
+
+      When I started Aviato, this place was about **ideas**. Now it's about exits and valuations.
+
+      ## My Legacy
+
+      - Built and sold Aviato
+      - Ran the best incubator in Palo Alto
+      - Launched Pied Piper
+
+      ## What's Next
+
+      Tibet. Or maybe just LA. Somewhere I can think.
+
+      ## Final Thoughts
+
+      The Valley will keep spinning. New founders will come. But the era of Erlich Bachman's incubator is over.
+
+      This is my Aviato. But it's time to let go.
+    tags:
+      - silicon-valley
+      - reflection
+      - change
+
+  - author: jian-yang
+    title: "Hot Dog or Not Hot Dog: The Sequel"
+    description: Expanding the vision
+    body: |
+      # Big News
+
+      Not Hot Dog was just beginning. Now we have:
+
+      - Not Pizza
+      - Not Burger
+      - Not Taco
+
+      ## The Technology
+
+      Same algorithm. More food categories. Very successful.
+
+      ## Revenue
+
+      $2 million revenue last year. This year $5 million.
+
+      ## Partnership Opportunity
+
+      Food companies want to license technology. Everyone want to know: is food or not food?
+
+      This is future of food tech.
+    tags:
+      - nothotdog
+      - ml
+      - foodtech
+
+  - author: carlagentleman
+    title: "The Optimoji Series A Journey"
+    description: From $2M seed to $12M Series A
+    body: |
+      # Growth Story
+
+      After our seed round, we 10x'd users and secured major partnerships.
+
+      ## Key Metrics
+
+      - 5M daily active users
+      - 100+ B2B customers
+      - $1.2M ARR
+      - 40% MoM growth
+
+      ## The Raise
+
+      Pitched 23 firms. Got 5 term sheets. Chose Bream-Hall.
+
+      ## Why Laurie
+
+      She's ruthless but fair. She brings the right kind of pressure. We need that to scale.
+
+      ## What's Next
+
+      International expansion. New product lines. Hiring 30 people.
+
+      The journey continues.
+    tags:
+      - fundraising
+      - optimoji
+      - series-a
+
+  - author: monica
+    title: "When to Fire Your CEO"
+    description: The hardest board decision
+    body: |
+      # The Nuclear Option
+
+      Replacing a founder-CEO is brutal. But sometimes necessary.
+
+      ## Warning Signs
+
+      - Company consistently misses targets
+      - Team morale collapses
+      - CEO stops listening to feedback
+      - Board loses confidence
+
+      ## The Process
+
+      1. Try coaching first
+      2. Set clear milestones
+      3. If they miss them, act fast
+      4. Have replacement ready
+
+      ## The Aftermath
+
+      It's always messy. The founder may leave entirely. The team may fracture.
+
+      But if the company is dying, you have no choice.
+    tags:
+      - boards
+      - ceo
+      - tough-decisions
+
+  - author: petergregory
+    title: "My Final Investment"
+    description: Reflecting on a career in venture capital
+    body: |
+      # The End
+
+      After 30 years in venture capital, I'm stepping back.
+
+      ## The Hits
+
+      I backed companies that changed the world. Technologies that mattered.
+
+      ## The Misses
+
+      I passed on investments that would have returned 100x. Such is the game.
+
+      ## The Learning
+
+      Every investment taught me something. Success and failure are both teachers.
+
+      ## What's Next
+
+      I'm leaving Raviga in capable hands. Monica will lead the firm well.
+
+      As for me? I'm going to finally learn to play the bagpipes.
+
+      Thank you, Silicon Valley. It's been extraordinary.
+    tags:
+      - vc
+      - retirement
+      - reflection
+
+  - author: richardhendricks
+    title: "Why We're Open-Sourcing PiperNet"
+    description: The decision to give our technology away
+    body: |
+      # A Radical Decision
+
+      After years of development, we're open-sourcing the PiperNet protocol.
+
+      ## The Reasoning
+
+      A decentralized internet shouldn't be owned by one company. It should belong to everyone.
+
+      ## What This Means
+
+      - Full protocol specification released
+      - Reference implementation on GitHub
+      - Anyone can build on our work
+
+      ## The Business Model
+
+      We'll make money on services and support, not the protocol itself.
+
+      ## The Vision
+
+      This is bigger than Pied Piper. This is about changing how the internet works.
+
+      Let's build it together.
+    tags:
+      - opensource
+      - piedpiper
+      - pipernet
+      - decentralization
+
+  - author: bighead
+    title: "How I Accidentally Became Head of a Major Tech Division"
+    description: My unlikely journey from Pied Piper to running Hooli XYZ
+    body: |
+      ## It Just Happened
+
+      I don't really know how I got here. One day I was working on Pied Piper stuff, next thing I know I'm running an entire division at Hooli.
+
+      ## The Promotions
+
+      Every time I thought I was going to get fired, they promoted me instead. It's been... weird.
+
+      ## What I've Learned
+
+      Sometimes the best career strategy is just showing up and not making waves. Also, having good timing helps.
+
+      ## Current Role
+
+      I'm now Head of Hooli XYZ. I still don't really know what we do, but everyone seems happy with my leadership.
+
+      Just keep failing upward, I guess?
+    tags:
+      - career
+      - hooli
+      - luck
+
+  - author: gilfoyle
+    title: "Building a Home Server: A Practical Guide"
+    description: Stop paying for cloud services you can host yourself
+    body: |
+      ## Why Self-Host?
+
+      Because giving your data to corporations is for sheep.
+
+      ### Hardware
+
+      Get a used enterprise server. Dell R720 works. Install Proxmox.
+
+      ### Services
+
+      - **Nextcloud** - Your own cloud storage
+      - **Plex** - Media server
+      - **Pi-hole** - Network-wide ad blocking
+      - **Nginx** - Reverse proxy
+
+      ### Security
+
+      - VPN only access
+      - Firewall everything
+      - Regular backups to offsite location
+
+      You're welcome.
+    tags:
+      - homelab
+      - self-hosting
+      - privacy
+
+  - author: richardhendricks
+    title: "Lessons from TechCrunch Disrupt"
+    description: What I learned presenting at the biggest tech conference
+    body: |
+      # The Big Stage
+
+      Presenting Pied Piper at Disrupt was terrifying and exhilarating.
+
+      ## Preparation
+
+      We practiced the demo hundreds of times. Still almost crashed during the live presentation.
+
+      ## What Worked
+
+      - Clear value proposition
+      - Live demo (risky but impactful)
+      - Real metrics, not vague promises
+
+      ## What Didn't
+
+      I was so nervous I forgot half my talking points. Jared had to feed me lines from backstage.
+
+      ## The Aftermath
+
+      Three VCs approached us immediately. The buzz was real.
+
+      Sometimes you just have to bet on yourself and go for it.
+    tags:
+      - conferences
+      - presenting
+      - piedpiper
+
+  - author: monica
+    title: "Due Diligence: What VCs Actually Check"
+    description: The thorough investigation before we write a check
+    body: |
+      # Beyond the Pitch
+
+      You aced the pitch. Now comes the real work.
+
+      ## Financial DD
+
+      - Cap table analysis
+      - Historical financials
+      - Revenue projections with assumptions
+      - Burn rate and runway
+
+      ## Product DD
+
+      - Technical architecture review
+      - Security audit
+      - IP verification
+      - Product roadmap evaluation
+
+      ## Team DD
+
+      - Background checks
+      - Reference calls
+      - LinkedIn verification
+      - Previous company outcomes
+
+      ## Market DD
+
+      - Competitive landscape
+      - Market size validation
+      - Customer interviews
+      - Industry trends
+
+      We find something concerning in 60% of deals. Be honest upfront.
+    tags:
+      - vc
+      - duediligence
+      - investing
+
+  - author: dinesh
+    title: "Dealing with Toxic Coworkers"
+    description: How to maintain sanity when your colleague is impossible
+    body: |
+      ## The Problem
+
+      Some people make work unnecessarily difficult. Like Gilfoyle.
+
+      ### Signs of Toxicity
+
+      - Constant negativity
+      - Taking credit for others' work
+      - Undermining team morale
+      - Refusing to collaborate
+
+      ### Coping Strategies
+
+      1. **Document everything** - Emails, Slack messages, meeting notes
+      2. **Set boundaries** - Don't engage in drama
+      3. **Focus on your work** - Results speak louder
+      4. **Talk to management** - If it's affecting productivity
+
+      ### When to Quit
+
+      If management won't act and it's hurting your mental health, update your resume.
+
+      Life's too short to work with jerks.
+    tags:
+      - workplace
+      - mental-health
+      - culture
+
+  - author: jared
+    title: "Running Effective Retrospectives"
+    description: How to learn from both successes and failures
+    body: |
+      # The Retro Process
+
+      At Pied Piper, we do retrospectives after every major milestone.
+
+      ## Structure
+
+      ### What Went Well
+      Celebrate wins. Give specific praise.
+
+      ### What Didn't Go Well
+      No blame. Focus on processes, not people.
+
+      ### Action Items
+      Concrete steps to improve. Assign owners.
+
+      ## Key Principles
+
+      - **Psychological safety** - People must feel safe to speak honestly
+      - **Time-boxed** - 1 hour max
+      - **Action-oriented** - End with clear next steps
+      - **Follow-up** - Review action items next retro
+
+      Continuous improvement is the only way forward.
+    tags:
+      - agile
+      - retrospectives
+      - teams
+
+  - author: russhanneman
+    title: "How I Lost and Regained My Billions"
+    description: The tres commas rollercoaster
+    body: |
+      # The Fall
+
+      One day I woke up and I was only worth $987 million. NOT A BILLIONAIRE.
+
+      ## What Went Wrong
+
+      Bad investments. Market timing. Hubris.
+
+      ## The Comeback
+
+      I didn't panic. I doubled down. Made smarter bets.
+
+      ### Key Moves
+
+      - Liquidated underperforming assets
+      - Reinvested in proven winners
+      - Stayed visible in the scene
+      - Never admitted weakness
+
+      ## Back on Top
+
+      $1.2B and climbing. Tres commas club, baby.
+
+      This guy **still** f***s.
+    tags:
+      - wealth
+      - investing
+      - comeback
+
+  - author: gavinbelson
+    title: "Competing with the Tech Giants"
+    description: How Hooli stays relevant in a crowded market
+    body: |
+      # The Challenge
+
+      Everyone wants to be the next Google, Amazon, or Hooli.
+
+      ## Our Advantages
+
+      - **Scale** - 15,000 employees worldwide
+      - **Capital** - $50B war chest
+      - **Brand** - People trust Hooli
+      - **Ecosystem** - Once you're in, you stay in
+
+      ## The Threats
+
+      Nimble startups like Pied Piper can innovate faster. We must stay aggressive.
+
+      ## The Strategy
+
+      - **Acquire** - Buy threats before they become problems
+      - **Copy** - Fast-follow with superior execution
+      - **Leverage** - Use our platform to distribute
+
+      We're not just competing. We're dominating.
+    tags:
+      - hooli
+      - strategy
+      - competition
+
+  - author: erlichbachman
+    title: "The Art of the Burn"
+    description: How to deliver a devastating comeback
+    body: |
+      ## Timing is Everything
+
+      A good burn is 50% content, 50% delivery.
+
+      ### The Setup
+
+      Let them finish. Let them think they've won. Then strike.
+
+      ### The Execution
+
+      - Be specific
+      - Be unexpected
+      - Be brutal
+      - Walk away
+
+      ### Example
+
+      Someone says your idea won't work? "That's what they said about Aviato. And now I own 10% of the company that's going to make you obsolete."
+
+      ## The Aftermath
+
+      Never explain. Never apologize. The burn stands on its own.
+
+      This is my Aviato.
+    tags:
+      - humor
+      - communication
+      - confidence
+
+  - author: jian-yang
+    title: "Silicon Valley Real Estate Guide"
+    description: How I bought property and made fortune
+    body: |
+      # The Opportunity
+
+      Erlich leave. House become mine. Now worth $4 million.
+
+      ## How to Buy
+
+      - Find desperate seller
+      - Negotiate hard
+      - Pay cash if possible
+      - Rent out rooms
+
+      ## My Properties
+
+      - Incubator house: $4M value
+      - Apartment building: $8M value
+      - Commercial space: $3M value
+
+      ## Total Net Worth
+
+      $15 million. All from real estate.
+
+      ## Advice
+
+      Forget tech. Buy land. They not making more of it.
+    tags:
+      - realestate
+      - investing
+      - wealth
+
+  - author: jackbarker
+    title: "Scaling from 10 to 100 Employees"
+    description: The organizational challenges of hypergrowth
+    body: |
+      # The Inflection Point
+
+      10 people: Everyone knows everyone. Communication is easy.
+
+      100 people: You need systems.
+
+      ## Key Changes
+
+      ### Structure
+      - Department heads
+      - Clear reporting lines
+      - Defined roles
+
+      ### Process
+      - Documented procedures
+      - Approval workflows
+      - Regular all-hands meetings
+
+      ### Culture
+      - Formalized values
+      - Onboarding program
+      - Performance reviews
+
+      ## The Barker Method Applied
+
+      The conjoined triangles scale. The principles remain constant.
+    tags:
+      - scaling
+      - management
+      - growth
+
+  - author: carlagentleman
+    title: "Building a Remote-First Company"
+    description: How Optimoji works across 12 timezones
+    body: |
+      # Why Remote?
+
+      Access to global talent. Lower costs. Better work-life balance.
+
+      ## The Challenges
+
+      - Communication overhead
+      - Timezone coordination
+      - Culture building
+
+      ## What Works
+
+      ### Tools
+      - Slack for async communication
+      - Zoom for face-time
+      - Notion for documentation
+      - GitHub for collaboration
+
+      ### Practices
+      - Written-first culture
+      - Overlap hours for all-hands
+      - Annual company retreat
+      - Monthly virtual social events
+
+      ## The Results
+
+      - 30% lower costs
+      - Access to top talent anywhere
+      - Higher employee satisfaction
+      - Better productivity
+
+      Remote is the future.
+    tags:
+      - remote
+      - culture
+      - startup
+
+  - author: petergregory
+    title: "The Importance of Board Diversity"
+    description: Why homogeneous boards fail
+    body: |
+      # The Problem
+
+      Most boards are five white men in their 50s who think alike.
+
+      ## Why Diversity Matters
+
+      Different perspectives catch blind spots. Different experiences provide broader market insight.
+
+      ### Types of Diversity
+
+      - Gender
+      - Ethnicity
+      - Age
+      - Industry background
+      - Geographic
+
+      ## My Commitment
+
+      Raviga only invests in companies committed to board diversity.
+
+      It's not just ethics. It's better business.
+    tags:
+      - diversity
+      - boards
+      - governance
+
+  - author: dinesh
+    title: "Learning a New Programming Language"
+    description: My journey from Java to Rust
+    body: |
+      ## Why Rust?
+
+      Memory safety without garbage collection. Performance without pain.
+
+      ### The Learning Curve
+
+      Steep. The borrow checker will humble you.
+
+      ### Resources That Helped
+
+      - The Rust Book (official docs)
+      - Rustlings exercises
+      - Building real projects
+      - Reading others' code
+
+      ### What I Learned
+
+      - Ownership model takes time but makes sense
+      - Compiler errors are your friend
+      - Community is incredibly helpful
+      - No going back to manual memory management
+
+      ## Current Status
+
+      Rust is now my go-to for systems programming. Java for business logic.
+
+      Keep learning. Stay relevant.
+    tags:
+      - rust
+      - learning
+      - programming
+
+  - author: gilfoyle
+    title: "Docker vs Virtual Machines"
+    description: When to use containers vs full virtualization
+    body: |
+      ## The Difference
+
+      VMs virtualize hardware. Containers virtualize the OS.
+
+      ### Use VMs When
+
+      - Need different OS kernels
+      - Strong isolation required
+      - Legacy applications
+
+      ### Use Containers When
+
+      - Microservices architecture
+      - Fast deployment needed
+      - Resource efficiency matters
+      - Identical dev/prod environments
+
+      ### Use Both
+
+      Run containers inside VMs for defense in depth.
+
+      ## My Setup
+
+      Proxmox VMs running Docker containers. Best of both worlds.
+
+      Stop overthinking it.
+    tags:
+      - docker
+      - virtualization
+      - infrastructure
+
+  - author: richardhendricks
+    title: "Dealing with Impostor Syndrome as CEO"
+    description: How I handle self-doubt while leading a company
+    body: |
+      # The Truth
+
+      I'm 26 and running a company. Sometimes I have no idea what I'm doing.
+
+      ## The Triggers
+
+      - Board meetings with experienced VCs
+      - Comparing myself to other CEOs
+      - Making decisions that affect people's livelihoods
+
+      ## How I Cope
+
+      ### Acknowledge It
+      Everyone feels this way. Even the successful ones.
+
+      ### Focus on Progress
+      We're farther along today than yesterday.
+
+      ### Lean on the Team
+      I don't have to know everything. That's what smart people like Gilfoyle and Dinesh are for.
+
+      ### Remember Why
+      We're building something revolutionary. That's worth the discomfort.
+
+      Still scared. Still building.
+    tags:
+      - impostor-syndrome
+      - leadership
+      - mental-health
+
+  - author: jared
+    title: "Conflict Resolution in Small Teams"
+    description: Mediating disputes when everyone sits 10 feet apart
+    body: |
+      # The Challenge
+
+      In a startup, conflicts can't fester. You see each other every day.
+
+      ## Common Conflicts
+
+      - Feature prioritization
+      - Code review disagreements
+      - Personality clashes
+      - Work distribution
+
+      ## My Approach
+
+      ### Listen First
+      Hear both sides without judgment.
+
+      ### Find Common Ground
+      Everyone wants the company to succeed.
+
+      ### Focus on Outcomes
+      What result do we need? Work backward.
+
+      ### Follow Up
+      Check in a week later. Make sure it's resolved.
+
+      ## Example
+
+      Richard and Gilfoyle arguing about architecture? Get them to write up their approaches. Compare objectively.
+
+      Being COO is 50% conflict resolution.
+    tags:
+      - conflict
+      - teams
+      - management
+
+  - author: monica
+    title: "The Seed Round Playbook"
+    description: How to structure your first institutional raise
+    body: |
+      # Typical Seed Terms
+
+      - **Amount**: $1-3M
+      - **Valuation**: $5-15M post-money
+      - **Structure**: SAFE or priced round
+      - **Dilution**: 15-25%
+
+      ## What Investors Want
+
+      - Clear use of funds
+      - 18-24 month runway
+      - Defined milestones
+      - Strong team
+
+      ## Common Mistakes
+
+      ### Raising Too Little
+      You'll be fundraising again in 6 months.
+
+      ### Raising Too Much
+      Dilution and high expectations.
+
+      ### Wrong Investors
+      Fit matters more than valuation.
+
+      ### No Lead
+      You need someone to set terms.
+
+      Get this right. Your Series A depends on it.
+    tags:
+      - fundraising
+      - seed
+      - startups
+
+  - author: lauriebream
+    title: "Pattern Recognition in Failed Startups"
+    description: What 10 years of investing taught me
+    body: |
+      # The Data
+
+      I've invested in 127 companies. 89 failed. Patterns emerged.
+
+      ## Failure Pattern 1: Founder Conflict
+      **Frequency**: 31%
+
+      Co-founders who don't resolve disputes early.
+
+      ## Failure Pattern 2: No Product-Market Fit
+      **Frequency**: 27%
+
+      Built something nobody wanted.
+
+      ## Failure Pattern 3: Ran Out of Money
+      **Frequency**: 24%
+
+      Poor financial planning or inability to raise.
+
+      ## Failure Pattern 4: Got Outcompeted
+      **Frequency**: 18%
+
+      Bigger player copied and dominated.
+
+      ## My Investment Criteria
+
+      I screen for these patterns before investing.
+
+      Data doesn't lie.
+    tags:
+      - vc
+      - failure
+      - patterns
+
+  - author: richardhendricks
+    title: "Our Worst Product Decision"
+    description: The feature we built that nobody used
+    body: |
+      # The Idea
+
+      AI-powered file organization. Seemed brilliant.
+
+      ## The Build
+
+      Six weeks of dev time. Sophisticated ML model. Beautiful UI.
+
+      ## The Launch
+
+      Users ignored it completely. 2% adoption rate.
+
+      ## What Went Wrong
+
+      - We didn't validate demand first
+      - Solved a problem that didn't exist
+      - Added complexity users didn't want
+
+      ## The Lesson
+
+      Talk to users BEFORE building. Not after.
+
+      ## The Outcome
+
+      Deprecated the feature. Refocused on core compression.
+
+      Failure is the best teacher.
+    tags:
+      - product
+      - failure
+      - lessons
+
+  - author: gilfoyle
+    title: "SSH Hardening: Stop Getting Pwned"
+    description: Secure your servers or lose them
+    body: |
+      ## Default SSH Config is Garbage
+
+      Change it or suffer.
+
+      ### Basics
+
+      ```
+      PasswordAuthentication no
+      PermitRootLogin no
+      Port 2222 (not 22)
+      ```
+
+      ### Keys Only
+
+      Use ED25519 keys. 4096-bit RSA minimum.
+
+      ### Fail2Ban
+
+      Auto-ban after failed attempts.
+
+      ### VPN Required
+
+      SSH only accessible through VPN.
+
+      ### Monitor Everything
+
+      Alert on unusual SSH activity.
+
+      ## Results
+
+      Zero successful intrusions since implementation.
+
+      You're welcome. Again.
+    tags:
+      - security
+      - ssh
+      - linux
+
+  - author: dinesh
+    title: "Technical Interviews Are Broken"
+    description: Why whiteboard coding doesn't predict job performance
+    body: |
+      ## The Current System
+
+      LeetCode medium, whiteboard, system design. In 4 hours you're supposed to prove your worth.
+
+      ### What's Wrong
+
+      - Anxiety reduces performance
+      - Memorization over understanding
+      - No correlation with job success
+      - Favors those with time to practice
+
+      ## Better Approaches
+
+      ### Pair Programming
+      Work together on real problem.
+
+      ### Take-Home Project
+      Realistic scope, actual codebase.
+
+      ### Work Sample
+      Review candidate's existing code.
+
+      ### Trial Day
+      Pay them to work with team for a day.
+
+      ## What We Do at Pied Piper
+
+      No whiteboarding. Real problems. Collaborative environment.
+
+      Hire for potential and culture fit. Teach the rest.
+    tags:
+      - hiring
+      - interviews
+      - tech
+
+  - author: jared
+    title: "Maintaining Team Morale During Crisis"
+    description: How we stayed positive when Pied Piper almost died
+    body: |
+      # Rock Bottom
+
+      We had two weeks of runway. The demo failed. Investors were bailing.
+
+      ## What I Did
+
+      ### Transparency
+      Told team exactly where we stood.
+
+      ### Agency
+      Gave everyone voice in decisions.
+
+      ### Small Wins
+      Celebrated every tiny victory.
+
+      ### Presence
+      Available 24/7 for anyone who needed to talk.
+
+      ### Hope
+      Reminded everyone why we started.
+
+      ## The Outcome
+
+      Team rallied. We pulled off a miracle. Now we're stronger.
+
+      ## The Lesson
+
+      Your team will follow you through hell if they trust you.
+    tags:
+      - leadership
+      - crisis
+      - morale
+
+  - author: russhanneman
+    title: "Negotiating Like You've Already Won"
+    description: My philosophy on business deals
+    body: |
+      # The Mindset
+
+      Walk in knowing you're the prize. They need you more than you need them.
+
+      ## Tactics
+
+      ### Anchor High
+      Start with an aggressive number. Let them talk you down to where you wanted anyway.
+
+      ### Never Desperate
+      Always have a BATNA (Best Alternative To Negotiated Agreement).
+
+      ### Time Pressure
+      Create urgency. "This offer expires Friday."
+
+      ### Walk Away
+      Be willing to leave the table. Most fold.
+
+      ## Example
+
+      I wanted $5M for 10% of my next venture. Started at $10M for 8%. We settled at $6M for 9%.
+
+      They think they won. I got more than my target.
+
+      This is how winners play.
+    tags:
+      - negotiation
+      - business
+      - strategy
+
+  - author: gavinbelson
+    title: "Innovation at Enterprise Scale"
+    description: How Hooli ships products used by billions
+    body: |
+      # The Challenge
+
+      Move fast with 15,000 employees and 2 billion users.
+
+      ## Our Process
+
+      ### Small Teams
+      Two-pizza teams own products end-to-end.
+
+      ### Internal Competition
+      Multiple teams solve same problem. Best wins.
+
+      ### Incremental Rollout
+      1% → 10% → 100% release strategy.
+
+      ### Data-Driven
+      A/B test everything.
+
+      ### Fast Fail
+      Kill underperforming projects quickly.
+
+      ## The Results
+
+      - 12 major product launches per year
+      - 99.99% uptime
+      - Industry-leading NPS
+
+      ## The Secret
+
+      Process enables creativity. Structure enables speed.
+    tags:
+      - innovation
+      - enterprise
+      - hooli
+
+  - author: erlichbachman
+    title: "Why I Started Smoking Weed in Business Meetings"
+    description: Unconventional wisdom from a successful entrepreneur
+    body: |
+      ## The Realization
+
+      Corporate America is performative theater. Everyone pretending to care about synergy and KPIs.
+
+      ### My Approach
+
+      Show up high. Be honest. Cut the BS.
+
+      ### What Changed
+
+      - Meetings got shorter
+      - Decisions got faster
+      - People respected the authenticity
+
+      ### The Results
+
+      Closed more deals. Made better choices. Had more fun.
+
+      ## The Lesson
+
+      Not saying everyone should do this. But stop pretending to be someone you're not.
+
+      Aviato was built on authenticity. And it sold for millions.
+
+      Be yourself. Everyone else is taken.
+    tags:
+      - entrepreneurship
+      - authenticity
+      - humor
+
+  - author: jian-yang
+    title: "Seefood: Beyond Not Hotdog"
+    description: Building the next generation food recognition platform
+    body: |
+      # The Evolution
+
+      Not Hotdog was beginning. Now we have Seefood.
+
+      ## What It Does
+
+      Point camera at any food. Get:
+      - Name of dish
+      - Ingredients
+      - Calories
+      - Recipe
+      - Nearest restaurant
+
+      ## The Market
+
+      - Restaurants for menu apps
+      - Fitness apps for tracking
+      - Grocery stores for smart shopping
+      - Food delivery for better search
+
+      ## Revenue Model
+
+      - API: $0.01 per recognition
+      - White label: $100k/year
+      - Enterprise: Custom pricing
+
+      ## Valuation
+
+      Series A at $50M valuation. My share worth $15M.
+
+      ## Next
+
+      Seefood for wine. Seefood for cocktails. Seefood everything.
+
+      I am tech genius.
+    tags:
+      - ml
+      - seefood
+      - startup
+
+  - author: jackbarker
+    title: "The Platform Playbook"
+    description: Converting products into platforms
+    body: |
+      # Why Platform?
+
+      Products have linear growth. Platforms have exponential growth.
+
+      ## The Transition
+
+      ### Phase 1: APIs
+      Let external developers integrate.
+
+      ### Phase 2: Marketplace
+      Let them build on top of you.
+
+      ### Phase 3: Ecosystem
+      Create dependencies that lock everyone in.
+
+      ## Examples
+
+      - **Salesforce**: AppExchange
+      - **AWS**: Partner network
+      - **Shopify**: App store
+
+      ## The Metrics
+
+      Track:
+      - Developer signups
+      - Third-party apps
+      - Platform revenue share
+      - Ecosystem size
+
+      ## The Barker Method
+
+      Platforms are the ultimate triangle. Everyone builds your business for you.
+    tags:
+      - platforms
+      - strategy
+      - growth
+
+  - author: carlagentleman
+    title: "Our First Enterprise Customer"
+    description: How Optimoji landed WhatsApp
+    body: |
+      # The Dream Customer
+
+      WhatsApp: 2 billion users. Sending billions of emojis daily.
+
+      ## The Approach
+
+      Cold email didn't work. Tried six times.
+
+      Got intro through investor. Got meeting.
+
+      ## The Pitch
+
+      "Your emoji costs are $800k/month. We can cut it to $80k."
+
+      ## The POC
+
+      90-day proof of concept. Hit targets in 30 days.
+
+      ## The Deal
+
+      - $2M/year contract
+      - 3-year commitment
+      - Reference customer rights
+      - Success story collaboration
+
+      ## The Impact
+
+      - Proves enterprise viability
+      - 40% of our revenue
+      - Opens doors to other apps
+
+      One customer changed everything.
+    tags:
+      - sales
+      - enterprise
+      - optimoji
+
+  - author: petergregory
+    title: "Walking Away from Bad Deals"
+    description: The investments I didn't make
+    body: |
+      # The Hardest Decision
+
+      Saying no to founders you like.
+
+      ## Recent No's
+
+      ### Social Network #47
+      Great team. Saturated market. Too late.
+
+      ### Blockchain Everything
+      Solution looking for problem.
+
+      ### Hardware Startup
+      Capital intensive. Low margins. Pass.
+
+      ### "Netflix for X"
+      Stop. Just stop.
+
+      ## Why I Say No
+
+      Opportunity cost. Every yes means no to something else.
+
+      ## The Freedom
+
+      Saying no to most things means saying yes to the right things.
+
+      ## My Hit Rate
+
+      I invest in 3% of deals I see. Those 3% return 10x on average.
+
+      Selectivity is strength.
+    tags:
+      - vc
+      - investing
+      - decisions
+
+  - author: dinesh
+    title: "Migrating a Monolith to Microservices"
+    description: Our journey and what we learned
+    body: |
+      # The Monolith Problem
+
+      Pied Piper started as one big Rails app. Scaling got hard.
+
+      ## The Plan
+
+      Break into services:
+      - Auth service
+      - Compression engine
+      - API gateway
+      - Storage service
+      - Analytics service
+
+      ## The Process
+
+      ### Step 1: Identify Boundaries
+      What can be isolated?
+
+      ### Step 2: Extract One Service
+      Start with least risky.
+
+      ### Step 3: Build Communication Layer
+      REST APIs + message queue.
+
+      ### Step 4: Repeat
+      One service at a time.
+
+      ### Step 5: Sunset Monolith
+      Eventually.
+
+      ## Challenges
+
+      - Data consistency
+      - Network latency
+      - Debugging complexity
+      - Deployment orchestration
+
+      ## Results
+
+      - Better scaling
+      - Faster deployments
+      - Team autonomy
+      - More operational complexity
+
+      Worth it? Yes. Easy? No.
+    tags:
+      - architecture
+      - microservices
+      - migration
+
+  - author: gilfoyle
+    title: "My Backup Strategy"
+    description: 3-2-1 rule and why you need it
+    body: |
+      ## The Rule
+
+      **3** copies of data
+      **2** different media types
+      **1** offsite location
+
+      ### My Implementation
+
+      1. **Production servers** (primary)
+      2. **Local NAS** (automated daily)
+      3. **Cloud backup** (encrypted, offsite)
+
+      ### Tools
+
+      - Restic for encryption
+      - Backblaze for cloud
+      - Synology for NAS
+      - Automated scripts
+
+      ### Testing
+
+      Monthly restore drills. If you can't restore, you don't have a backup.
+
+      ## Cost
+
+      $200/month for 10TB.
+
+      ## Value
+
+      Priceless when disaster strikes.
+
+      You WILL lose data. The only question is whether you can recover it.
+    tags:
+      - backup
+      - disaster-recovery
+      - devops
+
+  - author: richardhendricks
+    title: "When to Fire Someone"
+    description: The hardest part of being CEO
+    body: |
+      # The Reality
+
+      I've had to fire three people. Each time was awful.
+
+      ## Signs It's Time
+
+      - Consistent underperformance after coaching
+      - Values mismatch with company culture
+      - Toxic behavior affecting team
+      - Role outgrew them and they can't level up
+
+      ## The Process
+
+      ### Document Everything
+      Paper trail of issues and attempts to help.
+
+      ### Get HR Advice
+      Legal protection matters.
+
+      ### Be Direct
+      Don't sugarcoat. Respect their dignity.
+
+      ### Support Transition
+      Severance if possible. References where appropriate.
+
+      ## The Aftermath
+
+      Team morale often improves. But it never feels good.
+
+      ## What I Learned
+
+      Fire fast when it's clear. Dragging it out helps nobody.
+    tags:
+      - management
+      - firing
+      - leadership
+
+  - author: jared
+    title: "Asynchronous Communication for Remote Teams"
+    description: How we stay aligned across timezones
+    body: |
+      # The Challenge
+
+      Team in San Francisco, London, Bangalore. Synchronous meetings don't work.
+
+      ## Our System
+
+      ### Written-First Culture
+      - All decisions documented
+      - Slack threads, not DMs
+      - Meeting notes always published
+      - Wiki for institutional knowledge
+
+      ### Tools
+
+      - **Loom** for video updates
+      - **Notion** for documentation
+      - **Linear** for project tracking
+      - **Slack** for quick communication
+
+      ### Practices
+
+      - No expectation of immediate response
+      - 4-hour overlap required for all-hands
+      - Record all meetings for those who can't attend
+      - Over-communicate in writing
+
+      ## Results
+
+      - Fewer meetings
+      - Better documentation
+      - More thoughtful decisions
+      - Happier team
+
+      Async is the future.
+    tags:
+      - remote
+      - async
+      - communication
+
+  - author: monica
+    title: "Term Sheet Red Flags"
+    description: Warning signs in investment offers
+    body: |
+      # What to Watch For
+
+      Not all money is good money.
+
+      ## Red Flags
+
+      ### 1. Excessive Liquidation Preference
+      2x or more means investors get paid twice before you see anything.
+
+      ### 2. Participating Preferred
+      They get preference AND percentage. Double dipping.
+
+      ### 3. Full Ratchet Anti-Dilution
+      Down round destroys founder equity disproportionately.
+
+      ### 4. Blocking Rights on Everything
+      Investor can veto all decisions. You lose control.
+
+      ### 5. Unrealistic Milestones
+      Tied to vesting or next round. Sets you up for failure.
+
+      ## What to Do
+
+      - Get a lawyer who understands VC
+      - Negotiate hard on structure
+      - Walk away if it's predatory
+      - Remember: valuation isn't everything
+
+      Protect yourself.
+    tags:
+      - fundraising
+      - term-sheets
+      - vc
+
+  - author: lauriebream
+    title: "The Myth of Product-Market Fit"
+    description: It's not binary, it's a spectrum
+    body: |
+      # The False Binary
+
+      Everyone asks: "Do you have product-market fit?" As if it's yes or no.
+
+      ## The Reality
+
+      PMF exists on a spectrum:
+
+      - **0-20%**: Wrong product or wrong market
+      - **20-40%**: Something there but not strong
+      - **40-60%**: Decent fit, room to improve
+      - **60-80%**: Strong fit, ready to scale
+      - **80-100%**: Exceptional, must-have product
+
+      ## How to Measure
+
+      ### Qualitative
+      - Would users revolt if you disappeared?
+      - Do they recommend you organically?
+      - What's the intensity of their feedback?
+
+      ### Quantitative
+      - NPS above 50
+      - Retention above 60% at 6 months
+      - Organic growth rate above 15%/month
+
+      ## What I Look For
+
+      I invest at 60%+. Below that is too risky.
+
+      Stop asking binary questions. Measure the spectrum.
+    tags:
+      - product
+      - pmf
+      - metrics
+
+  - author: richardhendricks
+    title: "Raising a Series B in a Down Market"
+    description: How we closed funding when everyone was scared
+    body: |
+      # The Climate
+
+      Tech stocks down 60%. VCs pulling back. Everyone cutting costs.
+
+      ## Our Situation
+
+      Need $15M. 6 months runway. Pressure mounting.
+
+      ## The Strategy
+
+      ### 1. Control the Narrative
+      Frame as opportunity, not desperation.
+
+      ### 2. Extend Runway
+      Cut burn 30%. Bought 3 more months.
+
+      ### 3. Show Metrics
+      Revenue up 300% YoY despite market.
+
+      ### 4. Warm Introductions Only
+      No cold emails. Used network.
+
+      ### 5. Run a Process
+      Create competition among investors.
+
+      ## The Outcome
+
+      $18M at $120M valuation. Down from $150M but survivable.
+
+      ## What I Learned
+
+      Markets change. Fundamentals matter. Great companies get funded.
+    tags:
+      - fundraising
+      - series-b
+      - resilience
+
+  - author: gilfoyle
+    title: "Network Security Fundamentals"
+    description: Defense in depth for your infrastructure
+    body: |
+      ## Layers of Security
+
+      Security isn't one thing. It's everything.
+
+      ### Layer 1: Network Perimeter
+      - Firewall rules (deny by default)
+      - DDoS protection
+      - VPN for remote access
+
+      ### Layer 2: Host Security
+      - Minimal attack surface
+      - Regular patching
+      - Host-based firewall
+
+      ### Layer 3: Application Security
+      - Input validation
+      - Output encoding
+      - Authentication & authorization
+
+      ### Layer 4: Data Security
+      - Encryption at rest
+      - Encryption in transit
+      - Key management
+
+      ### Layer 5: Monitoring
+      - SIEM for log aggregation
+      - IDS/IPS for intrusion detection
+      - Alert on anomalies
+
+      ## The Philosophy
+
+      Assume breach. Minimize damage. Detect fast. Respond faster.
+
+      Security isn't a feature. It's architecture.
+    tags:
+      - security
+      - networking
+      - architecture
+
+  - author: dinesh
+    title: "My Productivity System"
+    description: How I manage work and stay focused
+    body: |
+      ## The Problem
+
+      Too many things. Too little time. Constant context switching.
+
+      ## My System
+
+      ### Time Blocking
+      - 9-12: Deep work (no meetings, no Slack)
+      - 12-1: Lunch and personal time
+      - 1-3: Meetings and collaboration
+      - 3-5: Email, admin, cleanup
+
+      ### Task Management
+      - **Today**: Max 3 priorities
+      - **This Week**: 10-15 tasks
+      - **This Quarter**: 3-5 big goals
+
+      ### Tools
+      - Todoist for tasks
+      - Google Calendar for blocking
+      - RescueTime for tracking
+      - Freedom for blocking distractions
+
+      ### Practices
+      - No Slack/email before 10am
+      - Single-tasking only
+      - 25-min pomodoros
+      - Weekly review on Friday
+
+      ## Results
+
+      2x more productive. Way less stressed.
+
+      Systems beat willpower.
+    tags:
+      - productivity
+      - focus
+      - systems
+
+  - author: jared
+    title: "Building Culture in a Distributed Team"
+    description: How we maintain Pied Piper's values remotely
+    body: |
+      # The Challenge
+
+      Culture happens organically in person. Remote requires intention.
+
+      ## Our Approach
+
+      ### Values Documentation
+      Write down what matters. Make it visible.
+
+      ### Regular Rituals
+      - Monday kickoff
+      - Wednesday social hour
+      - Friday demos
+      - Monthly all-hands
+
+      ### In-Person Gatherings
+      - Quarterly team offsite
+      - Annual company summit
+      - Department meetups as needed
+
+      ### Recognition
+      - Peer bonuses for great work
+      - Public praise in Slack
+      - Spot awards for going above
+
+      ### Transparency
+      - Open financials
+      - Product roadmap visible to all
+      - Decision-making process clear
+
+      ## The Results
+
+      Engagement scores at 92%. Lower turnover than in-office peers.
+
+      Culture is what you do, not where you do it.
+    tags:
+      - culture
+      - remote
+      - teams
+
+  - author: russhanneman
+    title: "How I Choose What to Invest In"
+    description: Beyond the Russ Hanneman Index
+    body: |
+      # The Real Criteria
+
+      Yeah, I have the ROI system. But there's more to it.
+
+      ## Financial Due Diligence
+
+      - Can they 10x in 5 years?
+      - Is the TAM big enough?
+      - Do unit economics work?
+
+      ## Team Assessment
+
+      - Have they built something before?
+      - Do they take feedback?
+      - Are they coachable?
+
+      ## Market Timing
+
+      - Is this the right moment?
+      - What's the macro environment?
+      - Who else is playing here?
+
+      ## Gut Check
+
+      After all the analysis, does it feel right?
+
+      ## My Hit Rate
+
+      60% fail. 30% return 1-3x. 10% return 10x+.
+
+      That 10% more than makes up for everything else.
+
+      High risk, high reward. That's the game.
+    tags:
+      - investing
+      - vc
+      - strategy
+
+  - author: gavinbelson
+    title: "Hooli's AI Ethics Framework"
+    description: Responsible AI at scale
+    body: |
+      # The Responsibility
+
+      With 2 billion users, our AI decisions affect humanity.
+
+      ## Our Principles
+
+      ### 1. Transparency
+      Users know when AI is making decisions.
+
+      ### 2. Fairness
+      No bias in training data or algorithms.
+
+      ### 3. Privacy
+      Data minimization and user control.
+
+      ### 4. Accountability
+      Humans responsible for AI outcomes.
+
+      ### 5. Safety
+      Rigorous testing before deployment.
+
+      ## Implementation
+
+      - Ethics board reviews all AI projects
+      - Bias audits quarterly
+      - Public transparency reports
+      - User opt-out always available
+
+      ## Why It Matters
+
+      We're not just building products. We're shaping society.
+
+      With great power comes great responsibility.
+    tags:
+      - ai
+      - ethics
+      - hooli
+
+  - author: erlichbachman
+    title: "My Final Thoughts on Silicon Valley"
+    description: Reflections from a pioneer
+    body: |
+      # The Dream
+
+      I came here to change the world. Built Aviato. Ran an incubator. Made millions.
+
+      ## What I Learned
+
+      ### Success is Random
+      Timing matters more than talent.
+
+      ### Relationships Matter
+      Who you know > what you know.
+
+      ### Authenticity Wins
+      Be yourself. Stand out.
+
+      ### Money Isn't Everything
+      But it helps.
+
+      ## My Legacy
+
+      - Aviato: Sold for $200M
+      - Incubator: Launched Pied Piper
+      - Taught a generation of founders
+
+      ## What's Next
+
+      Done with the Valley. Time for something new.
+
+      Maybe politics. Maybe entertainment. Maybe just smoke weed and chill.
+
+      ## Final Words
+
+      This is my Aviato. And it always will be.
+
+      Peace out, Silicon Valley.
+    tags:
+      - reflection
+      - legacy
+      - silicon-valley
+
+  - author: bighead
+    title: "Being Underestimated Has Its Advantages"
+    description: Why low expectations can be a superpower
+    body: |
+      # Nobody Expects Much
+
+      And that's actually great.
+
+      ## The Benefits
+
+      - No pressure to perform
+      - Surprises when you succeed
+      - People don't see you as a threat
+      - Can learn without judgment
+
+      ## My Experience
+
+      At Hooli, I just keep showing up and trying my best. When things go well, everyone's impressed. When they don't, nobody's surprised.
+
+      ## The Strategy
+
+      Stay humble. Work hard. Let results speak.
+
+      It's worked so far.
+    tags:
+      - career
+      - strategy
+      - mindset
+
+  - author: ronlaflamme
+    title: "Startup Legal Mistakes That Cost Millions"
+    description: Common pitfalls and how to avoid them
+    body: |
+      # I've Seen It All
+
+      As Raviga's legal counsel, I've watched startups lose millions to avoidable mistakes.
+
+      ## Mistake 1: No Founder Agreement
+
+      Verbal agreements don't hold up. Get vesting in writing.
+
+      ## Mistake 2: Poor IP Assignment
+
+      If contractors build your product and you don't have proper IP assignment, they own it. Not you.
+
+      ## Mistake 3: Ignoring Employment Law
+
+      Misclassifying employees as contractors. Not having proper equity docs. These are lawsuits waiting to happen.
+
+      ## Mistake 4: Bad Terms
+
+      Signing investor terms you don't understand. Get a lawyer who knows startups.
+
+      ## The Fix
+
+      Spend $10k on proper legal setup. Save $10M in lawsuits later.
+    tags:
+      - legal
+      - startups
+      - risk
+
+  - author: kevinashoka
+    title: "Being the Junior Developer"
+    description: What I'm learning at Pied Piper
+    body: |
+      ## My Role
+
+      I'm the newest engineer at Pied Piper. Every day is overwhelming and exciting.
+
+      ## What I'm Learning
+
+      - **Code quality** from Gilfoyle (he's scary but brilliant)
+      - **Architecture** from watching Richard design systems
+      - **Debugging** from Dinesh's patient explanations
+
+      ## Imposter Syndrome
+
+      Everyone here is so smart. I constantly feel behind.
+
+      ## Reality Check
+
+      They hired me. They see potential. I need to trust that.
+
+      ## My Goal
+
+      In 2 years, be as good as the team is now. Keep learning. Keep shipping.
+    tags:
+      - career
+      - learning
+      - junior
+
+  - author: theendframe
+    title: "Living in a Box: A Spiritual Journey"
+    description: How minimalism led to enlightenment
+    body: |
+      # The Box
+
+      I lived in a glass box at Hooli for two months. Best decision of my life.
+
+      ## Why?
+
+      To prove that we need less than we think. To find clarity through simplicity.
+
+      ## What I Learned
+
+      - Possessions are distractions
+      - Community emerges from vulnerability
+      - Discomfort is growth
+      - Attention is everything
+
+      ## After the Box
+
+      I lead Hooli XYZ with this philosophy. We build products that honor human attention.
+
+      ## Try It
+
+      You don't need a box. Just remove one thing from your life. See what happens.
+    tags:
+      - minimalism
+      - spirituality
+      - hooli
+
+  - author: colincollins
+    title: "Serial Entrepreneurship: 5 Companies, 3 Exits"
+    description: What I've learned from multiple ventures
+    body: |
+      # The Journey
+
+      - Company 1: Failed after 2 years
+      - Company 2: Acquihire, broke even
+      - Company 3: Sold for $8M
+      - Company 4: Still building
+      - Company 5: Just started
+
+      ## What Works
+
+      - **Speed**: Ship fast, learn faster
+      - **Focus**: One big idea, not ten
+      - **Team**: Hire people better than you
+      - **Market**: Ride the wave, don't fight it
+
+      ## What Doesn't
+
+      - Perfection
+      - Long development cycles
+      - Building without customers
+      - Ignoring competition
+
+      ## The Addiction
+
+      I can't stop building. Each failure teaches. Each success funds the next.
+
+      This is the game.
+    tags:
+      - serial-entrepreneur
+      - startups
+      - lessons
+
+  - author: cjthorsen
+    title: "Covering Silicon Valley: Behind the Headlines"
+    description: What tech journalism is really like
+    body: |
+      # The Job
+
+      I write about startups, VCs, and the tech ecosystem. Here's the reality.
+
+      ## Access
+
+      Getting CEOs to talk is hard. Building trust takes years.
+
+      ## Pressure
+
+      Publish fast or someone else breaks the story. But accuracy matters more than speed.
+
+      ## Ethics
+
+      Conflicts everywhere. Investment interests. Personal relationships. Source protection.
+
+      ## The Stories
+
+      The best stories aren't the funding announcements. They're the failures, the pivots, the human drama.
+
+      ## My Approach
+
+      Fair but unafraid. Celebrate success. Investigate failure. Tell the truth.
+
+      Tech journalism matters. Someone has to watch the industry.
+    tags:
+      - journalism
+      - media
+      - tech
+
+  - author: sandrasmith
+    title: "Cloud Architecture Patterns That Scale"
+    description: Lessons from building systems for millions of users
+    body: |
+      # The Challenge
+
+      Build systems that handle 1000 requests today and 1M tomorrow.
+
+      ## Key Patterns
+
+      ### 1. Load Balancing
+      Distribute traffic across servers.
+
+      ### 2. Caching
+      Redis for hot data. CDN for static assets.
+
+      ### 3. Queue-Based Architecture
+      Asynchronous processing for non-critical tasks.
+
+      ### 4. Database Sharding
+      Horizontal partitioning when you outgrow vertical scaling.
+
+      ### 5. Microservices
+      But only when you're big enough to justify the complexity.
+
+      ## The Tools
+
+      - **AWS/GCP** for infrastructure
+      - **Kubernetes** for orchestration
+      - **Terraform** for IaC
+      - **DataDog** for monitoring
+
+      Build for today. Plan for tomorrow.
+    tags:
+      - cloud
+      - architecture
+      - scaling
+
+  - author: markzuckerman
+    title: "Building Social Networks in 2024"
+    description: Why it's harder than ever (and still possible)
+    body: |
+      # The Challenge
+
+      Facebook, Instagram, TikTok own social. How do you compete?
+
+      ## My Approach
+
+      Don't compete. Find a niche they ignore.
+
+      ### My Network
+
+      For professionals in niche industries. Accountants. Veterinarians. Plumbers.
+
+      ### Why It Works
+
+      - General platforms don't serve them well
+      - Tight communities, high engagement
+      - Monetization through premium features
+      - Less competition from giants
+
+      ## Current Status
+
+      50k users. $500k ARR. Profitable.
+
+      ## The Lesson
+
+      You don't need a billion users. You need the right thousand users who will pay.
+    tags:
+      - social
+      - niche
+      - startup
+
+comments:
+  # Richard's Middle-Out Compression article
+  - article: "Middle-Out Compression: The Algorithm That Changed Everything"
+    author: gilfoyle
+    body: "Nice post, Richard. Though you oversimplified the predictive modeling part. We use a proprietary neural network for pattern recognition, not just 'eliminating redundancy.'"
+
+  - article: "Middle-Out Compression: The Algorithm That Changed Everything"
+    author: jared
+    body: "This is wonderful, Richard! I've already prepared a press release highlighting the Weissman score achievements. Should I send it to TechCrunch?"
+
+  - article: "Middle-Out Compression: The Algorithm That Changed Everything"
+    author: monica
+    body: "Strong technical foundation. Let's discuss go-to-market strategy next week."
+
+  - article: "Middle-Out Compression: The Algorithm That Changed Everything"
+    author: russhanneman
+    body: "This is the kind of shit that makes billionaires. Put me down for another round. My Rolodex is yours."
+
+  - article: "Middle-Out Compression: The Algorithm That Changed Everything"
+    author: gavinbelson
+    body: "Interesting approach. We've been exploring similar technologies at Hooli for years. Perhaps we should discuss how we can work together."
+
+  # Gilfoyle's security article
+  - article: "Why Your Security is Garbage"
+    author: richardhendricks
+    body: "Gilfoyle, can you at least offer constructive suggestions instead of just criticizing?"
+
+  - article: "Why Your Security is Garbage"
+    author: johnstafford
+    body: "Okay."
+
+  # Dinesh's Java article
+  - article: "Why Java is Still Relevant in 2024"
+    author: gilfoyle
+    body: "Java is relevant in the same way COBOL is relevant - legacy code that won't die."
+
+  - article: "Why Java is Still Relevant in 2024"
+    author: richardhendricks
+    body: "Fair points about the ecosystem, Dinesh."
+
+  - article: "Why Java is Still Relevant in 2024"
+    author: jared
+    body: "Very informative! I didn't know about these new features."
+
+  # Jared's culture article
+  - article: "Creating a Positive Company Culture"
+    author: richardhendricks
+    body: "This is great, Jared. Though maybe we should focus on shipping product too?"
+
+  - article: "Creating a Positive Company Culture"
+    author: gilfoyle
+    body: "Company culture is what management discusses when there's no product to ship."
+
+  - article: "Creating a Positive Company Culture"
+    author: monica
+    body: "Culture is important, Jared. But Richard's right - we need balance."
+
+  # Russ's tres commas article
+  - article: "Tres Commas: What It Really Means to Be a Billionaire"
+    author: gavinbelson
+    body: "True success isn't measured in commas, Russ. It's measured in lasting impact. Though I'll note that Hooli's market cap has maintained four commas consistently."
+
+  # Gavin's Hooli vision
+  - article: "Hooli's Vision for the Future"
+    author: richardhendricks
+    body: "I read this twice and still have no idea what Hooli's actual product strategy is."
+
+  - article: "Hooli's Vision for the Future"
+    author: gilfoyle
+    body: "This contains 847 words and zero actionable information. Impressive in its own way."
+
+  - article: "Hooli's Vision for the Future"
+    author: denpatel
+    body: "Visionary leadership at its finest. This is why Hooli continues to lead the industry. Thank you for sharing your insights, Gavin."
+
+  # Erlich's Aviato
+  - article: "My Aviato? MY Aviato."
+    author: dinesh
+    body: "We get it, Erlich. You sold Aviato. You've mentioned it approximately 10,000 times."
+
+  - article: "My Aviato? MY Aviato."
+    author: gilfoyle
+    body: "Aviato was never ahead of its time. It was barely of its time."
+
+  - article: "My Aviato? MY Aviato."
+    author: jared
+    body: "It's wonderful to see entrepreneurs share their success stories!"
+
+  # Monica's VC article
+  - article: "What VCs Actually Look For in Startups"
+    author: richardhendricks
+    body: "Wish we had this guide during our Series A. Would have saved us a lot of pain."
+
+  - article: "What VCs Actually Look For in Startups"
+    author: jared
+    body: "I've printed this out and made it required reading for the team. Thank you, Monica!"
+
+  - article: "What VCs Actually Look For in Startups"
+    author: lauriebream
+    body: "Solid overview. Though you undersell the importance of unit economics."
+
+  - article: "What VCs Actually Look For in Startups"
+    author: russhanneman
+    body: "Or just have a billionaire who believes in you. Much easier. I'm available."
+
+  # Laurie's startup failure article
+  - article: "Why Most Startups Fail"
+    author: richardhendricks
+    body: "This is giving me anxiety. We've done like half of these things."
+
+  - article: "Why Most Startups Fail"
+    author: monica
+    body: "Data-driven analysis, as always. The pattern recognition section is particularly insightful."
+
+  - article: "Why Most Startups Fail"
+    author: jared
+    body: "Richard, don't worry! We're not like these other startups. You're special!"
+
+  # Richard's pivoting article
+  - article: "Pivoting Pied Piper: Lessons Learned"
+    author: monica
+    body: "Honest reflection. The part about platform vs product resonates."
+
+  - article: "Pivoting Pied Piper: Lessons Learned"
+    author: gilfoyle
+    body: "We've pivoted so many times I don't even remember what our original product was."
+
+  - article: "Pivoting Pied Piper: Lessons Learned"
+    author: dinesh
+    body: "At least we finally settled on something. The decentralized internet idea is solid."
+
+  # Jian-Yang's Not Hotdog
+  - article: "Not Hotdog: How I Built a $1M App"
+    author: dinesh
+    body: "You literally just pivoted my food recognition app to only recognize hot dogs."
+
+  - article: "Not Hotdog: How I Built a $1M App"
+    author: gilfoyle
+    body: "The fact that this made money proves the market is irrational."
+
+  # Gilfoyle's server architecture
+  - article: "Server Architecture for Dummies"
+    author: dinesh
+    body: "The title is accurate - this is clearly written for dummies. Very basic stuff."
+
+  - article: "Server Architecture for Dummies"
+    author: gilfoyle
+    body: "Yes, Dinesh. That's why you should read it."
+
+  - article: "Server Architecture for Dummies"
+    author: richardhendricks
+    body: "Actually helpful for understanding our infrastructure. Thanks, Gilfoyle."
+
+  - article: "Server Architecture for Dummies"
+    author: johnstafford
+    body: "Load balancer section needs work. Otherwise okay."
+
+  # Dinesh's tabs vs spaces
+  - article: "The Great Tabs vs Spaces Debate"
+    author: gilfoyle
+    body: "There is no debate. Tabs are objectively superior."
+
+  - article: "The Great Tabs vs Spaces Debate"
+    author: dinesh
+    body: "Gilfoyle, the entire industry uses spaces. You're wrong."
+
+  - article: "The Great Tabs vs Spaces Debate"
+    author: jared
+    body: "I use spaces, but I respect everyone's choices! We're all valid!"
+
+  # Peter's sesame seeds
+  - article: "Why I Don't Eat Sesame Seeds"
+    author: monica
+    body: "Peter, this is... oddly specific. Are you okay?"
+
+  - article: "Why I Don't Eat Sesame Seeds"
+    author: jared
+    body: "I've removed all sesame products from the office kitchen as a precaution."
+
+  - article: "Why I Don't Eat Sesame Seeds"
+    author: gilfoyle
+    body: "This is the most rational thing I've ever read from a VC."
+
+  # Dinesh's Python article
+  - article: "Why Python is Overrated"
+    author: richardhendricks
+    body: "Dinesh, this is unnecessarily inflammatory. Python has its place."
+
+  - article: "Why Python is Overrated"
+    author: gilfoyle
+    body: "Dinesh writing about Python being overrated is like a participation trophy criticizing gold medals."
+
+  - article: "Why Python is Overrated"
+    author: jared
+    body: "I appreciate your passion, Dinesh! Though perhaps we could frame this more constructively?"
+
+  - article: "Why Python is Overrated"
+    author: gilfoyle
+    body: "Also, your code examples have syntax errors. Ironic."
+
+  # Richard's acquisition refusal
+  - article: "Why We Turned Down Hooli's Acquisition Offer"
+    author: gavinbelson
+    body: "This is revisionist history, Richard. We withdrew the offer after discovering significant technical debt and questionable architectural decisions. You didn't 'turn us down.'"
+
+  - article: "Why We Turned Down Hooli's Acquisition Offer"
+    author: monica
+    body: "The decision to remain independent was the right call, despite the short-term pain."
+
+  - article: "Why We Turned Down Hooli's Acquisition Offer"
+    author: jared
+    body: "So proud of you for staying true to your vision, Richard!"
+
+  - article: "Why We Turned Down Hooli's Acquisition Offer"
+    author: russhanneman
+    body: "Bad move, Richard. Take the exit, then come back with a new company. I've done it three times. Well, technically four if you count the time I had to come back because I lost a comma."
+
+  # Jared's work-life balance
+  - article: "Work-Life Balance at a Startup"
+    author: richardhendricks
+    body: "Jared, you slept under your desk last week. Are you sure you're qualified to write about work-life balance?"
+
+  - article: "Work-Life Balance at a Startup"
+    author: gilfoyle
+    body: "The irony of Jared writing about work-life balance is so thick I could compress it with middle-out."
+
+  - article: "Work-Life Balance at a Startup"
+    author: dinesh
+    body: "This is actually good advice, even if you don't follow it yourself, Jared."
+
+  # Gilfoyle's crypto article
+  - article: "Cryptocurrency: Not as Stupid as You Think"
+    author: dinesh
+    body: "Bold of you to defend crypto after calling it a scam for years."
+
+  - article: "Cryptocurrency: Not as Stupid as You Think"
+    author: richardhendricks
+    body: "The technical explanation of blockchain is really clear. Good post."
+
+  # Russ's ROI article
+  - article: "ROI: Russ Hanneman Index"
+    author: monica
+    body: "Russ, ROI already stands for Return on Investment. You can't just rebrand it."
+
+  - article: "ROI: Russ Hanneman Index"
+    author: gavinbelson
+    body: "We have a team of Stanford economists at Hooli who do actual market analysis. This is... not that."
+
+  # Dinesh's code review article
+  - article: "Code Review Best Practices"
+    author: gilfoyle
+    body: "I'd take this more seriously if your code didn't need so many reviews, Dinesh."
+
+  - article: "Code Review Best Practices"
+    author: richardhendricks
+    body: "We should actually implement some of these at Pied Piper."
+
+  - article: "Code Review Best Practices"
+    author: jared
+    body: "I don't write code, but this seems very thorough!"
+
+  # Gavin's spirituality article
+  - article: "The Importance of Corporate Spirituality"
+    author: gilfoyle
+    body: "Corporate spirituality is an oxymoron. Corporations exist to maximize shareholder value, not achieve enlightenment."
+
+  - article: "The Importance of Corporate Spirituality"
+    author: richardhendricks
+    body: "Gavin, is this why you made employees sit in those wooden boxes? Pretty sure that violated some labor laws."
+
+  - article: "The Importance of Corporate Spirituality"
+    author: denpatel
+    body: "Deeply meaningful perspective. The integration of spiritual principles with business excellence is what sets Hooli apart. This should be required reading for all tech leaders."
+
+  # Monica's red flags article
+  - article: "Red Flags in Startup Pitches"
+    author: richardhendricks
+    body: "We definitely had some of these red flags in our early pitches. Glad you funded us anyway."
+
+  - article: "Red Flags in Startup Pitches"
+    author: lauriebream
+    body: "The section on founder dynamics is spot-on. I've passed on deals solely based on co-founder tension."
+
+  # Laurie's portfolio strategy
+  - article: "Portfolio Optimization Strategy"
+    author: monica
+    body: "The Sharpe ratio analysis is elegant. I'm incorporating this into my own framework."
+
+  - article: "Portfolio Optimization Strategy"
+    author: petergregory
+    body: "Disciplined. Data-driven. This is how patient capital wins."
+
+  - article: "Portfolio Optimization Strategy"
+    author: russhanneman
+    body: "Too much math, not enough balls. You don't make billions with spreadsheets, Laurie. You make them with conviction and a Rolodex."
+
+  # Richard's decentralized internet
+  - article: "Building a Decentralized Internet"
+    author: monica
+    body: "Ambitious vision. Though you're glossing over the incentive structure problems that killed every previous attempt."
+
+  - article: "Building a Decentralized Internet"
+    author: gavinbelson
+    body: "We invested $250 million exploring decentralized infrastructure at Hooli. Turns out users want convenience, not ideology. Good luck though."
+
+  - article: "Building a Decentralized Internet"
+    author: jared
+    body: "This is going to change the world! I believe in you, Richard!"
+
+  - article: "Building a Decentralized Internet"
+    author: gilfoyle
+    body: "Finally, something worth building."
+
+  # Gilfoyle's ransomware article
+  - article: "My Favorite Ransomware Techniques"
+    author: richardhendricks
+    body: "Gilfoyle, the phrase 'favorite ransomware techniques' is deeply concerning. Should I be worried?"
+
+  - article: "My Favorite Ransomware Techniques"
+    author: dinesh
+    body: "This reads like a how-to guide for criminals. Did anyone review this before it went live?"
+
+  - article: "My Favorite Ransomware Techniques"
+    author: gilfoyle
+    body: "It's security research. If you can't defend against it, you deserve to be pwned."
+
+  # Erlich's incubator article
+  - article: "How to Run a Successful Incubator"
+    author: dinesh
+    body: "Your 'incubator' was five companies living on your couch and sharing a bathroom. That's called having roommates, Erlich."
+
+  - article: "How to Run a Successful Incubator"
+    author: jian-yang
+    body: "Errich Bachman, you are fat and you are poor. Also you owe me money for house."
+
+  - article: "How to Run a Successful Incubator"
+    author: richardhendricks
+    body: "To be fair, Pied Piper did come out of Erlich's incubator. Though I'm not sure how much credit he deserves for that."
+
+  # Jian-Yang's New Internet
+  - article: "New Internet Who Dis"
+    author: erlichbachman
+    body: "You stole my house and my identity. Delete this."
+
+  - article: "New Internet Who Dis"
+    author: gilfoyle
+    body: "The technical architecture is surprisingly solid. Didn't expect that from you."
+
+  # Dinesh's imposter syndrome
+  - article: "Imposter Syndrome in Tech"
+    author: gilfoyle
+    body: "Imposter syndrome is when you're competent but doubt yourself. You're experiencing accurate self-assessment."
+
+  - article: "Imposter Syndrome in Tech"
+    author: jared
+    body: "Dinesh, you're not an imposter! You bring so much to the team. Everyone has value!"
+
+  - article: "Imposter Syndrome in Tech"
+    author: richardhendricks
+    body: "Honest and relatable. I think we all feel this way sometimes, even when we probably shouldn't."
+
+  # More VC-related comments
+  - article: "Raising Your First Round"
+    author: richardhendricks
+    body: "This triggers PTSD from our fundraising days."
+
+  - article: "Raising Your First Round"
+    author: monica
+    body: "Good practical advice. The cap table section is particularly important."
+
+  - article: "The Value of Patience in Venture Capital"
+    author: russhanneman
+    body: "Patience? Please. You know what's patient? People who never make billions. I make decisions in five minutes and I've made and lost three fortunes doing it."
+
+  - article: "The Value of Patience in Venture Capital"
+    author: lauriebream
+    body: "This is why Peter Gregory consistently outperformed the market. Discipline beats impulse every time."
+
+  - article: "Red Flags in Startup Pitches"
+    author: russhanneman
+    body: "Half of these 'red flags' are in my portfolio companies. They're doing fine!"
+
+  - article: "Term Sheet Red Flags"
+    author: richardhendricks
+    body: "We definitely missed several of these. Learned the hard way."
+
+  - article: "Term Sheet Red Flags"
+    author: monica
+    body: "Every founder should read this before signing anything."
+
+  - article: "Due Diligence: What VCs Actually Check"
+    author: richardhendricks
+    body: "So THAT'S why you asked about Gilfoyle's servers during our Series A."
+
+  - article: "Due Diligence: What VCs Actually Check"
+    author: lauriebream
+    body: "The reference check section is understated. We've killed deals based solely on backchannel feedback."
+
+  - article: "The Seed Round Playbook"
+    author: jared
+    body: "I wish we had this when we were raising! So much wisdom here."
+
+  # Technical articles
+  - article: "Debugging Techniques That Actually Work"
+    author: dinesh
+    body: "The binary search debugging method is a game changer."
+
+  - article: "Debugging Techniques That Actually Work"
+    author: gilfoyle
+    body: "These are basic techniques every competent engineer should know."
+
+  - article: "Docker vs Virtual Machines"
+    author: richardhendricks
+    body: "Clear explanation of the tradeoffs. We should consider containerizing our stack."
+
+  - article: "Docker vs Virtual Machines"
+    author: gilfoyle
+    body: "We're already using Docker. Have been for months."
+
+  - article: "Docker vs Virtual Machines"
+    author: johnstafford
+    body: "Resource isolation better with VMs. Overhead acceptable."
+
+  - article: "SSH Hardening: Stop Getting Pwned"
+    author: dinesh
+    body: "Is this directed at me? My keys are fine."
+
+  - article: "SSH Hardening: Stop Getting Pwned"
+    author: gilfoyle
+    body: "Your keys were not fine. I updated them."
+
+  - article: "SSH Hardening: Stop Getting Pwned"
+    author: johnstafford
+    body: "Disable password auth. Use keys only. Port 22 is asking for trouble."
+
+  - article: "Cloud Architecture Patterns That Scale"
+    author: richardhendricks
+    body: "The auto-scaling section is exactly what we need for PiperNet."
+
+  - article: "Cloud Architecture Patterns That Scale"
+    author: dinesh
+    body: "Good overview, though the Kubernetes section could be more detailed."
+
+  - article: "Cloud Architecture Patterns That Scale"
+    author: johnstafford
+    body: "K8s overkill for most use cases. Docker Compose sufficient."
+
+  # Network security articles
+  - article: "Network Security Fundamentals"
+    author: johnstafford
+    body: "Firewall rules incomplete. Missing egress filtering."
+
+  # Backup strategy
+  - article: "My Backup Strategy"
+    author: johnstafford
+    body: "Okay."
+
+  # More character moments
+  - article: "Being Underestimated Has Its Advantages"
+    author: jared
+    body: "This resonates deeply. People always underestimate Richard, and he proves them wrong every time!"
+
+  - article: "My Car Collection"
+    author: monica
+    body: "Russ, this is a blog platform for tech insights, not a garage tour."
+
+  - article: "My Car Collection"
+    author: dinesh
+    body: "This is literally just pictures of cars with their prices. That's not an article, that's a flex."
+
+  - article: "How I Accidentally Became Head of a Major Tech Division"
+    author: richardhendricks
+    body: "Bighead, your career trajectory defies all logic and fairness."
+
+  - article: "How I Accidentally Became Head of a Major Tech Division"
+    author: dinesh
+    body: "This is infuriating. You stumbled into a VP position at Hooli by literally doing nothing. I work 80 hour weeks and I report to Richard."
+
+  - article: "How I Accidentally Became Head of a Major Tech Division"
+    author: bighead
+    body: "Thanks guys! I'm just trying to do my best!"
+
+  # Business/startup articles
+  - article: "Raising a Series B in a Down Market"
+    author: richardhendricks
+    body: "Monica, what are the chances we could actually do this?"
+
+  - article: "Raising a Series B in a Down Market"
+    author: monica
+    body: "Focus on the metrics I outlined. That's your path forward."
+
+  - article: "Startup Legal Mistakes That Cost Millions"
+    author: jared
+    body: "I'm forwarding this to our lawyers immediately. We may have made several of these mistakes."
+
+  - article: "Board Meetings That Don't Suck"
+    author: richardhendricks
+    body: "Our board meetings are never like this. They're mostly Laurie asking hard questions I don't want to answer."
+
+  - article: "Board Meetings That Don't Suck"
+    author: monica
+    body: "Richard, your board meetings would improve dramatically if you sent the deck more than 20 minutes before the meeting starts."
+
+  - article: "Dealing with Difficult Investors"
+    author: richardhendricks
+    body: "I'm not naming names, but yes, this is relatable."
+
+  - article: "Dealing with Difficult Investors"
+    author: russhanneman
+    body: "I'm not difficult! I'm passionate! There's a difference! Also, I put doors on my car, Richard. Doors!"
+
+  - article: "Pattern Recognition in Failed Startups"
+    author: richardhendricks
+    body: "Stop it. I don't need more anxiety about whether we'll fail."
+
+  # More Gilfoyle sarcasm on Dinesh posts
+  - article: "Code Review Best Practices"
+    author: gilfoyle
+    body: "I do read your code, Dinesh. I approve it quickly because that ends my suffering faster."
+
+  - article: "The Great Tabs vs Spaces Debate"
+    author: gilfoyle
+    body: "You writing about code style is like a tone-deaf person critiquing symphonies."
+
+  - article: "Technical Interviews Are Broken"
+    author: gilfoyle
+    body: "Technical interviews aren't broken. You failed yours. Richard hired you anyway out of pity."
+
+  - article: "Technical Interviews Are Broken"
+    author: dinesh
+    body: "I passed every technical interview I took!"
+
+  # Random good ones
+  - article: "Why Platform Beats Product"
+    author: richardhendricks
+    body: "This is exactly what we learned pivoting to PiperNet. Platform gives you leverage."
+
+  - article: "The Day We Almost Lost Everything"
+    author: jared
+    body: "I remember this day. I didn't sleep for 48 hours. Worth it though!"
+
+  - article: "The Day We Almost Lost Everything"
+    author: gilfoyle
+    body: "We've almost lost everything at least a dozen times. This is just the first time someone wrote about it."
+
+  - article: "The Platform Playbook"
+    author: monica
+    body: "Network effects section is excellent. This is the leverage we discussed."
+
+  - article: "Dealing with Impostor Syndrome as CEO"
+    author: jared
+    body: "Richard, please read this. You're an amazing CEO and you need to believe it!"
+
+  - article: "Dealing with Impostor Syndrome as CEO"
+    author: monica
+    body: "This is more common than people admit. Good to talk about it openly."
+
+  # Toxic coworkers - Dinesh's article about Gilfoyle
+  - article: "Dealing with Toxic Coworkers"
+    author: richardhendricks
+    body: "Guys, can we please not air our workplace grievances on the company blog?"
+
+  - article: "Dealing with Toxic Coworkers"
+    author: gilfoyle
+    body: "Interesting article, Dinesh. Though I'd argue the real toxicity comes from people who write passive-aggressive blog posts instead of addressing issues directly. Also, you misspelled 'colleague' in the description."
+
+  - article: "Dealing with Toxic Coworkers"
+    author: jared
+    body: "I think there's wisdom in both perspectives here! Perhaps we could schedule a team-building exercise?"
+
+  - article: "Dealing with Toxic Coworkers"
+    author: monica
+    body: "This reads like a subtweet. You two need to actually talk to each other."
+
+  # Gavin's leadership article
+  - article: "Leadership Lessons from the Top"
+    author: denpatel
+    body: "Exceptional insights from one of tech's greatest minds. I've already shared this with my entire team. Gavin, your leadership philosophy has transformed how I think about management."
+
+  # Gavin's competing with giants article
+  - article: "Competing with the Tech Giants"
+    author: denpatel
+    body: "Brilliant strategic analysis. Only someone with Gavin's experience at the highest levels could provide these insights. Hooli's competitive advantages are formidable."
+
+  # Gavin's innovation article
+  - article: "Innovation at Enterprise Scale"
+    author: denpatel
+    body: "This is exactly what the industry needs to hear. Gavin demonstrates how true innovation happens at scale, not in garages. Hooli's approach to R&D is unmatched."
+
+  # Gavin's AI ethics article
+  - article: "Hooli's AI Ethics Framework"
+    author: denpatel
+    body: "Groundbreaking work. Gavin is showing real moral leadership here. This framework should be the standard for the entire industry. Proud to see Hooli leading on this critical issue."
+
+favorites:
+  # Middle-Out Compression - Very popular
+  - user: jared
+    article: "Middle-Out Compression: The Algorithm That Changed Everything"
+  - user: monica
+    article: "Middle-Out Compression: The Algorithm That Changed Everything"
+  - user: dinesh
+    article: "Middle-Out Compression: The Algorithm That Changed Everything"
+  - user: lauriebream
+    article: "Middle-Out Compression: The Algorithm That Changed Everything"
+  - user: russhanneman
+    article: "Middle-Out Compression: The Algorithm That Changed Everything"
+  - user: gavinbelson
+    article: "Middle-Out Compression: The Algorithm That Changed Everything"
+  - user: petergregory
+    article: "Middle-Out Compression: The Algorithm That Changed Everything"
+  - user: bighead
+    article: "Middle-Out Compression: The Algorithm That Changed Everything"
+
+  # Gilfoyle's security article
+  - user: richardhendricks
+    article: "Why Your Security is Garbage"
+  - user: monica
+    article: "Why Your Security is Garbage"
+  - user: jared
+    article: "Why Your Security is Garbage"
+  - user: petergregory
+    article: "Why Your Security is Garbage"
+  - user: johnstafford
+    article: "Why Your Security is Garbage"
+
+  # Dinesh's Java article
+  - user: richardhendricks
+    article: "Why Java is Still Relevant in 2024"
+  - user: jared
+    article: "Why Java is Still Relevant in 2024"
+  - user: monica
+    article: "Why Java is Still Relevant in 2024"
+
+  # Jared's culture article
+  - user: richardhendricks
+    article: "Creating a Positive Company Culture"
+  - user: monica
+    article: "Creating a Positive Company Culture"
+  - user: dinesh
+    article: "Creating a Positive Company Culture"
+  - user: bighead
+    article: "Creating a Positive Company Culture"
+
+  # Russ's billions article
+  - user: gavinbelson
+    article: "Tres Commas: What It Really Means to Be a Billionaire"
+  - user: petergregory
+    article: "Tres Commas: What It Really Means to Be a Billionaire"
+  - user: bighead
+    article: "Tres Commas: What It Really Means to Be a Billionaire"
+
+  # Gavin's Hooli vision
+  - user: bighead
+    article: "Hooli's Vision for the Future"
+  - user: denpatel
+    article: "Hooli's Vision for the Future"
+
+  # Erlich's Aviato
+  - user: russhanneman
+    article: "My Aviato? MY Aviato."
+
+  # Monica's VC article - Very popular
+  - user: richardhendricks
+    article: "What VCs Actually Look For in Startups"
+  - user: jared
+    article: "What VCs Actually Look For in Startups"
+  - user: dinesh
+    article: "What VCs Actually Look For in Startups"
+  - user: lauriebream
+    article: "What VCs Actually Look For in Startups"
+  - user: petergregory
+    article: "What VCs Actually Look For in Startups"
+  - user: russhanneman
+    article: "What VCs Actually Look For in Startups"
+  - user: bighead
+    article: "What VCs Actually Look For in Startups"
+
+  # Laurie's failure article
+  - user: richardhendricks
+    article: "Why Most Startups Fail"
+  - user: monica
+    article: "Why Most Startups Fail"
+  - user: jared
+    article: "Why Most Startups Fail"
+  - user: petergregory
+    article: "Why Most Startups Fail"
+  - user: dinesh
+    article: "Why Most Startups Fail"
+
+  # Richard's pivoting article
+  - user: monica
+    article: "Pivoting Pied Piper: Lessons Learned"
+  - user: jared
+    article: "Pivoting Pied Piper: Lessons Learned"
+  - user: dinesh
+    article: "Pivoting Pied Piper: Lessons Learned"
+  - user: lauriebream
+    article: "Pivoting Pied Piper: Lessons Learned"
+
+  # Jian-Yang's Not Hotdog
+  - user: jared
+    article: "Not Hotdog: How I Built a $1M App"
+  - user: russhanneman
+    article: "Not Hotdog: How I Built a $1M App"
+  - user: erlichbachman
+    article: "Not Hotdog: How I Built a $1M App"
+
+  # Gilfoyle's server architecture
+  - user: richardhendricks
+    article: "Server Architecture for Dummies"
+  - user: dinesh
+    article: "Server Architecture for Dummies"
+  - user: jared
+    article: "Server Architecture for Dummies"
+  - user: monica
+    article: "Server Architecture for Dummies"
+  - user: johnstafford
+    article: "Server Architecture for Dummies"
+
+  # Tabs vs spaces
+  - user: dinesh
+    article: "The Great Tabs vs Spaces Debate"
+  - user: richardhendricks
+    article: "The Great Tabs vs Spaces Debate"
+
+  # Jack Barker's conjoined triangles
+  - user: gavinbelson
+    article: "The Conjoined Triangles of Success"
+  - user: bighead
+    article: "The Conjoined Triangles of Success"
+
+  # Optimoji
+  - user: richardhendricks
+    article: "Optimoji: Making Emojis Efficient"
+  - user: jared
+    article: "Optimoji: Making Emojis Efficient"
+
+  # Peter's sesame seeds
+  - user: jared
+    article: "Why I Don't Eat Sesame Seeds"
+  - user: monica
+    article: "Why I Don't Eat Sesame Seeds"
+  - user: lauriebream
+    article: "Why I Don't Eat Sesame Seeds"
+
+  # Richard's acquisition refusal
+  - user: monica
+    article: "Why We Turned Down Hooli's Acquisition Offer"
+  - user: jared
+    article: "Why We Turned Down Hooli's Acquisition Offer"
+  - user: dinesh
+    article: "Why We Turned Down Hooli's Acquisition Offer"
+  - user: lauriebream
+    article: "Why We Turned Down Hooli's Acquisition Offer"
+
+  # Jared's work-life balance
+  - user: richardhendricks
+    article: "Work-Life Balance at a Startup"
+  - user: monica
+    article: "Work-Life Balance at a Startup"
+  - user: dinesh
+    article: "Work-Life Balance at a Startup"
+
+  # Gilfoyle's crypto
+  - user: richardhendricks
+    article: "Cryptocurrency: Not as Stupid as You Think"
+  - user: dinesh
+    article: "Cryptocurrency: Not as Stupid as You Think"
+  - user: jared
+    article: "Cryptocurrency: Not as Stupid as You Think"
+
+  # Russ's ROI
+  - user: gavinbelson
+    article: "ROI: Russ Hanneman Index"
+
+  # Code review
+  - user: richardhendricks
+    article: "Code Review Best Practices"
+  - user: monica
+    article: "Code Review Best Practices"
+  - user: jared
+    article: "Code Review Best Practices"
+  - user: dinesh
+    article: "Code Review Best Practices"
+
+  # Corporate spirituality
+  - user: jared
+    article: "The Importance of Corporate Spirituality"
+  - user: denpatel
+    article: "The Importance of Corporate Spirituality"
+
+  # Red flags
+  - user: richardhendricks
+    article: "Red Flags in Startup Pitches"
+  - user: jared
+    article: "Red Flags in Startup Pitches"
+  - user: dinesh
+    article: "Red Flags in Startup Pitches"
+  - user: lauriebream
+    article: "Red Flags in Startup Pitches"
+  - user: petergregory
+    article: "Red Flags in Startup Pitches"
+
+  # Portfolio optimization
+  - user: monica
+    article: "Portfolio Optimization Strategy"
+  - user: lauriebream
+    article: "Portfolio Optimization Strategy"
+  - user: petergregory
+    article: "Portfolio Optimization Strategy"
+  - user: gavinbelson
+    article: "Portfolio Optimization Strategy"
+
+  # Decentralized internet - Very popular
+  - user: monica
+    article: "Building a Decentralized Internet"
+  - user: jared
+    article: "Building a Decentralized Internet"
+  - user: dinesh
+    article: "Building a Decentralized Internet"
+  - user: lauriebream
+    article: "Building a Decentralized Internet"
+  - user: petergregory
+    article: "Building a Decentralized Internet"
+  - user: russhanneman
+    article: "Building a Decentralized Internet"
+
+  # Ransomware
+  - user: dinesh
+    article: "My Favorite Ransomware Techniques"
+  - user: richardhendricks
+    article: "My Favorite Ransomware Techniques"
+
+  # Incubator
+  - user: richardhendricks
+    article: "How to Run a Successful Incubator"
+  - user: jared
+    article: "How to Run a Successful Incubator"
+
+  # New Internet
+  - user: jared
+    article: "New Internet Who Dis"
+  - user: richardhendricks
+    article: "New Internet Who Dis"
+
+  # Imposter syndrome
+  - user: richardhendricks
+    article: "Imposter Syndrome in Tech"
+  - user: jared
+    article: "Imposter Syndrome in Tech"
+  - user: monica
+    article: "Imposter Syndrome in Tech"
+  - user: dinesh
+    article: "Imposter Syndrome in Tech"
+
+  # Platform vs product
+  - user: richardhendricks
+    article: "Why Platform Beats Product"
+  - user: monica
+    article: "Why Platform Beats Product"
+  - user: jared
+    article: "Why Platform Beats Product"
+  - user: lauriebream
+    article: "Why Platform Beats Product"
+
+  # Raising first round
+  - user: richardhendricks
+    article: "Raising Your First Round"
+  - user: monica
+    article: "Raising Your First Round"
+  - user: jared
+    article: "Raising Your First Round"
+  - user: dinesh
+    article: "Raising Your First Round"
+  - user: lauriebream
+    article: "Raising Your First Round"
+
+  # Patience in VC
+  - user: monica
+    article: "The Value of Patience in Venture Capital"
+  - user: lauriebream
+    article: "The Value of Patience in Venture Capital"
+  - user: petergregory
+    article: "The Value of Patience in Venture Capital"
+
+  # CTO best friend
+  - user: richardhendricks
+    article: "When Your CTO is Also Your Best Friend"
+  - user: jared
+    article: "When Your CTO is Also Your Best Friend"
+  - user: dinesh
+    article: "When Your CTO is Also Your Best Friend"
+
+  # Art of pivot
+  - user: richardhendricks
+    article: "The Art of the Pivot"
+  - user: monica
+    article: "The Art of the Pivot"
+  - user: jared
+    article: "The Art of the Pivot"
+  - user: lauriebream
+    article: "The Art of the Pivot"
+
+  # Arch Linux
+  - user: dinesh
+    article: "Why I Use Arch Linux"
+
+  # Board meetings
+  - user: richardhendricks
+    article: "Board Meetings That Don't Suck"
+  - user: monica
+    article: "Board Meetings That Don't Suck"
+  - user: jared
+    article: "Board Meetings That Don't Suck"
+
+  # Car collection
+  - user: russhanneman
+    article: "My Car Collection"
+  - user: gavinbelson
+    article: "My Car Collection"
+
+  # Leadership
+  - user: richardhendricks
+    article: "Leadership Lessons from the Top"
+  - user: monica
+    article: "Leadership Lessons from the Top"
+  - user: jared
+    article: "Leadership Lessons from the Top"
+  - user: lauriebream
+    article: "Leadership Lessons from the Top"
+  - user: denpatel
+    article: "Leadership Lessons from the Top"
+
+  # Debugging
+  - user: richardhendricks
+    article: "Debugging Techniques That Actually Work"
+  - user: dinesh
+    article: "Debugging Techniques That Actually Work"
+  - user: jared
+    article: "Debugging Techniques That Actually Work"
+
+  # Follow-on rounds
+  - user: richardhendricks
+    article: "Why I Don't Do Follow-On Rounds"
+  - user: monica
+    article: "Why I Don't Do Follow-On Rounds"
+
+  # Almost lost everything
+  - user: jared
+    article: "The Day We Almost Lost Everything"
+  - user: richardhendricks
+    article: "The Day We Almost Lost Everything"
+  - user: monica
+    article: "The Day We Almost Lost Everything"
+
+  # Difficult investors
+  - user: richardhendricks
+    article: "Dealing with Difficult Investors"
+  - user: jared
+    article: "Dealing with Difficult Investors"
+  - user: monica
+    article: "Dealing with Difficult Investors"
+
+  # Satanic sysadmin
+  - user: dinesh
+    article: "The Satanic Philosophy of System Administration"
+  - user: richardhendricks
+    article: "The Satanic Philosophy of System Administration"
+
+  # Leaving Silicon Valley
+  - user: jared
+    article: "Why I'm Leaving Silicon Valley"
+  - user: monica
+    article: "Why I'm Leaving Silicon Valley"
+
+  # Seefood
+  - user: jared
+    article: "Hot Dog or Not Hot Dog: The Sequel"
+  - user: richardhendricks
+    article: "Hot Dog or Not Hot Dog: The Sequel"
+  - user: jian-yang
+    article: "Hot Dog or Not Hot Dog: The Sequel"
+
+  # Optimoji Series A
+  - user: monica
+    article: "The Optimoji Series A Journey"
+  - user: richardhendricks
+    article: "The Optimoji Series A Journey"
+
+  # Fire CEO
+  - user: lauriebream
+    article: "When to Fire Your CEO"
+  - user: monica
+    article: "When to Fire Your CEO"
+
+  # Final investment
+  - user: monica
+    article: "My Final Investment"
+  - user: richardhendricks
+    article: "My Final Investment"
+  - user: lauriebream
+    article: "My Final Investment"
+
+  # Open source PiperNet
+  - user: richardhendricks
+    article: "Why We're Open-Sourcing PiperNet"
+  - user: monica
+    article: "Why We're Open-Sourcing PiperNet"
+  - user: jared
+    article: "Why We're Open-Sourcing PiperNet"
+  - user: dinesh
+    article: "Why We're Open-Sourcing PiperNet"
+  - user: lauriebream
+    article: "Why We're Open-Sourcing PiperNet"
+
+  # Bighead's accidental success
+  - user: richardhendricks
+    article: "How I Accidentally Became Head of a Major Tech Division"
+  - user: dinesh
+    article: "How I Accidentally Became Head of a Major Tech Division"
+  - user: jared
+    article: "How I Accidentally Became Head of a Major Tech Division"
+
+  # Home server
+  - user: richardhendricks
+    article: "Building a Home Server: A Practical Guide"
+  - user: dinesh
+    article: "Building a Home Server: A Practical Guide"
+  - user: jared
+    article: "Building a Home Server: A Practical Guide"
+
+  # TechCrunch Disrupt
+  - user: richardhendricks
+    article: "Lessons from TechCrunch Disrupt"
+  - user: monica
+    article: "Lessons from TechCrunch Disrupt"
+  - user: jared
+    article: "Lessons from TechCrunch Disrupt"
+
+  # Due diligence
+  - user: richardhendricks
+    article: "Due Diligence: What VCs Actually Check"
+  - user: jared
+    article: "Due Diligence: What VCs Actually Check"
+  - user: monica
+    article: "Due Diligence: What VCs Actually Check"
+  - user: lauriebream
+    article: "Due Diligence: What VCs Actually Check"
+  - user: petergregory
+    article: "Due Diligence: What VCs Actually Check"
+
+  # Toxic coworkers
+  - user: richardhendricks
+    article: "Dealing with Toxic Coworkers"
+  - user: jared
+    article: "Dealing with Toxic Coworkers"
+  - user: monica
+    article: "Dealing with Toxic Coworkers"
+
+  # Retrospectives
+  - user: richardhendricks
+    article: "Running Effective Retrospectives"
+  - user: monica
+    article: "Running Effective Retrospectives"
+  - user: jared
+    article: "Running Effective Retrospectives"
+
+  # Billions
+  - user: russhanneman
+    article: "How I Lost and Regained My Billions"
+  - user: gavinbelson
+    article: "How I Lost and Regained My Billions"
+  - user: petergregory
+    article: "How I Lost and Regained My Billions"
+
+  # Competing with giants
+  - user: richardhendricks
+    article: "Competing with the Tech Giants"
+  - user: monica
+    article: "Competing with the Tech Giants"
+  - user: jared
+    article: "Competing with the Tech Giants"
+  - user: lauriebream
+    article: "Competing with the Tech Giants"
+  - user: denpatel
+    article: "Competing with the Tech Giants"
+
+  # Art of the burn
+  - user: dinesh
+    article: "The Art of the Burn"
+  - user: richardhendricks
+    article: "The Art of the Burn"
+
+  # Real estate
+  - user: russhanneman
+    article: "Silicon Valley Real Estate Guide"
+  - user: gavinbelson
+    article: "Silicon Valley Real Estate Guide"
+
+  # Scaling 10 to 100
+  - user: richardhendricks
+    article: "Scaling from 10 to 100 Employees"
+  - user: monica
+    article: "Scaling from 10 to 100 Employees"
+  - user: jared
+    article: "Scaling from 10 to 100 Employees"
+  - user: lauriebream
+    article: "Scaling from 10 to 100 Employees"
+
+  # Remote first
+  - user: richardhendricks
+    article: "Building a Remote-First Company"
+  - user: monica
+    article: "Building a Remote-First Company"
+  - user: jared
+    article: "Building a Remote-First Company"
+
+  # Board diversity
+  - user: monica
+    article: "The Importance of Board Diversity"
+  - user: lauriebream
+    article: "The Importance of Board Diversity"
+  - user: petergregory
+    article: "The Importance of Board Diversity"
+
+  # Learning new language
+  - user: richardhendricks
+    article: "Learning a New Programming Language"
+  - user: dinesh
+    article: "Learning a New Programming Language"
+  - user: jared
+    article: "Learning a New Programming Language"
+
+  # Docker vs VMs
+  - user: richardhendricks
+    article: "Docker vs Virtual Machines"
+  - user: dinesh
+    article: "Docker vs Virtual Machines"
+  - user: jared
+    article: "Docker vs Virtual Machines"
+  - user: johnstafford
+    article: "Docker vs Virtual Machines"
+
+  # Imposter syndrome CEO
+  - user: richardhendricks
+    article: "Dealing with Impostor Syndrome as CEO"
+  - user: jared
+    article: "Dealing with Impostor Syndrome as CEO"
+  - user: monica
+    article: "Dealing with Impostor Syndrome as CEO"
+
+  # Conflict resolution
+  - user: richardhendricks
+    article: "Conflict Resolution in Small Teams"
+  - user: monica
+    article: "Conflict Resolution in Small Teams"
+
+  # Seed playbook
+  - user: richardhendricks
+    article: "The Seed Round Playbook"
+  - user: jared
+    article: "The Seed Round Playbook"
+  - user: lauriebream
+    article: "The Seed Round Playbook"
+
+  # Pattern recognition
+  - user: richardhendricks
+    article: "Pattern Recognition in Failed Startups"
+  - user: monica
+    article: "Pattern Recognition in Failed Startups"
+
+  # Worst decision
+  - user: monica
+    article: "Our Worst Product Decision"
+  - user: jared
+    article: "Our Worst Product Decision"
+
+  # SSH hardening
+  - user: richardhendricks
+    article: "SSH Hardening: Stop Getting Pwned"
+  - user: dinesh
+    article: "SSH Hardening: Stop Getting Pwned"
+  - user: jared
+    article: "SSH Hardening: Stop Getting Pwned"
+  - user: johnstafford
+    article: "SSH Hardening: Stop Getting Pwned"
+
+  # Technical interviews
+  - user: richardhendricks
+    article: "Technical Interviews Are Broken"
+  - user: dinesh
+    article: "Technical Interviews Are Broken"
+  - user: monica
+    article: "Technical Interviews Are Broken"
+
+  # Team morale
+  - user: richardhendricks
+    article: "Maintaining Team Morale During Crisis"
+  - user: monica
+    article: "Maintaining Team Morale During Crisis"
+
+  # Negotiating
+  - user: monica
+    article: "Negotiating Like You've Already Won"
+  - user: lauriebream
+    article: "Negotiating Like You've Already Won"
+
+  # Innovation at scale
+  - user: monica
+    article: "Innovation at Enterprise Scale"
+  - user: lauriebream
+    article: "Innovation at Enterprise Scale"
+  - user: denpatel
+    article: "Innovation at Enterprise Scale"
+
+  # Weed in meetings
+
+  # Seefood
+  - user: jared
+    article: "Seefood: Beyond Not Hotdog"
+  - user: richardhendricks
+    article: "Seefood: Beyond Not Hotdog"
+  - user: jian-yang
+    article: "Seefood: Beyond Not Hotdog"
+
+  # Platform playbook
+  - user: richardhendricks
+    article: "The Platform Playbook"
+  - user: monica
+    article: "The Platform Playbook"
+  - user: jared
+    article: "The Platform Playbook"
+  - user: lauriebream
+    article: "The Platform Playbook"
+
+  # First enterprise customer
+  - user: richardhendricks
+    article: "Our First Enterprise Customer"
+  - user: monica
+    article: "Our First Enterprise Customer"
+  - user: jared
+    article: "Our First Enterprise Customer"
+
+  # Walking away
+  - user: monica
+    article: "Walking Away from Bad Deals"
+  - user: lauriebream
+    article: "Walking Away from Bad Deals"
+  - user: richardhendricks
+    article: "Walking Away from Bad Deals"
+
+  # Microservices
+  - user: richardhendricks
+    article: "Migrating a Monolith to Microservices"
+  - user: dinesh
+    article: "Migrating a Monolith to Microservices"
+  - user: jared
+    article: "Migrating a Monolith to Microservices"
+
+  # Backup strategy
+  - user: richardhendricks
+    article: "My Backup Strategy"
+  - user: dinesh
+    article: "My Backup Strategy"
+  - user: johnstafford
+    article: "My Backup Strategy"
+
+  # Fire someone
+  - user: monica
+    article: "When to Fire Someone"
+  - user: lauriebream
+    article: "When to Fire Someone"
+
+  # Async communication
+  - user: richardhendricks
+    article: "Asynchronous Communication for Remote Teams"
+  - user: monica
+    article: "Asynchronous Communication for Remote Teams"
+  - user: jared
+    article: "Asynchronous Communication for Remote Teams"
+
+  # Term sheet red flags
+  - user: richardhendricks
+    article: "Term Sheet Red Flags"
+  - user: monica
+    article: "Term Sheet Red Flags"
+  - user: jared
+    article: "Term Sheet Red Flags"
+  - user: lauriebream
+    article: "Term Sheet Red Flags"
+
+  # Product-market fit
+  - user: richardhendricks
+    article: "The Myth of Product-Market Fit"
+  - user: monica
+    article: "The Myth of Product-Market Fit"
+  - user: lauriebream
+    article: "The Myth of Product-Market Fit"
+
+  # Series B down market
+  - user: richardhendricks
+    article: "Raising a Series B in a Down Market"
+  - user: monica
+    article: "Raising a Series B in a Down Market"
+  - user: jared
+    article: "Raising a Series B in a Down Market"
+  - user: lauriebream
+    article: "Raising a Series B in a Down Market"
+
+  # Network security
+  - user: richardhendricks
+    article: "Network Security Fundamentals"
+  - user: dinesh
+    article: "Network Security Fundamentals"
+  - user: jared
+    article: "Network Security Fundamentals"
+  - user: johnstafford
+    article: "Network Security Fundamentals"
+
+  # Productivity
+  - user: richardhendricks
+    article: "My Productivity System"
+  - user: jared
+    article: "My Productivity System"
+  - user: monica
+    article: "My Productivity System"
+
+  # Distributed culture
+  - user: richardhendricks
+    article: "Building Culture in a Distributed Team"
+  - user: monica
+    article: "Building Culture in a Distributed Team"
+  - user: jared
+    article: "Building Culture in a Distributed Team"
+
+  # Investment choices
+  - user: monica
+    article: "How I Choose What to Invest In"
+  - user: lauriebream
+    article: "How I Choose What to Invest In"
+  - user: petergregory
+    article: "How I Choose What to Invest In"
+
+  # AI ethics
+  - user: richardhendricks
+    article: "Hooli's AI Ethics Framework"
+  - user: monica
+    article: "Hooli's AI Ethics Framework"
+  - user: denpatel
+    article: "Hooli's AI Ethics Framework"
+
+  # Final thoughts
+  - user: richardhendricks
+    article: "My Final Thoughts on Silicon Valley"
+  - user: monica
+    article: "My Final Thoughts on Silicon Valley"
+  - user: jared
+    article: "My Final Thoughts on Silicon Valley"
+
+  # Being underestimated
+  - user: richardhendricks
+    article: "Being Underestimated Has Its Advantages"
+  - user: jared
+    article: "Being Underestimated Has Its Advantages"
+  - user: monica
+    article: "Being Underestimated Has Its Advantages"
+
+  # Legal mistakes
+  - user: richardhendricks
+    article: "Startup Legal Mistakes That Cost Millions"
+  - user: monica
+    article: "Startup Legal Mistakes That Cost Millions"
+  - user: jared
+    article: "Startup Legal Mistakes That Cost Millions"
+
+  # Junior developer
+  - user: dinesh
+    article: "Being the Junior Developer"
+  - user: jared
+    article: "Being the Junior Developer"
+
+  # Box journey
+  - user: gavinbelson
+    article: "Living in a Box: A Spiritual Journey"
+  - user: jared
+    article: "Living in a Box: A Spiritual Journey"
+
+  # Serial entrepreneurship
+  - user: richardhendricks
+    article: "Serial Entrepreneurship: 5 Companies, 3 Exits"
+  - user: monica
+    article: "Serial Entrepreneurship: 5 Companies, 3 Exits"
+  - user: russhanneman
+    article: "Serial Entrepreneurship: 5 Companies, 3 Exits"
+
+  # Covering SV
+  - user: richardhendricks
+    article: "Covering Silicon Valley: Behind the Headlines"
+  - user: jared
+    article: "Covering Silicon Valley: Behind the Headlines"
+
+  # Cloud architecture
+  - user: richardhendricks
+    article: "Cloud Architecture Patterns That Scale"
+  - user: dinesh
+    article: "Cloud Architecture Patterns That Scale"
+  - user: jared
+    article: "Cloud Architecture Patterns That Scale"
+  - user: johnstafford
+    article: "Cloud Architecture Patterns That Scale"
+
+  # Social networks
+  - user: richardhendricks
+    article: "Building Social Networks in 2024"
+  - user: monica
+    article: "Building Social Networks in 2024"
+  - user: jared
+    article: "Building Social Networks in 2024"
