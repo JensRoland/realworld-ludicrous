@@ -1,0 +1,24 @@
+{
+    "name": "realworld/php-htmx",
+    "description": "RealWorld App with Vanilla PHP and HTMX",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\Lib\\": "lib/",
+            "App\\Models\\": "models/"
+        },
+        "files": [
+            "components/article-meta/controller.php",
+            "components/article-preview/controller.php",
+            "components/comment/controller.php",
+            "components/favorite-button/controller.php",
+            "components/follow-button/controller.php"
+        ]
+    },
+    "require": {
+        "erusev/parsedown": "^1.7",
+        "firebase/php-jwt": "^6.10",
+        "symfony/yaml": "^6.0",
+        "doctrine/dbal": "^4.3"
+    }
+}

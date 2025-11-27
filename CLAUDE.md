@@ -1,0 +1,309 @@
+# CLAUDE.md - Development Guide
+
+## Project Overview
+
+RealWorld example app (Medium.com clone) built with vanilla PHP 8.3 and HTMX. File-based routing with `[param]` syntax.
+
+## Quick Start
+
+```bash
+make setup     # Install dependencies + create SQLite database
+make serve     # Start Docker container at http://localhost:8082
+make seed      # Populate with test data from database/data/seed.yaml
+make clean     # Reset database
+```
+
+## Architecture
+
+### Directory Structure
+
+```text
+app/
+├── components/            # Reusable UI components
+│   ├── article-meta/      # Author avatar, name, date
+│   │   ├── controller.php # Logic and data preparation
+│   │   └── template.php   # Pure HTML presentation
+│   ├── article-preview/   # Article card for lists
+│   ├── comment/           # Comment card with delete
+│   ├── favorite-button/   # Favorite/unfavorite button
+│   └── follow-button/     # Follow/unfollow button
+├── pages/                 # File-based routing (URL = file path)
+│   ├── index.php          # GET /
+│   ├── login.php          # GET/POST /login
+│   ├── register.php       # GET/POST /register
+│   ├── settings.php       # GET/POST /settings
+│   ├── editor/
+│   │   ├── index.php      # GET/POST /editor (new article)
+│   │   └── [slug].php     # GET/POST /editor/{slug} (edit article)
+│   ├── article/
+│   │   └── [slug]/
+│   │       ├── index.php      # GET /article/{slug}
+│   │       ├── delete.php     # POST /article/{slug}/delete
+│   │       ├── favorite.php   # POST /article/{slug}/favorite
+│   │       ├── unfavorite.php # POST /article/{slug}/unfavorite
+│   │       ├── comments.php   # POST /article/{slug}/comments
+│   │       └── comment/
+│   │           └── [id].php   # DELETE /article/{slug}/comment/{id}
+│   └── profile/
+│       └── [username]/
+│           ├── index.php      # GET /profile/{username}
+│           ├── follow.php     # POST /profile/{username}/follow
+│           └── unfollow.php   # POST /profile/{username}/unfollow
+├── lib/                   # Framework core
+│   ├── Router.php         # File-based router with [param] support
+│   ├── Database.php       # Doctrine DBAL singleton
+│   ├── Auth.php           # JWT authentication
+│   ├── Security.php       # CSRF protection
+│   ├── View.php           # Template rendering + component support
+│   └── Config.php         # Environment configuration
+├── models/                # Data models
+│   ├── User.php
+│   ├── Article.php
+│   └── Comment.php
+├── templates/             # PHP view templates
+│   └── layout.php
+└── public/                # Web root
+    ├── index.php          # Entry point
+    ├── css/
+    ├── js/
+    └── fonts/
+
+database/                  # Database infrastructure
+├── database.sqlite        # SQLite database (default)
+├── schema.sql             # SQLite schema
+├── schema-mysql.sql       # MySQL schema
+├── schema-postgres.sql    # PostgreSQL schema
+├── seed.php               # Database seeder
+└── data/seed.yaml         # Test data
+```
+
+### File-Based Routing
+
+Routes are determined by file paths in `app/pages/`:
+
+| File                                  | Route                        |
+| ------------------------------------- | ---------------------------- |
+| `pages/index.php`                     | `/`                          |
+| `pages/login.php`                     | `/login`                     |
+| `pages/article/[slug]/index.php`      | `/article/{slug}`            |
+| `pages/profile/[username]/follow.php` | `/profile/{username}/follow` |
+
+Parameters in brackets become variables: `[slug].php` → `$slug` is available.
+
+### Page File Structure
+
+Each page handles its own HTTP methods:
+
+```php
+<?php
+use App\Lib\Auth;
+use App\Lib\View;
+use App\Models\Article;
+
+match ($request->method) {
+    'GET' => showPage(),
+    'POST' => handleSubmit(),
+    default => abort(405),
+};
+
+function showPage(): void {
+    View::renderLayout('template', ['data' => $value]);
+}
+```
+
+The `$request` object provides: `method`, `params`, `query`, `body`, `isHtmx`.
+
+### Components
+
+Reusable UI components in `app/components/`. Each has:
+
+- `controller.php` - Logic, data preparation, calls View::component()
+- `template.php` - Pure HTML with simple control flow only
+
+```php
+// Controller pattern
+namespace App\Components\FavoriteButton;
+
+use App\Lib\View;
+
+function render(array $article, bool $isFavorited): void
+{
+    $props = [
+        'slug' => $article['slug'],
+        'count' => $article['favoritesCount'],
+        'buttonClass' => $isFavorited ? 'btn-primary' : 'btn-outline-primary',
+        // ... all computed values
+    ];
+    View::component(__DIR__ . '/template.php', $props);
+}
+```
+
+```php
+// Usage in templates
+\App\Components\FavoriteButton\render($article, $isFavorited);
+\App\Components\Comment\render($comment, $articleSlug);
+\App\Components\ArticlePreview\render($article);
+```
+
+### Core Components
+
+- **Router** (`app/lib/Router.php`): File-based routing with `[param]` syntax. Auto-validates CSRF on non-GET.
+- **Database** (`app/lib/Database.php`): Doctrine DBAL singleton with SQLite optimizations.
+- **Auth** (`app/lib/Auth.php`): JWT-based authentication via httpOnly cookies.
+- **Security** (`app/lib/Security.php`): CSRF protection using HMAC-derived tokens.
+- **View** (`app/lib/View.php`): Template rendering with layout support and `View::component()` for components.
+
+## Database
+
+Default: SQLite at `database/database.sqlite`
+
+Configure via `.env`:
+
+```env
+DB_DRIVER=pdo_sqlite|pdo_mysql|pdo_pgsql
+DB_PATH=database/database.sqlite  # SQLite only
+DB_HOST=localhost                # MySQL/PostgreSQL
+DB_PORT=3306
+DB_NAME=realworld
+DB_USER=root
+DB_PASSWORD=
+```
+
+Tables: users, articles, tags, article_tags, comments, favorites, follows
+
+## Key Patterns
+
+### Adding a New Page
+
+Create a file in `app/pages/`:
+
+```php
+// app/pages/about.php -> GET /about
+<?php
+use App\Lib\View;
+
+View::renderLayout('about', ['title' => 'About Us']);
+```
+
+### Adding a Parameterized Route
+
+```php
+// app/pages/user/[id].php -> GET /user/{id}
+<?php
+use App\Models\User;
+
+$user = User::findById($id);  // $id is extracted from URL
+// ...
+```
+
+### Adding a Component
+
+Create `app/components/{name}/controller.php` and `template.php`:
+
+```php
+// controller.php
+namespace App\Components\MyComponent;
+
+use App\Lib\View;
+
+function render(array $data): void
+{
+    $props = [
+        'title' => $data['title'],
+        'formattedDate' => date('F jS', strtotime($data['date'])),
+    ];
+    View::component(__DIR__ . '/template.php', $props);
+}
+```
+
+```php
+// template.php (pure HTML, no logic)
+<div class="my-component">
+    <h2><?= htmlspecialchars($title) ?></h2>
+    <span><?= $formattedDate ?></span>
+</div>
+```
+
+Add to `app/composer.json`:
+
+```json
+"files": [
+    "components/my-component/controller.php"
+]
+```
+
+Run `composer dump-autoload`.
+
+### Model Queries
+
+```php
+$db = Database::getConnection();
+$result = $db->fetchAssociative($sql, $params);
+$db->insert('table', ['column' => 'value']);
+```
+
+### HTMX Integration
+
+- Use `hx-get`, `hx-post`, `hx-delete` attributes
+- CSRF token auto-injected via meta tag and htmx:configRequest event
+- Target specific elements with `hx-target`
+
+## Development
+
+### Live Reload
+
+Changes to PHP files reflect immediately (Docker volume mount + OPcache with `validate_timestamps=1`).
+
+### Profiling
+
+```bash
+make profile-home   # Profile homepage
+make profile-tag    # Profile tag filter
+make profile-page   # Profile article page
+```
+
+Cachegrind files output to `profiling/` directory.
+
+### Test Users (after `make seed`)
+
+See `database/data/seed.yaml` for test accounts.
+
+## Environment Variables
+
+- `JWT_SECRET`: Secret key for JWT signing (required in production)
+- `DB_*`: Database configuration (see above)
+
+## Infrastructure
+
+- **FrankenPHP**: Modern PHP server on Caddy
+- **Docker**: Development container on port 8082
+- **Caddyfile**: Configures routing, compression (br/zstd/gzip), and caching headers
+
+## Planned Work
+
+### Required / Expected Features
+
+- [ ] Tag input UI component with autocompletion
+- [ ] Switch from HTMX to fixi.js
+- [ ] Paginator with page numbers (consider Nette Paginator)
+
+### Completed
+
+- [x] Basic RealWorld functionality (articles, comments, profiles, follows, favorites)
+- [x] Seeder with test data
+- [x] File-based routing with [param] support
+- [x] Component architecture (controller + template separation)
+
+### Performance Improvements
+
+- [ ] Less render-blocking requests (JS/CSS)
+- [ ] Fix layout shifts
+- [ ] Pre-compile Markdown to HTML and store in DB
+- [ ] Bundle, minify, and version assets (consider Nette Assets or Skybolt)
+- [ ] Resize and compress images
+
+### Future Enhancements
+
+- [ ] Templating language (Latte?) for faster compilation
+- [X] Single File Component syntax / Component folders
+- [ ] Require strong/high-entropy passwords

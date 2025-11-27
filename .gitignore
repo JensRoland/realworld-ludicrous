@@ -39,8 +39,8 @@ Thumbs.db
 
 ## Application
 .env
-/backend/database.sqlite
-/backend/vendor
+/database/database.sqlite
+/app/vendor
 
 ## Profiling
 /profiling

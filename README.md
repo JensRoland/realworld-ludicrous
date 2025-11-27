@@ -19,6 +19,7 @@ This project demonstrates a full-stack web application built according to the Re
 ### Backend
 
 - **Vanilla PHP 8.3** - No framework, pure PHP with PSR autoloading
+- **File-based routing** - Routes determined by file paths with `[param]` syntax
 - **Database-agnostic** - Supports SQLite, MySQL, and PostgreSQL via Doctrine DBAL
 - **Composer** - Dependency management and PSR-4 autoloading
 - **Parsedown** - Markdown to HTML conversion
@@ -38,21 +39,32 @@ This project demonstrates a full-stack web application built according to the Re
 
 ```text
 realworld-ludicrous/
-├── backend/
-│   ├── src/
-│   │   ├── Controllers/    # Request handlers
-│   │   ├── Models/         # Data models
-│   │   ├── Core/           # Router, Database, Security, View
-│   │   └── Services/       # Seeder and other services
+├── app/
+│   ├── components/         # Reusable UI components
+│   │   ├── article-meta/   # Author info (avatar, name, date)
+│   │   ├── article-preview/# Article card for lists
+│   │   ├── comment/        # Comment card
+│   │   ├── favorite-button/# Favorite/unfavorite button
+│   │   └── follow-button/  # Follow/unfollow button
+│   ├── lib/                # Framework core
+│   │   ├── Router.php      # File-based router with [param] support
+│   │   ├── Database.php    # Doctrine DBAL singleton
+│   │   ├── Auth.php        # JWT authentication
+│   │   ├── Security.php    # CSRF protection
+│   │   ├── View.php        # Template rendering
+│   │   └── Config.php      # Environment configuration
+│   ├── models/             # Data models (User, Article, Comment)
+│   ├── pages/              # File-based routing (URL = file path)
 │   ├── templates/          # PHP view templates
-│   ├── schema.sql          # Database schema
+│   ├── public/             # Web root (entry point, CSS, JS, fonts)
 │   └── composer.json       # PHP dependencies
-├── frontend/
-│   └── public/
-│       ├── css/            # Stylesheets
-│       ├── fonts/          # Web fonts
-│       ├── js/             # HTMX and minimal JS
-│       └── index.php       # Application entry point
+├── database/
+│   ├── database.sqlite     # SQLite database (default)
+│   ├── schema.sql          # SQLite schema
+│   ├── schema-mysql.sql    # MySQL schema
+│   ├── schema-postgres.sql # PostgreSQL schema
+│   ├── seed.php            # Database seeder
+│   └── data/seed.yaml      # Test data
 ├── docker-compose.yml      # Docker configuration
 ├── Caddyfile               # Web server configuration
 └── Makefile                # Build and run commands
@@ -115,7 +127,7 @@ SQLite is the default database and requires no additional setup:
 
 ```env
 DB_DRIVER=pdo_sqlite
-DB_PATH=backend/database.sqlite
+DB_PATH=database/database.sqlite
 ```
 
 To reset the database:
@@ -142,7 +154,7 @@ DB_CHARSET=utf8mb4
 Then initialize the schema:
 
 ```bash
-mysql -u root -p realworld < backend/schema-mysql.sql
+mysql -u root -p realworld < database/schema-mysql.sql
 ```
 
 #### PostgreSQL
@@ -161,7 +173,7 @@ DB_PASSWORD=your_password
 Then initialize the schema:
 
 ```bash
-psql -U postgres -d realworld -f backend/schema-postgres.sql
+psql -U postgres -d realworld -f database/schema-postgres.sql
 ```
 
 ### Adding Test Data
@@ -175,28 +187,52 @@ make seed
 Or directly via PHP:
 
 ```bash
-php backend/seed.php
+php database/seed.php
 ```
 
-The seeder reads data from [backend/data/seed.yaml](backend/data/seed.yaml), which defines users, articles, comments, follows, and favorites in a human-readable YAML format. You can customize this file or create your own:
+The seeder reads data from [database/data/seed.yaml](database/data/seed.yaml), which defines users, articles, comments, follows, and favorites in a human-readable YAML format. You can customize this file or create your own:
 
 ```bash
-php backend/seed.php path/to/custom-seed.yaml
+php database/seed.php path/to/custom-seed.yaml
 ```
-
-The seeder is idempotent and can be run multiple times safely (implementation in [backend/src/Services/Seeder.php](backend/src/Services/Seeder.php)).
 
 ## Architecture Highlights
 
-### Backend
+### File-Based Routing
 
-- **Router** - Simple but effective routing system in [backend/src/Core/Router.php](backend/src/Core/Router.php)
-- **Database** - Doctrine DBAL for database-agnostic queries in [backend/src/Core/Database.php](backend/src/Core/Database.php)
-- **Security** - Password hashing and JWT token generation in [backend/src/Core/Security.php](backend/src/Core/Security.php)
-- **View** - Template rendering with layout support in [backend/src/Core/View.php](backend/src/Core/View.php)
-- **Config** - Environment-based configuration in [backend/src/Core/Config.php](backend/src/Core/Config.php)
+Routes are determined by file paths in `app/pages/`:
 
-### Frontend
+| File                                   | Route                            |
+| -------------------------------------- | -------------------------------- |
+| `pages/index.php`                      | `/`                              |
+| `pages/login.php`                      | `/login`                         |
+| `pages/article/[slug]/index.php`       | `/article/{slug}`                |
+| `pages/profile/[username]/follow.php`  | `/profile/{username}/follow`     |
+
+Parameters in brackets become variables: `[slug].php` means `$slug` is available in the file.
+
+### Components
+
+Reusable UI components live in `app/components/`. Each component has:
+
+- `controller.php` - Logic and data preparation
+- `template.php` - Pure HTML presentation
+
+```php
+// Usage in templates
+\App\Components\FavoriteButton\render($article, $isFavorited);
+\App\Components\Comment\render($comment, $articleSlug);
+```
+
+### Backend Features
+
+- **Router** - File-based routing in [app/lib/Router.php](app/lib/Router.php)
+- **Database** - Doctrine DBAL for database-agnostic queries in [app/lib/Database.php](app/lib/Database.php)
+- **Security** - Password hashing and JWT token generation in [app/lib/Security.php](app/lib/Security.php)
+- **View** - Template rendering with layout support in [app/lib/View.php](app/lib/View.php)
+- **Config** - Environment-based configuration in [app/lib/Config.php](app/lib/Config.php)
+
+### Frontend Features
 
 - **HTMX-driven** - Most interactions use HTMX attributes for seamless updates
 - **Progressive Enhancement** - Works without JavaScript for basic functionality

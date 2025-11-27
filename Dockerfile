@@ -23,8 +23,6 @@ RUN echo "opcache.enable=1" >> /usr/local/etc/php/conf.d/opcache.ini \
     && echo "opcache.validate_timestamps=1" >> /usr/local/etc/php/conf.d/opcache.ini \
     && echo "opcache.revalidate_freq=0" >> /usr/local/etc/php/conf.d/opcache.ini \
     && echo "opcache.file_cache=/tmp/opcache" >> /usr/local/etc/php/conf.d/opcache.ini \
-    && echo "opcache.preload=/app/backend/preload.php" >> /usr/local/etc/php/conf.d/opcache.ini \
-    && echo "opcache.preload_user=root" >> /usr/local/etc/php/conf.d/opcache.ini \
     && mkdir -p /tmp/opcache
 
 # Create profiling directory
