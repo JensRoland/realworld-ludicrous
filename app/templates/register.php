@@ -13,15 +13,15 @@
                     </ul>
                 <?php endif; ?>
 
-                <form action="/register" method="POST" hx-boost="false">
+                <form action="/register" method="POST" fx-boost="false">
                     <fieldset class="form-group">
-                        <input class="form-control form-control-lg" type="text" name="username" placeholder="Username" required>
+                        <input class="form-control form-control-lg" type="text" name="username" placeholder="Username" autocomplete="username" required>
                     </fieldset>
                     <fieldset class="form-group">
-                        <input class="form-control form-control-lg" type="email" name="email" placeholder="Email" required>
+                        <input class="form-control form-control-lg" type="email" name="email" placeholder="Email" autocomplete="email" required>
                     </fieldset>
                     <fieldset class="form-group">
-                        <input class="form-control form-control-lg" type="password" name="password" placeholder="Password" required>
+                        <input class="form-control form-control-lg" type="password" name="password" placeholder="Password" autocomplete="current-password" required>
                     </fieldset>
                     <input type="hidden" name="csrf_token" value="<?= \App\Lib\Security::getToken() ?>">
                     <button class="btn btn-lg btn-primary pull-xs-right">

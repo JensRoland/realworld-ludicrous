@@ -10,7 +10,7 @@
                     <a class="btn btn-outline-secondary btn-sm" href="/editor/<?= $article['slug'] ?>">
                         <i class="ion-edit"></i> Edit Article
                     </a>
-                    <button class="btn btn-outline-danger btn-sm" hx-post="/article/<?= $article['slug'] ?>/delete" hx-confirm="Are you sure you want to delete this article?">
+                    <button class="btn btn-outline-danger btn-sm" fx-action="/article/<?= $article['slug'] ?>/delete" fx-method="POST" fx-confirm="Are you sure you want to delete this article?">
                         <i class="ion-trash-a"></i> Delete Article
                     </button>
                 <?php elseif (\App\Lib\Auth::check()): ?>
@@ -63,7 +63,7 @@
             <div class="col-xs-12 col-md-8 offset-md-2">
                 <?php $currentUser = \App\Lib\Auth::user(); ?>
                 <?php if ($currentUser): ?>
-                    <form class="card comment-form" hx-post="/article/<?= $article['slug'] ?>/comments" hx-target="#comment-list" hx-swap="afterbegin" hx-on::after-request="this.reset()">
+                    <form class="card comment-form" fx-action="/article/<?= $article['slug'] ?>/comments" fx-method="POST" fx-target="#comment-list" fx-swap="afterbegin" fx-reset>
                         <div class="card-block">
                             <textarea class="form-control" name="body" placeholder="Write a comment..." rows="3"></textarea>
                         </div>

@@ -4,7 +4,7 @@ use App\Lib\Auth;
 use App\Models\User;
 
 if (!Auth::check()) {
-    header('HX-Redirect: /login');
+    header('Location: /login');
     exit;
 }
 

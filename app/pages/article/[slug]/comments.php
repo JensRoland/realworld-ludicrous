@@ -5,7 +5,7 @@ use App\Models\Article;
 use App\Models\Comment;
 
 if (!Auth::check()) {
-    header('HX-Redirect: /login');
+    header('Location: /login');
     exit;
 }
 

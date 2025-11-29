@@ -8,18 +8,16 @@
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/icons.css">
-    <script src="/js/htmx.min.js"></script>
+    <script src="/js/boosti.js"></script>
     <script>
-        // Inject CSRF header for all HTMX requests
-        document.addEventListener('htmx:configRequest', function (event) {
-            var tokenMeta = document.querySelector('meta[name="csrf-token"]');
-            if (tokenMeta) {
-                event.detail.headers['X-CSRF-Token'] = tokenMeta.getAttribute('content') || '';
-            }
+        // Inject CSRF token into all boosti requests
+        document.addEventListener('fx:config', (e) => {
+            const token = document.querySelector('meta[name="csrf-token"]')?.content;
+            if (token) e.detail.cfg.headers['X-CSRF-Token'] = token;
         });
     </script>
 </head>
-<body hx-boost="true">
+<body>
     <nav class="navbar navbar-light">
         <div class="container">
             <a class="navbar-brand" href="/">conduit</a>

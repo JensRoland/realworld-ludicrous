@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" id="comment-<?= $id ?>">
     <div class="card-block">
         <p class="card-text"><?= htmlspecialchars($body) ?></p>
     </div>
@@ -14,9 +14,10 @@
         <?php if ($canDelete): ?>
             <span class="mod-options">
                 <i class="ion-trash-a"
-                   hx-delete="/article/<?= htmlspecialchars($articleSlug) ?>/comment/<?= $id ?>"
-                   hx-target="closest .card"
-                   hx-swap="outerHTML"></i>
+                   fx-action="/article/<?= htmlspecialchars($articleSlug) ?>/comment/<?= $id ?>"
+                   fx-method="DELETE"
+                   fx-target="#comment-<?= $id ?>"
+                   fx-swap="outerHTML"></i>
             </span>
         <?php endif; ?>
     </div>

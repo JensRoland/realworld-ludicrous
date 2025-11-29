@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-RealWorld example app (Medium.com clone) built with vanilla PHP 8.3 and HTMX. File-based routing with `[param]` syntax.
+RealWorld example app (Medium.com clone) built with vanilla PHP 8.3 and boosti.js (a HTMX subset). File-based routing with `[param]` syntax.
 
 ## Quick Start
 
@@ -111,7 +111,7 @@ function showPage(): void {
 }
 ```
 
-The `$request` object provides: `method`, `params`, `query`, `body`, `isHtmx`.
+The `$request` object provides: `method`, `params`, `query`, `body`, `isFixi`.
 
 ### Components
 
@@ -242,11 +242,30 @@ $result = $db->fetchAssociative($sql, $params);
 $db->insert('table', ['column' => 'value']);
 ```
 
-### HTMX Integration
+### boosti.js Integration
 
-- Use `hx-get`, `hx-post`, `hx-delete` attributes
-- CSRF token auto-injected via meta tag and htmx:configRequest event
-- Target specific elements with `hx-target`
+boosti.js is a fork of fixi.js with boost, confirm, and reset extensions (~4KB).
+
+**Attributes:**
+
+- `fx-action` - URL endpoint (required for AJAX)
+- `fx-method` - HTTP method (default: GET)
+- `fx-target` - CSS selector for swap target
+- `fx-swap` - Swap mode: outerHTML, innerHTML, afterbegin, etc.
+- `fx-trigger` - Event to trigger request
+- `fx-confirm` - Show confirmation dialog before request
+- `fx-reset` - Reset form after successful submission
+- `fx-boost="false"` - Disable SPA navigation for element/descendants
+- `fx-ignore` - Skip processing for element/descendants
+
+**Boost behavior:**
+
+- All internal links (`<a href="/...">`) are fetched via AJAX
+- All forms (without `fx-action`) submit via AJAX
+- Uses View Transitions API for smooth page swaps
+- Disable with `fx-boost="false"` on element or ancestor
+
+CSRF token auto-injected via `fx:config` event in layout.php.
 
 ## Development
 
@@ -284,7 +303,6 @@ See `database/data/seed.yaml` for test accounts.
 ### Required / Expected Features
 
 - [ ] Tag input UI component with autocompletion
-- [ ] Switch from HTMX to fixi.js
 - [ ] Paginator with page numbers (consider Nette Paginator)
 
 ### Completed
@@ -293,6 +311,7 @@ See `database/data/seed.yaml` for test accounts.
 - [x] Seeder with test data
 - [x] File-based routing with [param] support
 - [x] Component architecture (controller + template separation)
+- [x] Switch from HTMX to ~~fixi~~ boosti.js
 
 ### Performance Improvements
 

@@ -140,7 +140,7 @@ class Router
             'params' => $params,
             'query' => $_GET,
             'body' => $_POST,
-            'isHtmx' => isset($_SERVER['HTTP_HX_REQUEST']),
+            'isFixi' => isset($_SERVER['HTTP_FX_REQUEST']),
         ];
 
         ob_start();

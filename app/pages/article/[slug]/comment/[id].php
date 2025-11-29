@@ -11,7 +11,7 @@ if ($request->method !== 'DELETE') {
 }
 
 if (!Auth::check()) {
-    header('HX-Redirect: /login');
+    header('Location: /login');
     exit;
 }
 
