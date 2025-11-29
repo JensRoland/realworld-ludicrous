@@ -307,11 +307,11 @@ See `database/data/seed.yaml` for test accounts.
 
 ### Completed
 
-- [x] Basic RealWorld functionality (articles, comments, profiles, follows, favorites)
-- [x] Seeder with test data
-- [x] File-based routing with [param] support
-- [x] Component architecture (controller + template separation)
-- [x] Switch from HTMX to ~~fixi~~ boosti.js
+- [X] Basic RealWorld functionality (articles, comments, profiles, follows, favorites)
+- [X] Seeder with test data
+- [X] File-based routing with [param] support
+- [X] Component architecture (controller + template separation)
+- [X] Switch from HTMX to ~~fixi~~ boosti.js
 
 ### Performance Improvements
 
