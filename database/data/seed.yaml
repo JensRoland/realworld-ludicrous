@@ -4,63 +4,63 @@ users:
     email: richard@piedpiper.com
     password: password
     bio: CEO of Pied Piper. Built middle-out compression. This guy f***s.
-    image: /img/avatars/richardhendricks.jpg
+    image: /img/avatars/richardhendricks.avif
 
   - username: dinesh
     email: dinesh@piedpiper.com
     password: password
     bio: Java engineer at Pied Piper. Better than Gilfoyle at everything except being a jerk.
-    image: /img/avatars/dinesh.jpg
+    image: /img/avatars/dinesh.avif
 
   - username: gilfoyle
     email: gilfoyle@piedpiper.com
     password: password
     bio: Systems architect. Satanist. I run the servers that run your life.
-    image: /img/avatars/gilfoyle.jpg
+    image: /img/avatars/gilfoyle.avif
 
   - username: jared
     email: jared@piedpiper.com
     password: password
     bio: COO, Pied Piper. "I've been told I'm a very nurturing person." - Donald "Jared" Dunn
-    image: /img/avatars/jared.jpg
+    image: /img/avatars/jared.avif
 
   - username: bighead
     email: bighead@hooli.com
     password: password
     bio: Former Pied Piper, now at Hooli. Failing upward since 2014.
-    image: /img/avatars/bighead.jpg
+    image: /img/avatars/bighead.avif
 
   # Investors & VCs
   - username: russhanneman
     email: russ@russfest.com
     password: password
     bio: "Billionaire. This guy f***s. ROI, Russ Hanneman. Tres Commas Club (temporarily)."
-    image: /img/avatars/russhanneman.jpg
+    image: /img/avatars/russhanneman.avif
 
   - username: petergregory
     email: peter@raveniga.com
     password: password
     bio: Founder of Raviga Capital. Sesame seeds are the bugs of the food world.
-    image: /img/avatars/petergregory.jpg
+    image: /img/avatars/petergregory.avif
 
   - username: monica
     email: monica@raveniga.com
     password: password
     bio: Partner at Raviga Capital. Actually knows what she's doing.
-    image: /img/avatars/monica.jpg
+    image: /img/avatars/monica.avif
 
   - username: lauriebream
     email: laurie@breem-hall.com
     password: password
     bio: Managing Partner, Bream-Hall. Cold, calculating, and usually right.
-    image: /img/avatars/laurieb.jpg
+    image: /img/avatars/laurieb.avif
 
   # Hooli
   - username: gavinbelson
     email: gavin@hooli.com
     password: password
     bio: "CEO of Hooli. Visionary. Dreamer. Thinker. I don't want to live in a world where someone else makes the world a better place better than we do."
-    image: /img/avatars/gavin.jpg
+    image: /img/avatars/gavin.avif
 
   - username: theendframe
     email: endframe@hooli.com
@@ -72,7 +72,7 @@ users:
     email: jpatakian@hooli.com
     password: password
     bio:  The other Jared. Hooli's Chief of Staff.
-    image: /img/avatars/jackbarker.jpg
+    image: /img/avatars/jackbarker.avif
 
   - username: johnstafford
     email: john@hooli.com
@@ -85,7 +85,7 @@ users:
     email: erlich@aviato.com
     password: password
     bio: "Founder of Aviato. My Aviato? This is my incubator. I own 10% of Pied Piper."
-    image: /img/avatars/erlich.jpg
+    image: /img/avatars/erlich.avif
 
   # Raviga team
   - username: ronlaflamme
@@ -99,7 +99,7 @@ users:
     email: jianyang@nothotdog.com
     password: password
     bio: "Errich Bachman, this is you as an old man. I'm ugly and I'm dead. Alone."
-    image: /img/avatars/jian-yang.jpg
+    image: /img/avatars/jian-yang.avif
 
   # Other tech personalities
   - username: colincollins
@@ -112,14 +112,14 @@ users:
     email: den@chatapp.com
     password: password
     bio: Spiritual advisor and mindfulness coach. Helping tech leaders find their inner peace.
-    image: /img/avatars/denpok.jpg
+    image: /img/avatars/denpok.avif
 
   # Journalist & Media
   - username: jackbarker
     email: jack@thebarkermethod.com
     password: password
     bio: "Action Jack Barker, creator of The Barker Method: Conjoined Triangles of Success. Professional CEO."
-    image: /img/avatars/jackbarker.jpg
+    image: /img/avatars/jackbarker.avif
 
   - username: cjthorsen
     email: cj@techmedia.com
@@ -132,13 +132,13 @@ users:
     email: carla@optimoji.com
     password: password
     bio: Platform engineer.
-    image: /img/avatars/carla.jpg
+    image: /img/avatars/carla.avif
 
   - username: kevinashoka
     email: kevin@piedpiper.com
     password: password
     bio: Software engineer. Pied Piper's secret weapon (at least I think so).
-    image: /img/avatars/keenan.jpg
+    image: /img/avatars/keenan.avif
 
   - username: dannygillette
     email: danny@gillettecode.com

@@ -5,10 +5,7 @@
     <meta name="csrf-token" content="<?= \App\Lib\Security::getToken() ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conduit</title>
-    <link rel="stylesheet" href="/css/fonts.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/icons.css">
-    <script src="/js/boosti.js"></script>
+    <?= \App\Lib\Vite::assets() ?>
     <script>
         // Inject CSRF token into all boosti requests
         document.addEventListener('fx:config', (e) => {
@@ -20,25 +17,25 @@
 <body>
     <nav class="navbar navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="/">conduit</a>
+            <a yolo-deep class="navbar-brand" href="/">conduit</a>
             <ul class="nav navbar-nav pull-xs-right">
                 <li class="nav-item">
-                    <a class="nav-link<?= ($currentPage ?? '') === 'home' ? ' active' : '' ?>" href="/">Home</a>
+                    <a yolo-deep class="nav-link<?= ($currentPage ?? '') === 'home' ? ' active' : '' ?>" href="/">Home</a>
                 </li>
                 <?php $currentUser = \App\Lib\Auth::user(); ?>
                 <?php if ($currentUser): ?>
                     <li class="nav-item">
-                        <a class="nav-link<?= ($currentPage ?? '') === 'editor' ? ' active' : '' ?>" href="/editor">
+                        <a yolo-deep class="nav-link<?= ($currentPage ?? '') === 'editor' ? ' active' : '' ?>" href="/editor">
                             <i class="ion-compose"></i>&nbsp;New Article
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link<?= ($currentPage ?? '') === 'settings' ? ' active' : '' ?>" href="/settings">
+                        <a yolo-deep class="nav-link<?= ($currentPage ?? '') === 'settings' ? ' active' : '' ?>" href="/settings">
                             <i class="ion-gear-a"></i>&nbsp;Settings
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link<?= ($currentPage ?? '') === 'profile' ? ' active' : '' ?>" href="/profile/<?= htmlspecialchars($currentUser['username']) ?>">
+                        <a yolo-deep class="nav-link<?= ($currentPage ?? '') === 'profile' ? ' active' : '' ?>" href="/profile/<?= htmlspecialchars($currentUser['username']) ?>">
                             <?php if (!empty($currentUser['image'])): ?>
                                 <img src="<?= htmlspecialchars($currentUser['image']) ?>" class="user-pic" alt="<?= htmlspecialchars($currentUser['username']) ?>">
                             <?php endif; ?>
@@ -47,10 +44,10 @@
                     </li>
                 <?php else: ?>
                     <li class="nav-item">
-                        <a class="nav-link<?= ($currentPage ?? '') === 'login' ? ' active' : '' ?>" href="/login">Sign in</a>
+                        <a yolo-deep class="nav-link<?= ($currentPage ?? '') === 'login' ? ' active' : '' ?>" href="/login">Sign in</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link<?= ($currentPage ?? '') === 'register' ? ' active' : '' ?>" href="/register">Sign up</a>
+                        <a yolo-deep class="nav-link<?= ($currentPage ?? '') === 'register' ? ' active' : '' ?>" href="/register">Sign up</a>
                     </li>
                 <?php endif; ?>
             </ul>
@@ -63,7 +60,7 @@
 
     <footer>
         <div class="container">
-            <a href="/" class="logo-font">conduit</a>
+            <a yolo-deep href="/" class="logo-font">conduit</a>
             <span class="attribution">
                 An interactive learning project from <a href="https://thinkster.io">Thinkster</a>. Code &amp; design licensed under MIT.
             </span>

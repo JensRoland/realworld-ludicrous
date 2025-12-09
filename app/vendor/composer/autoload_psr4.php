@@ -13,6 +13,7 @@ return array(
     'Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),
     'Doctrine\\Deprecations\\' => array($vendorDir . '/doctrine/deprecations/src'),
     'Doctrine\\DBAL\\' => array($vendorDir . '/doctrine/dbal/src'),
+    'App\\Services\\' => array($baseDir . '/services'),
     'App\\Models\\' => array($baseDir . '/models'),
     'App\\Lib\\' => array($baseDir . '/lib'),
 );

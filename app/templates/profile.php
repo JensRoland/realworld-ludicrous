@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-10 offset-md-1">
-                    <img src="<?= $profile['image'] ?: '/img/smiley-cyrus.jpg' ?>" class="user-img" />
+                    <img src="<?= $profile['image'] ?: '/img/smiley-cyrus.avif' ?>" class="user-img" />
                     <h4><?= htmlspecialchars($profile['username']) ?></h4>
                     <p><?= htmlspecialchars($profile['bio'] ?? '') ?></p>
 

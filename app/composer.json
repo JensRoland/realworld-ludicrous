@@ -5,7 +5,8 @@
     "autoload": {
         "psr-4": {
             "App\\Lib\\": "lib/",
-            "App\\Models\\": "models/"
+            "App\\Models\\": "models/",
+            "App\\Services\\": "services/"
         },
         "files": [
             "components/article-meta/controller.php",

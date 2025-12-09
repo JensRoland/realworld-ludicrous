@@ -13,7 +13,7 @@ function render(array $article): void
 {
     $props = [
         'authorUsername' => $article['author_username'],
-        'authorImage' => $article['author_image'] ?: '/img/smiley-cyrus.jpg',
+        'authorImage' => $article['author_image'] ?: '/img/smiley-cyrus.avif',
         'date' => date('F jS', strtotime($article['created_at'])),
     ];
 

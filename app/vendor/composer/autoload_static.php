@@ -38,6 +38,7 @@ class ComposerStaticInit1f8ff424486d035473eda5921a3588fa
         ),
         'A' => 
         array (
+            'App\\Services\\' => 13,
             'App\\Models\\' => 11,
             'App\\Lib\\' => 8,
         ),
@@ -72,6 +73,10 @@ class ComposerStaticInit1f8ff424486d035473eda5921a3588fa
         array (
             0 => __DIR__ . '/..' . '/doctrine/dbal/src',
         ),
+        'App\\Services\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/services',
+        ),
         'App\\Models\\' => 
         array (
             0 => __DIR__ . '/../..' . '/models',
@@ -99,9 +104,11 @@ class ComposerStaticInit1f8ff424486d035473eda5921a3588fa
         'App\\Lib\\Router' => __DIR__ . '/../..' . '/lib/Router.php',
         'App\\Lib\\Security' => __DIR__ . '/../..' . '/lib/Security.php',
         'App\\Lib\\View' => __DIR__ . '/../..' . '/lib/View.php',
+        'App\\Lib\\Vite' => __DIR__ . '/../..' . '/lib/Vite.php',
         'App\\Models\\Article' => __DIR__ . '/../..' . '/models/Article.php',
         'App\\Models\\Comment' => __DIR__ . '/../..' . '/models/Comment.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/models/User.php',
+        'App\\Services\\Seeder' => __DIR__ . '/../..' . '/services/Seeder.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Doctrine\\DBAL\\ArrayParameterType' => __DIR__ . '/..' . '/doctrine/dbal/src/ArrayParameterType.php',
         'Doctrine\\DBAL\\ArrayParameters\\Exception' => __DIR__ . '/..' . '/doctrine/dbal/src/ArrayParameters/Exception.php',

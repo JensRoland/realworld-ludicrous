@@ -3,7 +3,7 @@
         'name' => 'realworld/php-htmx',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '895cc6de31d363e4a5fa5ffe46553bee8b3dea8a',
+        'reference' => '1f33581e0559d64b3fbca38d6fc13d55fd15130c',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -67,7 +67,7 @@
         'realworld/php-htmx' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '895cc6de31d363e4a5fa5ffe46553bee8b3dea8a',
+            'reference' => '1f33581e0559d64b3fbca38d6fc13d55fd15130c',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

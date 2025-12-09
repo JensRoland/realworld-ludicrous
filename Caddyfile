@@ -8,13 +8,10 @@
 :80 {
 	root * /app/app/public
 
-	route {
-		header Cache-Control "public, max-age=0, must-revalidate"
-		header /fonts/* Cache-Control "public, max-age=31536000, immutable"
-		header /img/* Cache-Control "public, max-age=31536000, immutable"
-		header *.css Cache-Control "public, max-age=31536000, immutable"
-		header *.js Cache-Control "public, max-age=31536000, immutable"
-	}
+	@static path /fonts/* /img/* /dist/* *.css *.js *.ico
+	header @static Cache-Control "public, max-age=31536000, immutable"
+	@html not path /fonts/* /img/* /dist/* *.css *.js
+	header @html Cache-Control "private, max-age=5"
 
 	encode br zstd gzip
 	php_server

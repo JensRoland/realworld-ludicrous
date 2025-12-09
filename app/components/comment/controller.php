@@ -17,7 +17,7 @@ function render(array $comment, string $articleSlug): void
         'id' => $comment['id'],
         'body' => $comment['body'],
         'authorUsername' => $comment['author_username'],
-        'authorImage' => $comment['author_image'] ?: '/img/smiley-cyrus.jpg',
+        'authorImage' => $comment['author_image'] ?: '/img/smiley-cyrus.avif',
         'date' => date('F jS', strtotime($comment['created_at'])),
         'articleSlug' => $articleSlug,
         'canDelete' => Auth::check() && Auth::userId() == $comment['author_id'],

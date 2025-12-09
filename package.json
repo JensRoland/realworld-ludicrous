@@ -1,0 +1,13 @@
+{
+  "name": "realworld-ludicrous",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^7.2.7",
+    "vite-plugin-purgecss": "^0.2.13"
+  }
+}

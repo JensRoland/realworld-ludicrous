@@ -1,3 +1,6 @@
+build:
+	bun run build
+
 serve:
 	docker-compose up --build
 

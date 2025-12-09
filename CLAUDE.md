@@ -11,6 +11,7 @@ make setup     # Install dependencies + create SQLite database
 make serve     # Start Docker container at http://localhost:8082
 make seed      # Populate with test data from database/data/seed.yaml
 make clean     # Reset database
+bun run build  # Build CSS/JS assets with Vite (hashed for cachebusting)
 ```
 
 ## Architecture
@@ -244,7 +245,7 @@ $db->insert('table', ['column' => 'value']);
 
 ### boosti.js Integration
 
-boosti.js is a fork of fixi.js with boost, confirm, and reset extensions (~4KB).
+boosti.js is a fork of fixi.js (which itself is a barebones version of htmx) with boost, confirm, and reset extensions (~4KB).
 
 **Attributes:**
 
@@ -312,6 +313,7 @@ See `database/data/seed.yaml` for test accounts.
 - [X] File-based routing with [param] support
 - [X] Component architecture (controller + template separation)
 - [X] Switch from HTMX to ~~fixi~~ boosti.js
+- [X] Just-in-time prefetching of next page links (YOLO Mode)
 
 ### Performance Improvements
 

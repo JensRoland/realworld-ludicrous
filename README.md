@@ -112,6 +112,7 @@ realworld-ludicrous/
 - `make serve` - Build and start the Docker containers
 - `make seed` - Populate the database with test data
 - `make clean` - Remove the database (useful for fresh start)
+- `make build` - Build CSS/JS assets with Vite
 
 ## Development
 
@@ -234,9 +235,12 @@ Reusable UI components live in `app/components/`. Each component has:
 
 ### Frontend Features
 
-- **HTMX-driven** - Most interactions use HTMX attributes for seamless updates
+- **HTMX-driven** - Most interactions use HTMX-like attributes for seamless updates (using the lightweight [boosti](https://github.com/JensRoland/boosti) library rather than full HTMX)
+- **Boosted links and View Transitions** - Smooth, SPA-like page transitions
+- **Just-in-time prefetching** - Links are prefetched on hover for speed (using boosti's 'YOLO Mode' companion library)
 - **Progressive Enhancement** - Works without JavaScript for basic functionality
-- **Minimal Dependencies** - Only HTMX, no heavy frontend frameworks
+- **Minimal Dependencies** - Only boosti/yolomode, no heavy frontend frameworks
+- **Vite for Asset Optimization** - Minify CSS/JS with cache busting, purge unused styles
 
 ## RealWorld Specification
 

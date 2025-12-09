@@ -1,9 +1,11 @@
 <div class="article-page">
     <div class="banner">
         <div class="container">
-            <h1><?= htmlspecialchars($article['title']) ?></h1>
+            <h1 style="view-transition-name: <?= htmlspecialchars($article['slug']) ?>-title;">
+                <?= htmlspecialchars($article['title']) ?>
+            </h1>
 
-            <div class="article-meta">
+            <div class="article-meta" style="view-transition-name: <?= htmlspecialchars($article['slug']) ?>-meta;">
                 <?php \App\Components\ArticleMeta\render($article); ?>
 
                 <?php if (\App\Lib\Auth::check() && \App\Lib\Auth::userId() == $article['author_id']): ?>
@@ -68,7 +70,7 @@
                             <textarea class="form-control" name="body" placeholder="Write a comment..." rows="3"></textarea>
                         </div>
                         <div class="card-footer">
-                            <img src="<?= \App\Models\User::findById($currentUser['id'])['image'] ?? '/img/smiley-cyrus.jpg' ?>" class="comment-author-img" />
+                            <img src="<?= \App\Models\User::findById($currentUser['id'])['image'] ?? '/img/smiley-cyrus.avif' ?>" class="comment-author-img" />
                             <input type="hidden" name="csrf_token" value="<?= \App\Lib\Security::getToken() ?>">
                             <button class="btn btn-sm btn-primary">
                                 Post Comment

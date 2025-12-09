@@ -18,7 +18,8 @@ Thumbs.db
 .VolumeIcon.icns
 
 ## Dependencies
-/dist
+/node_modules
+/app/public/dist
 
 ## IDEs and editors
 /.idea
