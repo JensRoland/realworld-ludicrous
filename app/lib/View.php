@@ -47,6 +47,15 @@ class View
     }
 
     /**
+     * Convert an image path to its thumbnail version.
+     * Example: /img/avatars/bighead.avif -> /img/avatars/bighead-thumb.avif
+     */
+    public static function thumbnail(string $path): string
+    {
+        return preg_replace('/\.([a-z]+)$/i', '-thumb.avif', $path);
+    }
+
+    /**
      * Render a component template with props.
      *
      * @param string $template Absolute path to the template file

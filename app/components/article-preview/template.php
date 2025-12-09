@@ -1,7 +1,7 @@
 <div class="article-preview">
     <div class="article-meta" style="view-transition-name: <?= htmlspecialchars($slug) ?>-meta;">
         <a yolo-deep href="/profile/<?= htmlspecialchars($authorUsername) ?>">
-            <img src="<?= htmlspecialchars($authorImage) ?>" />
+            <img src="<?= htmlspecialchars($authorImageThumb) ?>" />
         </a>
         <div class="info">
             <a yolo-deep href="/profile/<?= htmlspecialchars($authorUsername) ?>" class="author"><?= htmlspecialchars($authorUsername) ?></a>

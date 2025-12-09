@@ -13,11 +13,14 @@ use App\Lib\View;
  */
 function render(array $comment, string $articleSlug): void
 {
+    $authorImage = $comment['author_image'] ?: '/img/smiley-cyrus.avif';
+
     $props = [
         'id' => $comment['id'],
         'body' => $comment['body'],
         'authorUsername' => $comment['author_username'],
-        'authorImage' => $comment['author_image'] ?: '/img/smiley-cyrus.avif',
+        'authorImage' => $authorImage,
+        'authorImageThumb' => View::thumbnail($authorImage),
         'date' => date('F jS', strtotime($comment['created_at'])),
         'articleSlug' => $articleSlug,
         'canDelete' => Auth::check() && Auth::userId() == $comment['author_id'],

@@ -11,9 +11,12 @@ use App\Lib\View;
  */
 function render(array $article): void
 {
+    $authorImage = $article['author_image'] ?: '/img/smiley-cyrus.avif';
+
     $props = [
         'authorUsername' => $article['author_username'],
-        'authorImage' => $article['author_image'] ?: '/img/smiley-cyrus.avif',
+        'authorImage' => $authorImage,
+        'authorImageThumb' => View::thumbnail($authorImage),
         'date' => date('F jS', strtotime($article['created_at'])),
     ];
 

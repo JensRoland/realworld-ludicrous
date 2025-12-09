@@ -18,12 +18,15 @@ function render(array $article): void
         $isFavorited = Article::isFavorited(Auth::userId(), $article['id']);
     }
 
+    $authorImage = $article['author_image'] ?: '/img/smiley-cyrus.avif';
+
     $props = [
         'slug' => $article['slug'],
         'title' => $article['title'],
         'description' => $article['description'],
         'authorUsername' => $article['author_username'],
-        'authorImage' => $article['author_image'] ?: '/img/smiley-cyrus.avif',
+        'authorImage' => $authorImage,
+        'authorImageThumb' => View::thumbnail($authorImage),
         'date' => date('F jS', strtotime($article['created_at'])),
         'tagList' => $article['tagList'] ?? [],
         'article' => $article,

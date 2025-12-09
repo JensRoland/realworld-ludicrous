@@ -7,6 +7,7 @@
     "build": "vite build"
   },
   "devDependencies": {
+    "sharp": "^0.34.5",
     "vite": "^7.2.7",
     "vite-plugin-purgecss": "^0.2.13"
   }

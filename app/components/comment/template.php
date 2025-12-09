@@ -4,7 +4,7 @@
     </div>
     <div class="card-footer">
         <a href="/profile/<?= htmlspecialchars($authorUsername) ?>" class="comment-author">
-            <img src="<?= htmlspecialchars($authorImage) ?>" class="comment-author-img" />
+            <img src="<?= htmlspecialchars($authorImageThumb) ?>" class="comment-author-img" />
         </a>
         &nbsp;
         <a href="/profile/<?= htmlspecialchars($authorUsername) ?>" class="comment-author">

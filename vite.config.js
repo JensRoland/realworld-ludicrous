@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import purgecss from 'vite-plugin-purgecss'
+import thumbnails from './vite-plugin-thumbnails.js'
 
 export default defineConfig({
   build: {
@@ -15,6 +16,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    thumbnails(),
     purgecss({
       content: [
         './app/templates/**/*.php',
