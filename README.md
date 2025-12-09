@@ -2,7 +2,15 @@
 
 A [RealWorld](https://docs.realworld.show/) implementation using vanilla PHP (no framework) and [boosti.js](https://github.com/JensRoland/boosti) for SPA-like navigation.
 
+The purpose of this implementation of the RealWorld spec is to demonstrate the viability of the *traditional monolithic serverside rendered MPA* for building a modern, high-performance web site.
+
 **DEMO: [https://realworld.app.is/](https://realworld.app.is/)**
+
+![Lighthouse 100/100 on Performance](realworld-lighthouse.png)
+
+The demo scores **100/100 on Performance in Lighthouse** (measured for mobile) and is built with a modern & intuitive component-based architecture with vertical slicing and file-based routing; and with HATEOAS principles applied to the frontend.
+
+*Note that the 91/100 Accessibility score is a limitation caused by the original RealWorld design having too-low contrast text. This could be easily fixed, but not without changing the official RealWorld design, thus deviating from the spec.*
 
 ## Overview
 
