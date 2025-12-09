@@ -38,18 +38,14 @@
     <div class="container page">
         <div class="row article-content">
             <div class="col-md-12">
-                <?php
-                $parsedown = new Parsedown();
-                $parsedown->setSafeMode(true);
-                echo $parsedown->text((string)$article['body']);
-                ?>
-                <?php if (!empty($article['tagList'])): ?>
+                <?= $article['body_html'] ?> 
+                <?php if (!empty($article['tagList'])): ?> 
                     <ul class="tag-list">
                         <?php foreach ($article['tagList'] as $tag): ?>
                             <li class="tag-default tag-pill tag-outline"><?= htmlspecialchars($tag) ?></li>
-                        <?php endforeach; ?>
+                        <?php endforeach; ?> 
                     </ul>
-                <?php endif; ?>
+                <?php endif; ?> 
             </div>
         </div>
 
@@ -57,13 +53,13 @@
 
         <div class="article-actions">
             <div class="article-meta">
-                <?php \App\Components\ArticleMeta\render($article); ?>
+                <?php \App\Components\ArticleMeta\render($article); ?> 
             </div>
         </div>
 
         <div class="row">
             <div class="col-xs-12 col-md-8 offset-md-2">
-                <?php $currentUser = \App\Lib\Auth::user(); ?>
+                <?php $currentUser = \App\Lib\Auth::user(); ?> 
                 <?php if ($currentUser): ?>
                     <form class="card comment-form" fx-action="/article/<?= $article['slug'] ?>/comments" fx-method="POST" fx-target="#comment-list" fx-swap="afterbegin" fx-reset>
                         <div class="card-block">
@@ -77,7 +73,7 @@
                             </button>
                         </div>
                     </form>
-                <?php else: ?>
+                <?php else: ?> 
                     <p>
                         <a href="/login">Sign in</a> or <a href="/register">sign up</a> to add comments on this article.
                     </p>
@@ -85,7 +81,7 @@
 
                 <div id="comment-list">
                     <?php if (!empty($comments)): ?>
-                        <?php foreach ($comments as $comment): ?>
+                        <?php foreach ($comments as $comment): ?> 
                             <?php \App\Components\Comment\render($comment, $article['slug']); ?>
                         <?php endforeach; ?>
                     <?php endif; ?>

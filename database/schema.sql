@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS articles (
     title TEXT NOT NULL,
     description TEXT NOT NULL,
     body TEXT NOT NULL,
+    body_html TEXT,
     author_id INTEGER NOT NULL,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,

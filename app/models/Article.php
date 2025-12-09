@@ -8,6 +8,13 @@ class Article
 {
     private static array $tagsCache = [];
 
+    private static function compileMarkdown(string $body): string
+    {
+        $parsedown = new \Parsedown();
+        $parsedown->setSafeMode(true);
+        return $parsedown->text($body);
+    }
+
     public static function create(string $title, string $description, string $body, array $tags, int $authorId): ?string
     {
         $db = Database::getConnection();
@@ -26,6 +33,7 @@ class Article
                 'title' => $title,
                 'description' => $description,
                 'body' => $body,
+                'body_html' => self::compileMarkdown($body),
                 'author_id' => $authorId
             ]);
             $articleId = $db->lastInsertId();
@@ -80,8 +88,8 @@ class Article
             }
 
             $db->executeStatement(
-                "UPDATE articles SET slug = ?, title = ?, description = ?, body = ?, updated_at = CURRENT_TIMESTAMP WHERE slug = ?",
-                [$newSlug, $title, $description, $body, $slug]
+                "UPDATE articles SET slug = ?, title = ?, description = ?, body = ?, body_html = ?, updated_at = CURRENT_TIMESTAMP WHERE slug = ?",
+                [$newSlug, $title, $description, $body, self::compileMarkdown($body), $slug]
             );
 
             if ($tags !== null) {

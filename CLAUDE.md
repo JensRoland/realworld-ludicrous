@@ -350,7 +350,7 @@ See `database/data/seed.yaml` for test accounts.
 
 ### Performance Improvements
 
-- [ ] Pre-compile Markdown to HTML and store in DB
+- [X] Pre-compile Markdown to HTML and store in DB
 
 ### Future Enhancements
 
