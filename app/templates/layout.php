@@ -20,25 +20,25 @@
 <body>
     <nav class="navbar navbar-light">
         <div class="container">
-            <a yolo-deep class="navbar-brand" href="/">conduit</a>
+            <a fx-yolo-deep class="navbar-brand" href="/">conduit</a>
             <ul class="nav navbar-nav pull-xs-right">
                 <li class="nav-item">
-                    <a yolo-deep class="nav-link<?= ($currentPage ?? '') === 'home' ? ' active' : '' ?>" href="/">Home</a>
+                    <a fx-yolo-deep class="nav-link<?= ($currentPage ?? '') === 'home' ? ' active' : '' ?>" href="/">Home</a>
                 </li>
                 <?php $currentUser = \App\Lib\Auth::user(); ?>
                 <?php if ($currentUser): ?>
                     <li class="nav-item">
-                        <a yolo-deep class="nav-link<?= ($currentPage ?? '') === 'editor' ? ' active' : '' ?>" href="/editor">
+                        <a fx-yolo-deep class="nav-link<?= ($currentPage ?? '') === 'editor' ? ' active' : '' ?>" href="/editor">
                             <i class="ion-compose"></i>&nbsp;New Article
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a yolo-deep class="nav-link<?= ($currentPage ?? '') === 'settings' ? ' active' : '' ?>" href="/settings">
+                        <a fx-yolo-deep class="nav-link<?= ($currentPage ?? '') === 'settings' ? ' active' : '' ?>" href="/settings">
                             <i class="ion-gear-a"></i>&nbsp;Settings
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a yolo-deep class="nav-link<?= ($currentPage ?? '') === 'profile' ? ' active' : '' ?>" href="/profile/<?= htmlspecialchars($currentUser['username']) ?>" title="User Profile">
+                        <a fx-yolo-deep class="nav-link<?= ($currentPage ?? '') === 'profile' ? ' active' : '' ?>" href="/profile/<?= htmlspecialchars($currentUser['username']) ?>" title="User Profile">
                             <?php if (!empty($currentUser['image'])): ?>
                                 <img src="<?= htmlspecialchars($currentUser['image']) ?>" class="user-pic" alt="<?= htmlspecialchars($currentUser['username']) ?>" alt="author avatar">
                             <?php endif; ?>
@@ -47,10 +47,10 @@
                     </li>
                 <?php else: ?>
                     <li class="nav-item">
-                        <a yolo-deep class="nav-link<?= ($currentPage ?? '') === 'login' ? ' active' : '' ?>" href="/login">Sign in</a>
+                        <a fx-yolo-deep class="nav-link<?= ($currentPage ?? '') === 'login' ? ' active' : '' ?>" href="/login">Sign in</a>
                     </li>
                     <li class="nav-item">
-                        <a yolo-deep class="nav-link<?= ($currentPage ?? '') === 'register' ? ' active' : '' ?>" href="/register">Sign up</a>
+                        <a fx-yolo-deep class="nav-link<?= ($currentPage ?? '') === 'register' ? ' active' : '' ?>" href="/register">Sign up</a>
                     </li>
                 <?php endif; ?>
             </ul>
@@ -63,7 +63,7 @@
 
     <footer>
         <div class="container">
-            <a yolo-deep href="/" class="logo-font">conduit</a>
+            <a fx-yolo-deep href="/" class="logo-font">conduit</a>
             <span class="attribution">
                 An interactive learning project from <a href="https://thinkster.io">Thinkster</a>. Code &amp; design licensed under MIT.
             </span>

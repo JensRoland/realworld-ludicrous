@@ -2,6 +2,8 @@
 
 A [RealWorld](https://docs.realworld.show/) implementation using vanilla PHP (no framework) and HTMX for dynamic interactions.
 
+**DEMO: [https://realworld.app.is/](https://realworld.app.is/)**
+
 ## Overview
 
 This project demonstrates a full-stack web application built according to the RealWorld specification, which defines a Medium.com clone with standardized features including:

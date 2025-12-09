@@ -1,0 +1,27 @@
+# Route all requests through index.php
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]
+
+# Cache headers for static assets (1 year, immutable)
+<FilesMatch "\.(css|js|ico|woff2?|ttf|otf|eot|avif|webp|png|jpe?g|gif|svg)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+
+# Cache headers for dist directory (hashed assets)
+<IfModule mod_headers.c>
+    <If "%{REQUEST_URI} =~ m#^/(dist|fonts|img)/#">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </If>
+</IfModule>
+
+# HTML/PHP responses - short cache, private
+<FilesMatch "\.php$">
+    Header set Cache-Control "private, max-age=5"
+</FilesMatch>
+
+# Enable compression (LiteSpeed supports this natively, but just in case)
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json
+</IfModule>
