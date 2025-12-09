@@ -34,12 +34,15 @@ This project demonstrates a full-stack web application built according to the Re
 - **Composer** - Dependency management and PSR-4 autoloading
 - **Parsedown** - Markdown to HTML conversion
 
+**Why PHP?**
+No particular reason other than ease of deployment, since I already had a Litespeed server running PHP. The same result could have been achieved with Go or Node.js or Python or Ruby, but since I was going for an oldschool MPA, PHP was a natural fit. And if I can achieve good performance and good developer ergonomics with PHP, you can do it with anything.
+
 ### Frontend
 
 - **[boosti.js](https://github.com/JensRoland/boosti)** - Lightweight HTMX alternative for SPA-like navigation
 - **[YOLO Mode](https://github.com/JensRoland/boosti?tab=readme-ov-file#yolo-mode-speculative-preloading)** - Just-in-time link prefetching on hover
 - **View Transitions API** - Smooth page transitions
-- **Vite** - Asset bundling with critical CSS extraction, PurgeCSS, thumbnail generation, and cache-busting
+- **Vite** - Asset minification with critical CSS extraction, PurgeCSS, thumbnail generation, and cache-busting
 
 ### Infrastructure
 
