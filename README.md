@@ -1,6 +1,6 @@
-# RealWorld Example App - Vanilla PHP + HTMX
+# RealWorld Example App - Vanilla PHP + boosti.js
 
-A [RealWorld](https://docs.realworld.show/) implementation using vanilla PHP (no framework) and HTMX for dynamic interactions.
+A [RealWorld](https://docs.realworld.show/) implementation using vanilla PHP (no framework) and [boosti.js](https://github.com/JensRoland/boosti) for SPA-like navigation.
 
 **DEMO: [https://realworld.app.is/](https://realworld.app.is/)**
 
@@ -28,9 +28,10 @@ This project demonstrates a full-stack web application built according to the Re
 
 ### Frontend
 
-- **HTMX** - Dynamic HTML interactions without complex JavaScript
-- **Vanilla CSS** - Following RealWorld styling specifications
-- **Minimal JavaScript** - Only where absolutely necessary
+- **[boosti.js](https://github.com/JensRoland/boosti)** - Lightweight HTMX alternative for SPA-like navigation
+- **[YOLO Mode](https://github.com/JensRoland/boosti?tab=readme-ov-file#yolo-mode-speculative-preloading)** - Just-in-time link prefetching on hover
+- **View Transitions API** - Smooth page transitions
+- **Vite** - Asset bundling with critical CSS extraction, PurgeCSS, thumbnail generation, and cache-busting
 
 ### Infrastructure
 
@@ -54,19 +55,26 @@ realworld-ludicrous/
 │   │   ├── Auth.php        # JWT authentication
 │   │   ├── Security.php    # CSRF protection
 │   │   ├── View.php        # Template rendering
+│   │   ├── Vite.php        # Asset helper with critical CSS
 │   │   └── Config.php      # Environment configuration
 │   ├── models/             # Data models (User, Article, Comment)
+│   ├── services/           # Business logic (Seeder)
 │   ├── pages/              # File-based routing (URL = file path)
 │   ├── templates/          # PHP view templates
-│   ├── public/             # Web root (entry point, CSS, JS, fonts)
+│   ├── public/             # Web root
+│   │   ├── dist/           # Vite build output (hashed assets)
+│   │   ├── fonts/
+│   │   └── img/
 │   └── composer.json       # PHP dependencies
+├── resources/              # Source assets (pre-build)
+│   ├── css/                # Stylesheets (fonts, icons, main)
+│   └── js/                 # JavaScript (app.js, boosti, yolomode)
 ├── database/
-│   ├── database.sqlite     # SQLite database (default)
 │   ├── schema.sql          # SQLite schema
 │   ├── schema-mysql.sql    # MySQL schema
 │   ├── schema-postgres.sql # PostgreSQL schema
-│   ├── seed.php            # Database seeder
 │   └── data/seed.yaml      # Test data
+├── vite.config.js          # Vite build configuration
 ├── docker-compose.yml      # Docker configuration
 ├── Caddyfile               # Web server configuration
 └── Makefile                # Build and run commands
@@ -77,6 +85,7 @@ realworld-ludicrous/
 ### Prerequisites
 
 - Docker and Docker Compose
+- Bun (for asset building)
 - Make (optional, but recommended)
 - Composer (for local development)
 
@@ -93,14 +102,22 @@ realworld-ludicrous/
 
    ```bash
    make setup
+   bun install
    ```
 
    This will:
    - Install PHP dependencies via Composer
    - Create the SQLite database
    - Run the database schema
+   - Install Node dependencies for Vite
 
-3. **Start the application**
+3. **Build assets**
+
+   ```bash
+   make build
+   ```
+
+4. **Start the application**
 
    ```bash
    make serve
@@ -110,11 +127,12 @@ realworld-ludicrous/
 
 ### Makefile Commands
 
-- `make setup` - Install dependencies and initialize database
-- `make serve` - Build and start the Docker containers
+- `make setup` - Install PHP dependencies and initialize database
+- `make serve` - Start the Docker containers
 - `make seed` - Populate the database with test data
 - `make clean` - Remove the database (useful for fresh start)
 - `make build` - Build CSS/JS assets with Vite
+- `bun run dev` - Start Vite dev server with HMR
 
 ## Development
 
@@ -237,12 +255,12 @@ Reusable UI components live in `app/components/`. Each component has:
 
 ### Frontend Features
 
-- **HTMX-driven** - Most interactions use HTMX-like attributes for seamless updates (using the lightweight [boosti](https://github.com/JensRoland/boosti) library rather than full HTMX)
-- **Boosted links and View Transitions** - Smooth, SPA-like page transitions
-- **Just-in-time prefetching** - Links are prefetched on hover for speed (using boosti's 'YOLO Mode' companion library)
+- **boosti.js** - Lightweight HTMX alternative (~2.9 KB Brotli'd) with `fx-*` attributes for AJAX interactions
+- **View Transitions** - Smooth, SPA-like page transitions via the View Transitions API
+- **YOLO Mode** - Just-in-time link prefetching on hover for instant navigation
+- **Critical CSS** - Above-the-fold styles inlined for fast first paint
+- **Async CSS Loading** - Full stylesheet loaded non-render-blocking via preload/swap
 - **Progressive Enhancement** - Works without JavaScript for basic functionality
-- **Minimal Dependencies** - Only boosti/yolomode, no heavy frontend frameworks
-- **Vite for Asset Optimization** - Minify CSS/JS with cache busting, purge unused styles
 
 ## RealWorld Specification
 
