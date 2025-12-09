@@ -1,7 +1,9 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
+import { FontaineTransform } from 'fontaine'
 import purgecss from 'vite-plugin-purgecss'
 import thumbnails from './vite-plugin-thumbnails.js'
+import criticalCss from './vite-plugin-critical-css.js'
 
 export default defineConfig({
   build: {
@@ -16,6 +18,10 @@ export default defineConfig({
     },
   },
   plugins: [
+    FontaineTransform.vite({
+      fallbacks: ['Arial', 'sans-serif'],
+      resolvePath: (id) => new URL(`./app/public${id}`, import.meta.url),
+    }),
     thumbnails(),
     purgecss({
       content: [
@@ -33,5 +39,6 @@ export default defineConfig({
         ],
       },
     }),
+    criticalCss(),
   ],
 })

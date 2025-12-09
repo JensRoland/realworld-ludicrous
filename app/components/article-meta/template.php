@@ -1,5 +1,5 @@
-<a href="/profile/<?= htmlspecialchars($authorUsername) ?>">
-    <img src="<?= htmlspecialchars($authorImageThumb) ?>" />
+<a href="/profile/<?= htmlspecialchars($authorUsername) ?>" title="Author Profile">
+    <img src="<?= htmlspecialchars($authorImageThumb) ?>" width="32" height="32" alt="author avatar" />
 </a>
 <div class="info">
     <a href="/profile/<?= htmlspecialchars($authorUsername) ?>" class="author"><?= htmlspecialchars($authorUsername) ?></a>

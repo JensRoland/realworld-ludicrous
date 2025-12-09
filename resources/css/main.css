@@ -5069,6 +5069,7 @@ footer {
   .article-preview .preview-link h1 {
     font-weight: 600 !important;
     font-size: 1.5rem !important;
+    line-height: 1.2;
     margin-bottom: 3px; }
   .article-preview .preview-link p {
     font-weight: 300;

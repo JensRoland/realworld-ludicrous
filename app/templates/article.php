@@ -70,7 +70,7 @@
                             <textarea class="form-control" name="body" placeholder="Write a comment..." rows="3"></textarea>
                         </div>
                         <div class="card-footer">
-                            <img src="<?= \App\Models\User::findById($currentUser['id'])['image'] ?? '/img/smiley-cyrus.avif' ?>" class="comment-author-img" />
+                            <img src="<?= \App\Models\User::findById($currentUser['id'])['image'] ?? '/img/smiley-cyrus.avif' ?>" class="comment-author-img" alt="author avatar" />
                             <input type="hidden" name="csrf_token" value="<?= \App\Lib\Security::getToken() ?>">
                             <button class="btn btn-sm btn-primary">
                                 Post Comment

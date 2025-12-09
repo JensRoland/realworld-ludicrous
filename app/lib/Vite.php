@@ -8,6 +8,7 @@ class Vite
 {
     private static ?array $manifest = null;
     private static string $manifestPath = __DIR__ . '/../public/dist/.vite/manifest.json';
+    private static string $criticalCssPath = __DIR__ . '/../public/dist/assets/critical.css';
     private static string $devServerUrl = 'http://localhost:5173';
 
     public static function isDev(): bool
@@ -59,16 +60,27 @@ class Vite
         $entryData = $manifest[$entry];
         $html = '';
 
-        // CSS files
+        // Inline critical CSS for fast first paint
+        if (file_exists(self::$criticalCssPath)) {
+            $criticalCss = file_get_contents(self::$criticalCssPath);
+            $html .= '<style>' . $criticalCss . '</style>' . "\n";
+        }
+
+        // Load full CSS asynchronously (non-render-blocking)
         if (isset($entryData['css'])) {
             foreach ($entryData['css'] as $cssFile) {
-                $html .= '<link rel="stylesheet" href="/dist/' . $cssFile . '">' . "\n";
+                $href = '/dist/' . $cssFile;
+                // Preload + swap pattern for async CSS loading
+                $html .= '<link rel="preload" href="' . $href . '" as="style" onload="this.onload=null;this.rel=\'stylesheet\'">' . "\n";
+                $html .= '<noscript><link rel="stylesheet" href="' . $href . '"></noscript>' . "\n";
             }
         }
 
-        // JS file
+        // JS file (preload + execute)
         if (isset($entryData['file'])) {
-            $html .= '<script type="module" src="/dist/' . $entryData['file'] . '"></script>';
+            $jsHref = '/dist/' . $entryData['file'];
+            $html .= '<link rel="modulepreload" href="' . $jsHref . '">' . "\n";
+            $html .= '<script type="module" src="' . $jsHref . '"></script>';
         }
 
         return $html;

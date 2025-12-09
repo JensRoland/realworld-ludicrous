@@ -5,14 +5,17 @@
     <meta name="csrf-token" content="<?= \App\Lib\Security::getToken() ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conduit</title>
+    <meta name="description" content="A place to share your knowledge.">
+    <link rel="preload" href="/fonts/source-sans-pro-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/source-sans-pro-v22-latin-300.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/source-sans-pro-v22-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/titillium-web-v17-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <?php if (($currentPage ?? '') === 'article'): ?>
+    <link rel="preload" href="/fonts/source-serif-pro-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/source-serif-pro-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/source-sans-pro-v22-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <?php endif; ?>
     <?= \App\Lib\Vite::assets() ?>
-    <script>
-        // Inject CSRF token into all boosti requests
-        document.addEventListener('fx:config', (e) => {
-            const token = document.querySelector('meta[name="csrf-token"]')?.content;
-            if (token) e.detail.cfg.headers['X-CSRF-Token'] = token;
-        });
-    </script>
 </head>
 <body>
     <nav class="navbar navbar-light">
@@ -35,9 +38,9 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a yolo-deep class="nav-link<?= ($currentPage ?? '') === 'profile' ? ' active' : '' ?>" href="/profile/<?= htmlspecialchars($currentUser['username']) ?>">
+                        <a yolo-deep class="nav-link<?= ($currentPage ?? '') === 'profile' ? ' active' : '' ?>" href="/profile/<?= htmlspecialchars($currentUser['username']) ?>" title="User Profile">
                             <?php if (!empty($currentUser['image'])): ?>
-                                <img src="<?= htmlspecialchars($currentUser['image']) ?>" class="user-pic" alt="<?= htmlspecialchars($currentUser['username']) ?>">
+                                <img src="<?= htmlspecialchars($currentUser['image']) ?>" class="user-pic" alt="<?= htmlspecialchars($currentUser['username']) ?>" alt="author avatar">
                             <?php endif; ?>
                             <?= htmlspecialchars($currentUser['username']) ?>
                         </a>
@@ -66,5 +69,12 @@
             </span>
         </div>
     </footer>
+    <script>
+        // Inject CSRF token into all boosti requests
+        document.addEventListener('fx:config', (e) => {
+            const token = document.querySelector('meta[name="csrf-token"]')?.content;
+            if (token) e.detail.cfg.headers['X-CSRF-Token'] = token;
+        });
+    </script>
 </body>
 </html>

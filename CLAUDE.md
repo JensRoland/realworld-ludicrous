@@ -314,14 +314,14 @@ See `database/data/seed.yaml` for test accounts.
 - [X] Component architecture (controller + template separation)
 - [X] Switch from HTMX to ~~fixi~~ boosti.js
 - [X] Just-in-time prefetching of next page links (YOLO Mode)
+- [X] Less render-blocking requests (JS/CSS)
+- [X] Fix layout shifts
+- [X] Bundle, minify, and version assets (consider Nette Assets or Skybolt)
+- [X] Resize and compress images
 
 ### Performance Improvements
 
-- [ ] Less render-blocking requests (JS/CSS)
-- [ ] Fix layout shifts
 - [ ] Pre-compile Markdown to HTML and store in DB
-- [ ] Bundle, minify, and version assets (consider Nette Assets or Skybolt)
-- [ ] Resize and compress images
 
 ### Future Enhancements
 

@@ -3,8 +3,8 @@
         <p class="card-text"><?= htmlspecialchars($body) ?></p>
     </div>
     <div class="card-footer">
-        <a href="/profile/<?= htmlspecialchars($authorUsername) ?>" class="comment-author">
-            <img src="<?= htmlspecialchars($authorImageThumb) ?>" class="comment-author-img" />
+        <a href="/profile/<?= htmlspecialchars($authorUsername) ?>" class="comment-author" title="Author Profile">
+            <img src="<?= htmlspecialchars($authorImageThumb) ?>" class="comment-author-img" width="32" height="32" alt="author avatar" />
         </a>
         &nbsp;
         <a href="/profile/<?= htmlspecialchars($authorUsername) ?>" class="comment-author">

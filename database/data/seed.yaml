@@ -3,7 +3,7 @@ users:
   - username: richardhendricks
     email: richard@piedpiper.com
     password: password
-    bio: CEO of Pied Piper. Built middle-out compression. This guy f***s.
+    bio: CEO of Pied Piper. Built middle-out compression.
     image: /img/avatars/richardhendricks.avif
 
   - username: dinesh
@@ -34,7 +34,7 @@ users:
   - username: russhanneman
     email: russ@russfest.com
     password: password
-    bio: "Billionaire. This guy f***s. ROI, Russ Hanneman. Tres Commas Club (temporarily)."
+    bio: "Billionaire. This guy f***s. ROI, Russ Hanneman. Tres Commas Club."
     image: /img/avatars/russhanneman.avif
 
   - username: petergregory
