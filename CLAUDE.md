@@ -61,13 +61,25 @@ app/
 │   ├── User.php
 │   ├── Article.php
 │   └── Comment.php
+├── services/              # Business logic services
+│   └── Seeder.php         # Database seeding service
 ├── templates/             # PHP view templates
 │   └── layout.php
 └── public/                # Web root
     ├── index.php          # Entry point
-    ├── css/
-    ├── js/
-    └── fonts/
+    ├── dist/              # Vite build output (hashed assets)
+    ├── fonts/
+    └── img/
+
+resources/                 # Source assets (pre-build)
+├── css/
+│   ├── fonts.css          # @font-face declarations
+│   ├── icons.css          # Ionicons via CSS masks
+│   └── main.css           # Bootstrap + Conduit styles
+└── js/
+    ├── app.js             # Entry point (imports CSS + JS)
+    ├── boosti.min.js      # HTMX & SPA navigation library
+    └── yolomode.min.js    # Link prefetching
 
 database/                  # Database infrastructure
 ├── database.sqlite        # SQLite database (default)
@@ -153,6 +165,7 @@ function render(array $article, bool $isFavorited): void
 - **Auth** (`app/lib/Auth.php`): JWT-based authentication via httpOnly cookies.
 - **Security** (`app/lib/Security.php`): CSRF protection using HMAC-derived tokens.
 - **View** (`app/lib/View.php`): Template rendering with layout support and `View::component()` for components.
+- **Vite** (`app/lib/Vite.php`): Asset helper for Vite manifest resolution and critical CSS injection.
 
 ## Database
 
@@ -268,6 +281,35 @@ boosti.js is a fork of fixi.js (which itself is a barebones version of htmx) wit
 
 CSRF token auto-injected via `fx:config` event in layout.php.
 
+## Build System
+
+Assets are built with Vite and served from `app/public/dist/` with content hashes for cache-busting.
+
+```bash
+bun run dev    # Start Vite dev server with HMR
+bun run build  # Production build with optimizations
+```
+
+### Vite Plugins
+
+- **fontaine**: Generates font fallbacks to reduce CLS
+- **vite-plugin-purgecss**: Removes unused CSS
+- **vite-plugin-thumbnails.js**: Auto-generates avatar thumbnails (32x32 AVIF)
+- **vite-plugin-critical-css.js**: Extracts above-the-fold CSS for inlining
+
+### Asset Loading Strategy
+
+The `Vite` helper (`app/lib/Vite.php`) handles asset injection:
+
+1. **Critical CSS** - Inlined in `<head>` for instant first paint
+2. **Full CSS** - Loaded async via preload/swap pattern (non-render-blocking)
+3. **JavaScript** - Modulepreload + deferred execution
+
+```php
+// In layout.php
+<?= \App\Lib\Vite::assets('resources/js/app.js') ?>
+```
+
 ## Development
 
 ### Live Reload
@@ -306,19 +348,6 @@ See `database/data/seed.yaml` for test accounts.
 - [ ] Tag input UI component with autocompletion
 - [ ] Paginator with page numbers (consider Nette Paginator)
 
-### Completed
-
-- [X] Basic RealWorld functionality (articles, comments, profiles, follows, favorites)
-- [X] Seeder with test data
-- [X] File-based routing with [param] support
-- [X] Component architecture (controller + template separation)
-- [X] Switch from HTMX to ~~fixi~~ boosti.js
-- [X] Just-in-time prefetching of next page links (YOLO Mode)
-- [X] Less render-blocking requests (JS/CSS)
-- [X] Fix layout shifts
-- [X] Bundle, minify, and version assets (consider Nette Assets or Skybolt)
-- [X] Resize and compress images
-
 ### Performance Improvements
 
 - [ ] Pre-compile Markdown to HTML and store in DB
@@ -326,5 +355,4 @@ See `database/data/seed.yaml` for test accounts.
 ### Future Enhancements
 
 - [ ] Templating language (Latte?) for faster compilation
-- [X] Single File Component syntax / Component folders
 - [ ] Require strong/high-entropy passwords
