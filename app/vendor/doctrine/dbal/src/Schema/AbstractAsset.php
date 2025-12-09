@@ -54,6 +54,7 @@ abstract class AbstractAsset
      */
     protected ?string $_namespace = null;
 
+    /** @deprecated */
     protected bool $_quoted = false;
 
     /** @var list<Identifier> */
@@ -280,7 +281,7 @@ abstract class AbstractAsset
      * The shortest name is stripped of the default namespace. All other
      * namespaced elements are returned as full-qualified names.
      *
-     * @deprecated Use {@link getName()} instead.
+     * @deprecated Use {@see NamedObject::getObjectName()} instead.
      */
     public function getShortestName(?string $defaultNamespaceName): string
     {
@@ -301,9 +302,22 @@ abstract class AbstractAsset
 
     /**
      * Checks if this asset's name is quoted.
+     *
+     * @deprecated Depending on the concrete class of the object, use {@see NamedObject::getObjectName()} or
+     *             {@see OptionallyNamedObject::getObjectName()} to get the name. Then, depending on the type of the
+     *             name, use {@see UnqualifiedName::getIdentifier()}, {@see OptionallyQualifiedName::getQualifier()},
+     *             or {@see OptionallyQualifiedName::getUnqualifiedName()} to get the corresponding identifiers. Then,
+     *             use {@see Identifier::$isQuoted()}.
      */
     public function isQuoted(): bool
     {
+        Deprecation::triggerIfCalledFromOutside(
+            'doctrine/dbal',
+            'https://github.com/doctrine/dbal/pull/7084',
+            '%s is deprecated and will be removed in 5.0.',
+            __METHOD__,
+        );
+
         return $this->_quoted;
     }
 
@@ -335,9 +349,20 @@ abstract class AbstractAsset
 
     /**
      * Returns the name of this schema asset.
+     *
+     * @deprecated Use {@see NamedObject::getObjectName()} or {@see OptionallyQualifiedName::getObjectName()} instead.
+     *             In SQL context, convert the resulting {@see Name} to SQL using {@see Name::toSQL()}. In other
+     *             contexts, convert the resulting name to string using {@see Name::toString()}.
      */
     public function getName(): string
     {
+        Deprecation::triggerIfCalledFromOutside(
+            'doctrine/dbal',
+            'https://github.com/doctrine/dbal/pull/7094',
+            '%s is deprecated and will be removed in 5.0.',
+            __METHOD__,
+        );
+
         if ($this->_namespace !== null) {
             return $this->_namespace . '.' . $this->_name;
         }

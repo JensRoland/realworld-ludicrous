@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
-        'name' => 'realworld/php-htmx',
+        'name' => 'realworld/ludicrous',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '1f33581e0559d64b3fbca38d6fc13d55fd15130c',
+        'reference' => 'aa1208e716e98d481d7744f91d89b10d544ccdbe',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'doctrine/dbal' => array(
-            'pretty_version' => '4.3.4',
-            'version' => '4.3.4.0',
-            'reference' => '1a2fbd0e93b8dec7c3d1ac2b6396a7b929b130dc',
+            'pretty_version' => '4.4.1',
+            'version' => '4.4.1.0',
+            'reference' => '3d544473fb93f5c25b483ea4f4ce99f8c4d9d44c',
             'type' => 'library',
             'install_path' => __DIR__ . '/../doctrine/dbal',
             'aliases' => array(),
@@ -64,10 +64,10 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'realworld/php-htmx' => array(
+        'realworld/ludicrous' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '1f33581e0559d64b3fbca38d6fc13d55fd15130c',
+            'reference' => 'aa1208e716e98d481d7744f91d89b10d544ccdbe',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -92,9 +92,9 @@
             'dev_requirement' => false,
         ),
         'symfony/yaml' => array(
-            'pretty_version' => 'v6.4.26',
-            'version' => '6.4.26.0',
-            'reference' => '0fc8b966fd0dcaab544ae59bfc3a433f048c17b0',
+            'pretty_version' => 'v6.4.30',
+            'version' => '6.4.30.0',
+            'reference' => '8207ae83da19ee3748d6d4f567b4d9a7c656e331',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/yaml',
             'aliases' => array(),

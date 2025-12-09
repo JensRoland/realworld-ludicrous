@@ -1,6 +1,6 @@
 {
-    "name": "realworld/php-htmx",
-    "description": "RealWorld App with Vanilla PHP and HTMX",
+    "name": "realworld/ludicrous",
+    "description": "RealWorld App with Vanilla PHP and a sprinkle of JS",
     "type": "project",
     "autoload": {
         "psr-4": {

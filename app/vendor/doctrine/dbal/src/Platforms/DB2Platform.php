@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Doctrine\DBAL\Platforms;
 
 use Doctrine\DBAL\Connection;
+use Doctrine\DBAL\Platforms\Db2\Db2MetadataProvider;
 use Doctrine\DBAL\Platforms\Exception\NotSupported;
 use Doctrine\DBAL\Platforms\Keywords\DB2Keywords;
 use Doctrine\DBAL\Platforms\Keywords\KeywordList;
@@ -587,6 +588,11 @@ class DB2Platform extends AbstractPlatform
         );
 
         return new DB2Keywords();
+    }
+
+    public function createMetadataProvider(Connection $connection): Db2MetadataProvider
+    {
+        return new Db2MetadataProvider($connection, $this);
     }
 
     public function createSchemaManager(Connection $connection): DB2SchemaManager

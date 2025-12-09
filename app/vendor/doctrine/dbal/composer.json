@@ -46,8 +46,8 @@
         "phpunit/phpunit": "11.5.23",
         "slevomat/coding-standard": "8.24.0",
         "squizlabs/php_codesniffer": "4.0.0",
-        "symfony/cache": "^6.3.8|^7.0",
-        "symfony/console": "^5.4|^6.3|^7.0"
+        "symfony/cache": "^6.3.8|^7.0|^8.0",
+        "symfony/console": "^5.4|^6.3|^7.0|^8.0"
     },
     "suggest": {
         "symfony/console": "For helpful console commands such as SQL execution and import of files."
@@ -64,5 +64,8 @@
     },
     "autoload-dev": {
         "psr-4": { "Doctrine\\DBAL\\Tests\\": "tests" }
+    },
+    "scripts": {
+        "docs": "composer --working-dir docs update && ./docs/vendor/bin/build-docs.sh @additional_args"
     }
 }

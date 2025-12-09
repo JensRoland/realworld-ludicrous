@@ -8,9 +8,9 @@ $baseDir = dirname($vendorDir);
 return array(
     '6e3fae29631ef280660b3cdad06f25a8' => $vendorDir . '/symfony/deprecation-contracts/function.php',
     '320cde22f66dd4f5d3fd621d3e88b98f' => $vendorDir . '/symfony/polyfill-ctype/bootstrap.php',
-    'c5c91b568708a10f6d3bc19aa0f4f1d3' => $baseDir . '/components/article-meta/controller.php',
-    'bfba9c4f5800044209e68b0acd365838' => $baseDir . '/components/article-preview/controller.php',
-    '5d5f338b8f6ce33b0a168fbdfcc7cec8' => $baseDir . '/components/comment/controller.php',
-    '8f3fee672de9ff1e9cf98a2a94e133f5' => $baseDir . '/components/favorite-button/controller.php',
-    '2d5e9a3c79dd1291c6b3696bfcec43c5' => $baseDir . '/components/follow-button/controller.php',
+    'b4da96e347af22e7c3978de71d1c860d' => $baseDir . '/components/article-meta/controller.php',
+    '95e1af9ee50b10444c03f547e3a75545' => $baseDir . '/components/article-preview/controller.php',
+    '641e68a351773935c50abed3308b37e4' => $baseDir . '/components/comment/controller.php',
+    '19c25f4aae967f40b537c5bc0d39ee7e' => $baseDir . '/components/favorite-button/controller.php',
+    'e0717df7ab1e90b02a8dbd89f2eb5a54' => $baseDir . '/components/follow-button/controller.php',
 );
