@@ -1,0 +1,32 @@
+<nav class="navbar navbar-light">
+    <div class="container">
+        <a fx-yolo-deep class="navbar-brand" href="/">conduit</a>
+        <ul class="nav navbar-nav pull-xs-right">
+            <li class="nav-item">
+                <a fx-yolo-deep class="nav-link{$currentPage === 'home' ? ' active' : ''}" href="/">Home</a>
+            </li>
+            <li n:if="$isLoggedIn" class="nav-item">
+                <a fx-yolo-deep class="nav-link{$currentPage === 'editor' ? ' active' : ''}" href="/editor">
+                    <i class="ion-compose"></i>&nbsp;New Article
+                </a>
+            </li>
+            <li n:if="$isLoggedIn" class="nav-item">
+                <a fx-yolo-deep class="nav-link{$currentPage === 'settings' ? ' active' : ''}" href="/settings">
+                    <i class="ion-gear-a"></i>&nbsp;Settings
+                </a>
+            </li>
+            <li n:if="$isLoggedIn" class="nav-item">
+                <a fx-yolo-deep class="nav-link{$currentPage === 'profile' ? ' active' : ''}" href="/profile/{$currentUser['username']}" title="User Profile">
+                    <img n:if="!empty($currentUser['image'])" src="{$currentUser['image']}" class="user-pic" alt="{$currentUser['username']}">
+                    {$currentUser['username']}
+                </a>
+            </li>
+            <li n:if="!$isLoggedIn" class="nav-item">
+                <a fx-yolo-deep class="nav-link{$currentPage === 'login' ? ' active' : ''}" href="/login">Sign in</a>
+            </li>
+            <li n:if="!$isLoggedIn" class="nav-item">
+                <a fx-yolo-deep class="nav-link{$currentPage === 'register' ? ' active' : ''}" href="/register">Sign up</a>
+            </li>
+        </ul>
+    </div>
+</nav>

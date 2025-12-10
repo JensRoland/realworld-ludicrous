@@ -6,7 +6,7 @@ The purpose of this implementation of the RealWorld spec is to demonstrate the v
 
 **DEMO: [https://realworld.app.is/](https://realworld.app.is/)**
 
-![Lighthouse 100/100 on Performance](realworld-lighthouse.png)
+![Lighthouse 100/100 on Performance](docs/realworld-lighthouse.png)
 
 The demo scores **100/100 on Performance in Lighthouse** (measured for mobile) and is built with a modern & intuitive component-based architecture with vertical slicing and file-based routing; and with HATEOAS principles applied to the frontend.
 
@@ -55,7 +55,7 @@ No particular reason other than ease of deployment, since I already had a Litesp
 
 ```text
 realworld-ludicrous/
-├── app/
+├── app/                    # DEPLOYABLE APPLICATION
 │   ├── components/         # Reusable UI components
 │   │   ├── article-meta/   # Author info (avatar, name, date)
 │   │   ├── article-preview/# Article card for lists
@@ -79,19 +79,26 @@ realworld-ludicrous/
 │   │   ├── fonts/
 │   │   └── img/
 │   └── composer.json       # PHP dependencies
+├── build/                  # Build tooling (dev only)
+│   ├── vite.config.js      # Vite build configuration
+│   └── vite-plugin-*.js    # Custom Vite plugins
+├── infra/                  # Infrastructure (dev only)
+│   ├── Dockerfile          # Container definition
+│   ├── docker-compose.yml  # Docker configuration
+│   └── Caddyfile           # Web server configuration
 ├── resources/              # Source assets (pre-build)
 │   ├── css/                # Stylesheets (fonts, icons, main)
 │   └── js/                 # JavaScript (app.js, boosti, yolomode)
-├── database/
+├── database/               # Database files
 │   ├── schema.sql          # SQLite schema
 │   ├── schema-mysql.sql    # MySQL schema
 │   ├── schema-postgres.sql # PostgreSQL schema
 │   └── data/seed.yaml      # Test data
-├── vite.config.js          # Vite build configuration
-├── docker-compose.yml      # Docker configuration
-├── Caddyfile               # Web server configuration
+├── docs/                   # Documentation assets
 └── Makefile                # Build and run commands
 ```
+
+The `app/` directory is the deployable application - everything else is development tooling.
 
 ## Getting Started
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="csrf-token" content="{csrf_token()}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conduit</title>
+    <meta name="description" content="A place to share your knowledge.">
+    <link rel="preload" href="/fonts/source-sans-pro-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/source-sans-pro-v22-latin-300.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/source-sans-pro-v22-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/titillium-web-v17-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link n:if="$currentPage === 'article'" rel="preload" href="/fonts/source-serif-pro-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link n:if="$currentPage === 'article'" rel="preload" href="/fonts/source-serif-pro-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link n:if="$currentPage === 'article'" rel="preload" href="/fonts/source-sans-pro-v22-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    {App\Lib\Vite::assets()|noescape}
+</head>
+<body>
+    {Navbar($currentPage)}
+
+    {include "$content_template.latte"}
+
+    {Footer()}
+    <script>
+        // Inject CSRF token into all boosti requests
+        document.addEventListener('fx:config', (e) => {
+            const token = document.querySelector('meta[name="csrf-token"]')?.content;
+            if (token) e.detail.cfg.headers['X-CSRF-Token'] = token;
+        });
+    </script>
+</body>
+</html>

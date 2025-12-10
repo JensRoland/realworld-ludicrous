@@ -26,5 +26,5 @@ function render(array $comment, string $articleSlug): void
         'canDelete' => Auth::check() && Auth::userId() == $comment['author_id'],
     ];
 
-    View::component(__DIR__ . '/template.php', $props);
+    View::component(__DIR__ . '/template.latte', $props);
 }

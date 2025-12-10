@@ -1,0 +1,12 @@
+<form class="card comment-form" fx-action="/article/{$articleSlug}/comments" fx-method="POST" fx-target="#comment-list" fx-swap="afterbegin" fx-reset>
+    <div class="card-block">
+        <textarea class="form-control" name="body" placeholder="Write a comment..." rows="3"></textarea>
+    </div>
+    <div class="card-footer">
+        <img src="{$userImage}" class="comment-author-img" alt="author avatar" />
+        <input type="hidden" name="csrf_token" value="{$csrfToken}">
+        <button class="btn btn-sm btn-primary">
+            Post Comment
+        </button>
+    </div>
+</form>

@@ -1,0 +1,23 @@
+<div class="card" id="comment-{$id}">
+    <div class="card-block">
+        <p class="card-text">{$body}</p>
+    </div>
+    <div class="card-footer">
+        <a href="/profile/{$authorUsername}" class="comment-author" title="Author Profile">
+            <img src="{$authorImageThumb}" class="comment-author-img" width="32" height="32" alt="author avatar" />
+        </a>
+        &nbsp;
+        <a href="/profile/{$authorUsername}" class="comment-author">
+            {$authorUsername}
+        </a>
+        <span class="date-posted">{$date}</span>
+        <span n:if="$canDelete" class="mod-options">
+            <i class="ion-trash-a"
+               fx-action="/article/{$articleSlug}/comment/{$id}"
+               fx-method="DELETE"
+               fx-boost="false"
+               fx-target="#comment-{$id}"
+               fx-swap="outerHTML"></i>
+        </span>
+    </div>
+</div>

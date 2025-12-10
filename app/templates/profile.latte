@@ -1,0 +1,13 @@
+<div class="profile-page">
+    {UserInfo($profile, $isFollowing ?? false)}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-10 offset-md-1">
+                {ProfileTabs($profile['username'], $activeTab ?? 'my')}
+                {ArticleList($articles)}
+                {Pagination($offset ?? 0, $limit ?? 20, count($articles), '/profile/' . $profile['username'], [tab => $activeTab ?? 'my'])}
+            </div>
+        </div>
+    </div>
+</div>

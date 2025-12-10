@@ -106,7 +106,9 @@ class Router
         }
 
         // Try parameterized directory: [slug], [id], etc.
-        $dirs = glob($currentDir . '/\[*\]', GLOB_ONLYDIR);
+        // Escape brackets in path for glob (brackets are glob pattern chars)
+        $escapedDir = $this->escapeGlobPath($currentDir);
+        $dirs = glob($escapedDir . '/\[*\]', GLOB_ONLYDIR);
         foreach ($dirs as $paramDir) {
             $paramName = trim(basename($paramDir), '[]');
             $newParams = $params;
@@ -116,7 +118,7 @@ class Router
         }
 
         // Try parameterized file: [slug].php, [id].php
-        $files = glob($currentDir . '/\[*\].php');
+        $files = glob($escapedDir . '/\[*\].php');
         foreach ($files as $paramFile) {
             $paramName = trim(basename($paramFile, '.php'), '[]');
             if (empty($remaining)) {
@@ -157,5 +159,14 @@ class Router
         } else {
             echo "404 Not Found: $path";
         }
+    }
+
+    /**
+     * Escape brackets in a path for use in glob patterns.
+     * Brackets are glob pattern characters, so literal brackets must be escaped.
+     */
+    private function escapeGlobPath(string $path): string
+    {
+        return str_replace(['[', ']'], ['\[', '\]'], $path);
     }
 }

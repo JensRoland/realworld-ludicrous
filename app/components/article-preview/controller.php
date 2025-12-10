@@ -33,5 +33,5 @@ function render(array $article): void
         'isFavorited' => $isFavorited,
     ];
 
-    View::component(__DIR__ . '/template.php', $props);
+    View::component(__DIR__ . '/template.latte', $props);
 }

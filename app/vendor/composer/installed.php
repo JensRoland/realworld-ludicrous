@@ -3,7 +3,7 @@
         'name' => 'realworld/ludicrous',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'aa1208e716e98d481d7744f91d89b10d544ccdbe',
+        'reference' => '69da19f65221d65581eef73a0146749ebcd2b6ef',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -46,6 +46,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'latte/latte' => array(
+            'pretty_version' => 'v3.1.0',
+            'version' => '3.1.0.0',
+            'reference' => 'b6e3ad20c968b0aee9a8b7c8587592cdf1feea73',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../latte/latte',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'psr/cache' => array(
             'pretty_version' => '3.0.0',
             'version' => '3.0.0.0',
@@ -67,7 +76,7 @@
         'realworld/ludicrous' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'aa1208e716e98d481d7744f91d89b10d544ccdbe',
+            'reference' => '69da19f65221d65581eef73a0146749ebcd2b6ef',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

@@ -1,0 +1,40 @@
+# Git
+.git
+.gitignore
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Documentation
+docs/
+*.md
+!README.md
+LICENSE
+CODE_OF_CONDUCT.md
+
+# Development files
+node_modules/
+bun.lock
+package.json
+.claude/
+
+# Build tooling (not needed in container)
+build/
+
+# Environment (sensitive, use Docker env vars instead)
+.env
+.env.example
+
+# Profiling output
+profiling/
+*.cachegrind
+
+# macOS
+.DS_Store
+
+# Temporary files
+*.log
+*.tmp

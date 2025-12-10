@@ -9,17 +9,31 @@
             "App\\Services\\": "services/"
         },
         "files": [
+            "components/article-actions/controller.php",
+            "components/article-list/controller.php",
             "components/article-meta/controller.php",
             "components/article-preview/controller.php",
+            "components/banner/controller.php",
             "components/comment/controller.php",
+            "components/comment-form/controller.php",
+            "components/comment-list/controller.php",
+            "components/error-messages/controller.php",
             "components/favorite-button/controller.php",
-            "components/follow-button/controller.php"
+            "components/feed-toggle/controller.php",
+            "components/follow-button/controller.php",
+            "components/footer/controller.php",
+            "components/navbar/controller.php",
+            "components/pagination/controller.php",
+            "components/profile-tabs/controller.php",
+            "components/tag-list/controller.php",
+            "components/user-info/controller.php"
         ]
     },
     "require": {
         "erusev/parsedown": "^1.7",
         "firebase/php-jwt": "^6.10",
         "symfony/yaml": "^6.0",
-        "doctrine/dbal": "^4.3"
+        "doctrine/dbal": "^4.3",
+        "latte/latte": "^3.1"
     }
 }

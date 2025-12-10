@@ -19,5 +19,5 @@ function render(array $profile, bool $isFollowing): void
         'label' => $isFollowing ? 'Unfollow' : 'Follow',
     ];
 
-    View::component(__DIR__ . '/template.php', $props);
+    View::component(__DIR__ . '/template.latte', $props);
 }

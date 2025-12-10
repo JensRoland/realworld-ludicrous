@@ -1,0 +1,17 @@
+<div class="home-page">
+    {Banner()}
+
+    <div class="container page">
+        <div class="row">
+            <div class="col-md-9">
+                {FeedToggle($activeFeed, $activeTag)}
+                {ArticleList($articles)}
+                {Pagination($offset, $limit, count($articles), '/', [feed => $activeFeed, tag => $activeTag])}
+            </div>
+
+            <div class="col-md-3">
+                {TagList($tags, 'sidebar')}
+            </div>
+        </div>
+    </div>
+</div>

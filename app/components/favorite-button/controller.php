@@ -33,5 +33,5 @@ function render(array $article, bool $isFavorited, bool $alignRight = false, boo
         'compact' => $compact,
     ];
 
-    View::component(__DIR__ . '/template.php', $props);
+    View::component(__DIR__ . '/template.latte', $props);
 }
