@@ -29,6 +29,7 @@ This project demonstrates a full-stack web application built according to the Re
 ### Backend
 
 - **Vanilla PHP 8.3** - No framework, pure PHP with PSR autoloading
+- **[Latte](https://latte.nette.org/)** - Fast, secure templating engine with auto-discovered components
 - **File-based routing** - Routes determined by file paths with `[param]` syntax
 - **Database-agnostic** - Supports SQLite, MySQL, and PostgreSQL via Doctrine DBAL
 - **Composer** - Dependency management and PSR-4 autoloading
@@ -56,24 +57,25 @@ No particular reason other than ease of deployment, since I already had a Litesp
 ```text
 realworld-ludicrous/
 ├── app/                    # DEPLOYABLE APPLICATION
-│   ├── components/         # Reusable UI components
-│   │   ├── article-meta/   # Author info (avatar, name, date)
+│   ├── components/         # Reusable UI components (18 total)
 │   │   ├── article-preview/# Article card for lists
-│   │   ├── comment/        # Comment card
-│   │   ├── favorite-button/# Favorite/unfavorite button
-│   │   └── follow-button/  # Follow/unfollow button
+│   │   ├── comment/        # Comment card with delete
+│   │   ├── navbar/         # Navigation bar
+│   │   └── ...             # See CLAUDE.md for full list
 │   ├── lib/                # Framework core
 │   │   ├── Router.php      # File-based router with [param] support
 │   │   ├── Database.php    # Doctrine DBAL singleton
 │   │   ├── Auth.php        # JWT authentication
 │   │   ├── Security.php    # CSRF protection
-│   │   ├── View.php        # Template rendering
+│   │   ├── View.php        # Latte/PHP template rendering
+│   │   ├── ComponentExtension.php  # Latte component auto-discovery
 │   │   ├── Vite.php        # Asset helper with critical CSS
 │   │   └── Config.php      # Environment configuration
 │   ├── models/             # Data models (User, Article, Comment)
 │   ├── services/           # Business logic (Seeder)
 │   ├── pages/              # File-based routing (URL = file path)
-│   ├── templates/          # PHP view templates
+│   ├── templates/          # Latte templates (.latte)
+│   ├── cache/              # Compiled Latte templates
 │   ├── public/             # Web root
 │   │   ├── dist/           # Vite build output (hashed assets)
 │   │   ├── fonts/
@@ -252,17 +254,36 @@ Routes are determined by file paths in `app/pages/`:
 
 Parameters in brackets become variables: `[slug].php` means `$slug` is available in the file.
 
+### Templating with Latte
+
+Templates use the [Latte](https://latte.nette.org/) templating engine with auto-discovered components:
+
+```latte
+{* Clean component syntax in .latte files *}
+<div class="home-page">
+    {Banner()}
+    {FeedToggle($activeFeed, $activeTag)}
+    {ArticleList($articles)}
+    {TagList($tags, 'sidebar')}
+</div>
+```
+
+Components are auto-registered as functions from `app/components/`:
+
+- `article-preview/` → `{ArticlePreview($article)}`
+- `tag-list/` → `{TagList($tags, 'sidebar')}`
+
 ### Components
 
 Reusable UI components live in `app/components/`. Each component has:
 
 - `controller.php` - Logic and data preparation
-- `template.php` - Pure HTML presentation
+- `template.latte` - Latte template
 
-```php
-// Usage in templates
-\App\Components\FavoriteButton\render($article, $isFavorited);
-\App\Components\Comment\render($comment, $articleSlug);
+```latte
+{* Usage in Latte templates *}
+{FavoriteButton($article, $isFavorited)}
+{Comment($comment, $articleSlug)}
 ```
 
 ### Backend Features
@@ -270,7 +291,8 @@ Reusable UI components live in `app/components/`. Each component has:
 - **Router** - File-based routing in [app/lib/Router.php](app/lib/Router.php)
 - **Database** - Doctrine DBAL for database-agnostic queries in [app/lib/Database.php](app/lib/Database.php)
 - **Security** - Password hashing and JWT token generation in [app/lib/Security.php](app/lib/Security.php)
-- **View** - Template rendering with layout support in [app/lib/View.php](app/lib/View.php)
+- **View** - Latte/PHP template rendering in [app/lib/View.php](app/lib/View.php)
+- **ComponentExtension** - Auto-discovers components as Latte functions in [app/lib/ComponentExtension.php](app/lib/ComponentExtension.php)
 - **Config** - Environment-based configuration in [app/lib/Config.php](app/lib/Config.php)
 
 ### Frontend Features

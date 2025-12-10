@@ -385,8 +385,8 @@ See `database/data/seed.yaml` for test accounts.
 
 ### Performance Improvements
 
-- [X] Pre-compile Markdown to HTML and store in DB
-- [X] Latte templating for faster compilation (with auto-discovered components)
+- [x] Pre-compile Markdown to HTML and store in DB
+- [x] Latte templating for faster compilation (with auto-discovered components)
 
 ### Future Enhancements
 
