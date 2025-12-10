@@ -1,0 +1,22 @@
+<div class="article-preview">
+    <div class="article-meta" style="view-transition-name: {$slug}-meta;">
+        <a fx-yolo-deep href="/profile/{$authorUsername}" title="Author Profile">
+            <img src="{$authorImageThumb}" width="32" height="32" alt="author avatar" />
+        </a>
+        <div class="info">
+            <a fx-yolo-deep href="/profile/{$authorUsername}" class="author">{$authorUsername}</a>
+            <span class="date">{$date}</span>
+        </div>
+        {FavoriteButton($article, $isFavorited, true, true)}
+    </div>
+    <a fx-yolo-deep href="/article/{$slug}" class="preview-link">
+        <h1 style="view-transition-name: {$slug}-title;">
+            {$title}
+        </h1>
+        <p>{$description}</p>
+        <span>Read more...</span>
+        <ul class="tag-list">
+            <li n:foreach="$tagList as $tag" class="tag-default tag-pill tag-outline">{$tag}</li>
+        </ul>
+    </a>
+</div>

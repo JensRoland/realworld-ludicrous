@@ -1,0 +1,6 @@
+<div n:if="empty($articles)" class="article-preview">
+    {$emptyMessage}
+</div>
+{foreach $articles as $article}
+    {ArticlePreview($article)}
+{/foreach}

@@ -1,0 +1,23 @@
+<div class="user-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-10 offset-md-1">
+                <img src="{$profile['image'] ?: '/img/smiley-cyrus.avif'}" class="user-img" alt="author avatar" />
+                <h4>{$profile['username']}</h4>
+                <p>{$profile['bio'] ?? ''}</p>
+
+                <a n:if="$isOwnProfile" href="/settings" class="btn btn-sm btn-outline-secondary action-btn">
+                    <i class="ion-gear-a"></i>
+                    &nbsp;
+                    Edit Profile Settings
+                </a>
+                {if !$isOwnProfile && $isLoggedIn}{FollowButton($profile, $isFollowing)}{/if}
+                <a n:if="!$isOwnProfile && !$isLoggedIn" href="/login" class="btn btn-sm btn-outline-secondary action-btn">
+                    <i class="ion-plus-round"></i>
+                    &nbsp;
+                    Follow {$profile['username']}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

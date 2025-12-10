@@ -1,0 +1,14 @@
+<button n:if="$compact" class="btn btn-sm{$alignClass} {$buttonClass}"
+        fx-action="/article/{$slug}/{$action}{$queryString}"
+        fx-method="POST"
+        fx-swap="outerHTML">
+    <i class="ion-heart"></i> {$count}
+</button>
+<button n:if="!$compact" class="btn btn-sm{$alignClass} {$buttonClass}"
+        fx-action="/article/{$slug}/{$action}{$queryString}"
+        fx-method="POST"
+        fx-swap="outerHTML">
+    <i class="ion-heart"></i>
+    &nbsp;
+    {$label} Article <span class="counter">({$count})</span>
+</button>

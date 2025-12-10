@@ -1,0 +1,13 @@
+services:
+  web:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
+    ports:
+      - "8082:80"
+    environment:
+      SERVER_NAME: ":80"
+    volumes:
+      - ..:/app
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+    working_dir: /app

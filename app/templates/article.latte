@@ -1,0 +1,38 @@
+<div class="article-page">
+    <div class="banner">
+        <div class="container">
+            <h1 style="view-transition-name: {$article['slug']}-title;">
+                {$article['title']}
+            </h1>
+
+            <div class="article-meta" style="view-transition-name: {$article['slug']}-meta;">
+                {ArticleMeta($article)}
+                {ArticleActions($article, $isFavorited)}
+            </div>
+        </div>
+    </div>
+
+    <div class="container page">
+        <div class="row article-content">
+            <div class="col-md-12">
+                {$article['body_html']|noescape}
+                {if !empty($article['tagList'])}{TagList($article['tagList'], 'inline')}{/if}
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="article-actions">
+            <div class="article-meta">
+                {ArticleMeta($article)}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-8 offset-md-2">
+                {CommentForm($article['slug'])}
+                {CommentList($comments ?? [], $article['slug'])}
+            </div>
+        </div>
+    </div>
+</div>

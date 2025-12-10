@@ -1,0 +1,10 @@
+<nav>
+    <ul class="pagination">
+        <li n:if="$hasPrevious" class="page-item">
+            <a fx-yolo-deep class="page-link" href="{$previousUrl}">Previous</a>
+        </li>
+        <li n:if="$hasNext" class="page-item">
+            <a fx-yolo-deep class="page-link" href="{$nextUrl}">Next</a>
+        </li>
+    </ul>
+</nav>

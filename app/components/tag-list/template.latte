@@ -1,0 +1,9 @@
+<div n:if="$variant === 'sidebar'" class="sidebar">
+    <p>Popular Tags</p>
+    <div class="tag-list">
+        <a n:foreach="$tags as $tag" fx-yolo-deep href="/?tag={$tag}" class="tag-pill tag-default">{$tag}</a>
+    </div>
+</div>
+<ul n:if="$variant !== 'sidebar'" class="tag-list">
+    <li n:foreach="$tags as $tag" class="tag-default tag-pill tag-outline">{$tag}</li>
+</ul>

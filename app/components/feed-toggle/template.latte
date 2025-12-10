@@ -1,0 +1,14 @@
+<div class="feed-toggle">
+    <ul class="nav nav-pills outline-active">
+        <li class="nav-item">
+            <a n:if="$isLoggedIn" fx-yolo-deep class="nav-link {$activeFeed === 'your' ? 'active' : ''}" href="/?feed=your">Your Feed</a>
+            <a n:if="!$isLoggedIn" fx-yolo-deep class="nav-link disabled" href="/login">Your Feed</a>
+        </li>
+        <li class="nav-item">
+            <a fx-yolo-deep class="nav-link {($activeFeed === 'global' && !$activeTag) ? 'active' : ''}" href="/">Global Feed</a>
+        </li>
+        <li n:if="$activeTag" class="nav-item">
+            <a fx-yolo-deep class="nav-link active" href="">#{$activeTag}</a>
+        </li>
+    </ul>
+</div>

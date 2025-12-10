@@ -10,6 +10,7 @@ return array(
     'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/src'),
     'Psr\\Cache\\' => array($vendorDir . '/psr/cache/src'),
+    'Latte\\' => array($vendorDir . '/latte/latte/src/Latte'),
     'Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),
     'Doctrine\\Deprecations\\' => array($vendorDir . '/doctrine/deprecations/src'),
     'Doctrine\\DBAL\\' => array($vendorDir . '/doctrine/dbal/src'),

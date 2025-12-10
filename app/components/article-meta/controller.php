@@ -20,5 +20,5 @@ function render(array $article): void
         'date' => date('F jS', strtotime($article['created_at'])),
     ];
 
-    View::component(__DIR__ . '/template.php', $props);
+    View::component(__DIR__ . '/template.latte', $props);
 }

@@ -19,76 +19,53 @@ bun run build  # Build CSS/JS assets with Vite (hashed for cachebusting)
 ### Directory Structure
 
 ```text
-app/
-├── components/            # Reusable UI components
-│   ├── article-meta/      # Author avatar, name, date
-│   │   ├── controller.php # Logic and data preparation
-│   │   └── template.php   # Pure HTML presentation
-│   ├── article-preview/   # Article card for lists
-│   ├── comment/           # Comment card with delete
-│   ├── favorite-button/   # Favorite/unfavorite button
-│   └── follow-button/     # Follow/unfollow button
-├── pages/                 # File-based routing (URL = file path)
-│   ├── index.php          # GET /
-│   ├── login.php          # GET/POST /login
-│   ├── register.php       # GET/POST /register
-│   ├── settings.php       # GET/POST /settings
-│   ├── editor/
-│   │   ├── index.php      # GET/POST /editor (new article)
-│   │   └── [slug].php     # GET/POST /editor/{slug} (edit article)
-│   ├── article/
-│   │   └── [slug]/
-│   │       ├── index.php      # GET /article/{slug}
-│   │       ├── delete.php     # POST /article/{slug}/delete
-│   │       ├── favorite.php   # POST /article/{slug}/favorite
-│   │       ├── unfavorite.php # POST /article/{slug}/unfavorite
-│   │       ├── comments.php   # POST /article/{slug}/comments
-│   │       └── comment/
-│   │           └── [id].php   # DELETE /article/{slug}/comment/{id}
-│   └── profile/
-│       └── [username]/
-│           ├── index.php      # GET /profile/{username}
-│           ├── follow.php     # POST /profile/{username}/follow
-│           └── unfollow.php   # POST /profile/{username}/unfollow
-├── lib/                   # Framework core
-│   ├── Router.php         # File-based router with [param] support
-│   ├── Database.php       # Doctrine DBAL singleton
-│   ├── Auth.php           # JWT authentication
-│   ├── Security.php       # CSRF protection
-│   ├── View.php           # Template rendering + component support
-│   └── Config.php         # Environment configuration
-├── models/                # Data models
-│   ├── User.php
-│   ├── Article.php
-│   └── Comment.php
-├── services/              # Business logic services
-│   └── Seeder.php         # Database seeding service
-├── templates/             # PHP view templates
-│   └── layout.php
-└── public/                # Web root
-    ├── index.php          # Entry point
-    ├── dist/              # Vite build output (hashed assets)
-    ├── fonts/
-    └── img/
-
-resources/                 # Source assets (pre-build)
-├── css/
-│   ├── fonts.css          # @font-face declarations
-│   ├── icons.css          # Ionicons via CSS masks
-│   └── main.css           # Bootstrap + Conduit styles
-└── js/
-    ├── app.js             # Entry point (imports CSS + JS)
-    ├── boosti.min.js      # HTMX & SPA navigation library
-    └── yolomode.min.js    # Link prefetching
-
-database/                  # Database infrastructure
-├── database.sqlite        # SQLite database (default)
-├── schema.sql             # SQLite schema
-├── schema-mysql.sql       # MySQL schema
-├── schema-postgres.sql    # PostgreSQL schema
-├── seed.php               # Database seeder
-└── data/seed.yaml         # Test data
+realworld-ludicrous/
+├── app/                       # DEPLOYABLE APPLICATION
+│   ├── components/            # Reusable UI components (18 total)
+│   │   ├── article-actions/   # Edit/Delete or Follow/Favorite buttons
+│   │   ├── article-list/      # Article preview list with empty state
+│   │   ├── article-meta/      # Author avatar, name, date
+│   │   ├── article-preview/   # Article card for lists
+│   │   ├── banner/            # Homepage hero banner
+│   │   ├── comment/           # Comment card with delete
+│   │   ├── comment-form/      # Comment input form
+│   │   ├── comment-list/      # Comments container
+│   │   ├── error-messages/    # Form error display
+│   │   ├── favorite-button/   # Favorite/unfavorite button
+│   │   ├── feed-toggle/       # Your Feed / Global Feed tabs
+│   │   ├── follow-button/     # Follow/unfollow button
+│   │   ├── footer/            # Site footer
+│   │   ├── navbar/            # Navigation bar
+│   │   ├── pagination/        # Previous/Next links
+│   │   ├── profile-tabs/      # My Articles / Favorited tabs
+│   │   ├── tag-list/          # Tags (sidebar or inline)
+│   │   └── user-info/         # Profile header with bio
+│   ├── lib/                   # Framework core
+│   ├── models/                # Data models (User, Article, Comment)
+│   ├── pages/                 # File-based routing (URL = file path)
+│   ├── services/              # Business logic (Seeder)
+│   ├── templates/             # Latte templates (.latte) with PHP fallback
+│   └── public/                # Web root
+├── build/                     # Build tooling (dev only)
+│   ├── vite.config.js         # Vite build configuration
+│   ├── vite-plugin-critical-css.js
+│   └── vite-plugin-thumbnails.js
+├── infra/                     # Infrastructure (dev only)
+│   ├── Dockerfile
+│   ├── docker-compose.yml
+│   └── Caddyfile
+├── resources/                 # Source assets (pre-build)
+│   ├── css/
+│   └── js/
+├── database/                  # Database files
+│   ├── schema.sql
+│   ├── schema-mysql.sql
+│   ├── schema-postgres.sql
+│   └── data/seed.yaml
+└── docs/                      # Documentation assets
 ```
+
+The `app/` directory is the deployable application - everything else is development tooling.
 
 ### File-Based Routing
 
@@ -126,6 +103,35 @@ function showPage(): void {
 
 The `$request` object provides: `method`, `params`, `query`, `body`, `isFixi`.
 
+### Templating with Latte
+
+Templates use the [Latte](https://latte.nette.org/) templating engine with auto-discovered components.
+
+**Installation:** `cd app && composer require latte/latte`
+
+```latte
+{* Clean component syntax in .latte files *}
+<div class="home-page">
+    {Banner()}
+
+    <div class="container">
+        {FeedToggle($activeFeed, $activeTag)}
+        {ArticleList($articles)}
+        {Pagination($offset, $limit, count($articles), '/', [feed => $activeFeed])}
+    </div>
+
+    {TagList($tags, 'sidebar')}
+</div>
+```
+
+Components are auto-registered as functions from `app/components/`:
+
+- `article-preview/` → `{ArticlePreview($article)}`
+- `tag-list/` → `{TagList($tags, 'sidebar')}`
+- Nested: `wiki/post/` → `{Wiki.Post($article)}` (dot notation)
+
+**Fallback:** If Latte isn't installed, PHP templates (`.php`) are used instead.
+
 ### Components
 
 Reusable UI components in `app/components/`. Each has:
@@ -145,26 +151,55 @@ function render(array $article, bool $isFavorited): void
         'slug' => $article['slug'],
         'count' => $article['favoritesCount'],
         'buttonClass' => $isFavorited ? 'btn-primary' : 'btn-outline-primary',
-        // ... all computed values
     ];
     View::component(__DIR__ . '/template.php', $props);
 }
 ```
 
-```php
-// Usage in templates
-\App\Components\FavoriteButton\render($article, $isFavorited);
-\App\Components\Comment\render($comment, $articleSlug);
-\App\Components\ArticlePreview\render($article);
+```latte
+{* Usage in Latte templates *}
+{FavoriteButton($article, $isFavorited)}
+{ArticleList($articles)}
+{Pagination($offset, $limit, count($articles), '/', [feed => $feed])}
 ```
 
-### Core Components
+```php
+// Usage in PHP templates (fallback)
+\App\Components\FavoriteButton\render($article, $isFavorited);
+\App\Components\ArticleList\render($articles);
+```
+
+### Available Components
+
+| Component | Description | Props |
+|-----------|-------------|-------|
+| `Navbar` | Top navigation | `$currentPage` |
+| `Footer` | Site footer | - |
+| `Banner` | Homepage hero | - |
+| `FeedToggle` | Feed tabs | `$activeFeed`, `$activeTag` |
+| `TagList` | Tag pills | `$tags`, `$variant` ('sidebar'\|'inline') |
+| `ArticleList` | Article previews | `$articles`, `$emptyMessage` |
+| `ArticlePreview` | Single article card | `$article` |
+| `ArticleMeta` | Author info | `$article` |
+| `ArticleActions` | Edit/Delete/Follow/Favorite | `$article`, `$isFavorited` |
+| `Pagination` | Prev/Next links | `$offset`, `$limit`, `$count`, `$baseUrl`, `$params` |
+| `CommentForm` | Comment input | `$articleSlug` |
+| `CommentList` | Comments container | `$comments`, `$articleSlug` |
+| `Comment` | Single comment | `$comment`, `$articleSlug` |
+| `FavoriteButton` | Heart button | `$article`, `$isFavorited` |
+| `FollowButton` | Follow button | `$profile`, `$isFollowing` |
+| `UserInfo` | Profile header | `$profile`, `$isFollowing` |
+| `ProfileTabs` | My/Favorited tabs | `$username`, `$activeTab` |
+| `ErrorMessages` | Form errors | `$errors` |
+
+### Core Libraries
 
 - **Router** (`app/lib/Router.php`): File-based routing with `[param]` syntax. Auto-validates CSRF on non-GET.
 - **Database** (`app/lib/Database.php`): Doctrine DBAL singleton with SQLite optimizations.
 - **Auth** (`app/lib/Auth.php`): JWT-based authentication via httpOnly cookies.
 - **Security** (`app/lib/Security.php`): CSRF protection using HMAC-derived tokens.
-- **View** (`app/lib/View.php`): Template rendering with layout support and `View::component()` for components.
+- **View** (`app/lib/View.php`): Latte/PHP template rendering with auto-discovered components.
+- **ComponentExtension** (`app/lib/ComponentExtension.php`): Latte extension for auto-registering components as functions.
 - **Vite** (`app/lib/Vite.php`): Asset helper for Vite manifest resolution and critical CSS injection.
 
 ## Database
@@ -290,7 +325,7 @@ bun run dev    # Start Vite dev server with HMR
 bun run build  # Production build with optimizations
 ```
 
-### Vite Plugins
+### Vite Plugins (in `build/`)
 
 - **fontaine**: Generates font fallbacks to reduce CLS
 - **vite-plugin-purgecss**: Removes unused CSS
@@ -335,7 +370,7 @@ See `database/data/seed.yaml` for test accounts.
 - `JWT_SECRET`: Secret key for JWT signing (required in production)
 - `DB_*`: Database configuration (see above)
 
-## Infrastructure
+## Infrastructure (in `infra/`)
 
 - **FrankenPHP**: Modern PHP server on Caddy
 - **Docker**: Development container on port 8082
@@ -351,8 +386,8 @@ See `database/data/seed.yaml` for test accounts.
 ### Performance Improvements
 
 - [X] Pre-compile Markdown to HTML and store in DB
+- [X] Latte templating for faster compilation (with auto-discovered components)
 
 ### Future Enhancements
 
-- [ ] Templating language (Latte?) for faster compilation
 - [ ] Require strong/high-entropy passwords
