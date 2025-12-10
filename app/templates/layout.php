@@ -67,6 +67,11 @@
             <span class="attribution">
                 An interactive learning project from <a href="https://thinkster.io">Thinkster</a>. Code &amp; design licensed under MIT.
             </span>
+            <ul class="nav navbar-nav pull-xs-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/JensRoland/realworld-ludicrous"><i class="ion-social-github"></i> Source code</a>
+                </li>
+            </ul>
         </div>
     </footer>
     <script>

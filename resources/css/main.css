@@ -5014,6 +5014,10 @@ footer {
     color: #bbb;
     font-weight: 300; }
 
+  @media (max-width: 790px) {
+    footer .attribution {
+      display: none; } }
+
 .error-messages {
   color: #B85C5C !important;
   font-weight: bold; }
