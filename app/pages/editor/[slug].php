@@ -18,7 +18,7 @@ function showEditPage(string $slug): void
 
     if (!$article) {
         http_response_code(404);
-        echo "Article not found";
+        View::renderLayout('404', ['path' => $_SERVER['REQUEST_URI'] ?? '']);
         return;
     }
 

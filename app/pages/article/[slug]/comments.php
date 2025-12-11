@@ -12,7 +12,7 @@ if (!Auth::check()) {
 $article = Article::findBySlug($slug);
 if (!$article) {
     http_response_code(404);
-    echo "Article not found";
+    echo "Article not found"; // API endpoint - plain text is appropriate
     return;
 }
 

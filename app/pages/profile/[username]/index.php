@@ -9,7 +9,7 @@ $profile = User::findByUsername($username);
 
 if (!$profile) {
     http_response_code(404);
-    echo "Profile not found";
+    View::renderLayout('404', ['path' => $_SERVER['REQUEST_URI'] ?? '']);
     return;
 }
 
