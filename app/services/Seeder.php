@@ -170,18 +170,13 @@ class Seeder
 
     private static function ensureSchema(Connection $db): void
     {
-        $schemaPath = __DIR__ . '/../../schema.sql';
-        if (is_readable($schemaPath)) {
-            $sql = file_get_contents($schemaPath);
-            if ($sql !== false) {
-                // Split statements by semicolon and execute each one
-                $statements = array_filter(array_map('trim', explode(';', $sql)));
-                foreach ($statements as $statement) {
-                    if (!empty($statement)) {
-                        $db->executeStatement($statement);
-                    }
-                }
-            }
+        // Schema is now managed by Doctrine Migrations
+        // Run `make migrate` to create/update the schema
+        $schemaManager = $db->createSchemaManager();
+        if (!$schemaManager->tableExists('users')) {
+            throw new \RuntimeException(
+                "Database schema not found. Run 'make migrate' to create the schema."
+            );
         }
     }
 

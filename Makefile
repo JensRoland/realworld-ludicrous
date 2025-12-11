@@ -1,13 +1,16 @@
+install:
+	bun install
+	cd app && composer install
+
 build:
 	bun run build
 
 serve:
 	docker-compose -f infra/docker-compose.yml up --build
 
-setup:
-	cd app && composer install
+setup: install
 	cd app && composer dump-autoload --optimize --classmap-authoritative
-	sqlite3 database/database.sqlite < database/schema.sql
+	php app/migrations.php migrations:migrate --no-interaction
 
 seed:
 	php database/seed.php
@@ -16,8 +19,17 @@ optimize:
 	cd app && composer dump-autoload --optimize --classmap-authoritative
 
 clean:
-	rm database/database.sqlite
-	sqlite3 database/database.sqlite < database/schema.sql
+	rm -f database/database.sqlite
+	php app/migrations.php migrations:migrate --no-interaction
+
+migrate:
+	php app/migrations.php migrations:migrate --no-interaction
+
+migrate-status:
+	php app/migrations.php migrations:status
+
+migrate-generate:
+	php app/migrations.php migrations:generate
 
 profile-home:
 	curl "http://localhost:8082/?XDEBUG_PROFILE=1"

@@ -28,7 +28,7 @@ This project demonstrates a full-stack web application built according to the Re
 
 ### Backend
 
-- **Vanilla PHP 8.3** - No framework, pure PHP with PSR autoloading
+- **Vanilla PHP 8** - No framework, pure PHP with PSR autoloading
 - **[Latte](https://latte.nette.org/)** - Fast, secure templating engine with auto-discovered components
 - **File-based routing** - Routes determined by file paths with `[param]` syntax
 - **Database-agnostic** - Supports SQLite, MySQL, and PostgreSQL via Doctrine DBAL
@@ -92,9 +92,7 @@ realworld-ludicrous/
 │   ├── css/                # Stylesheets (fonts, icons, main)
 │   └── js/                 # JavaScript (app.js, boosti, yolomode)
 ├── database/               # Database files
-│   ├── schema.sql          # SQLite schema
-│   ├── schema-mysql.sql    # MySQL schema
-│   ├── schema-postgres.sql # PostgreSQL schema
+│   ├── migrations/         # Doctrine migrations
 │   └── data/seed.yaml      # Test data
 ├── docs/                   # Documentation assets
 └── Makefile                # Build and run commands
@@ -106,6 +104,7 @@ The `app/` directory is the deployable application - everything else is developm
 
 ### Prerequisites
 
+- PHP 8.2+
 - Docker and Docker Compose
 - Bun (for asset building)
 - Make (optional, but recommended)
@@ -123,8 +122,8 @@ The `app/` directory is the deployable application - everything else is developm
 2. **Install dependencies and setup database**
 
    ```bash
+   make install
    make setup
-   bun install
    ```
 
    This will:
@@ -149,7 +148,8 @@ The `app/` directory is the deployable application - everything else is developm
 
 ### Makefile Commands
 
-- `make setup` - Install PHP dependencies and initialize database
+- `make install` - Install PHP and Node dependencies
+- `make setup` - Install dependencies and initialize database
 - `make serve` - Start the Docker containers
 - `make seed` - Populate the database with test data
 - `make clean` - Remove the database (useful for fresh start)
@@ -194,10 +194,10 @@ DB_PASSWORD=your_password
 DB_CHARSET=utf8mb4
 ```
 
-Then initialize the schema:
+Then run migrations to create the schema:
 
 ```bash
-mysql -u root -p realworld < database/schema-mysql.sql
+make migrate
 ```
 
 #### PostgreSQL
@@ -213,10 +213,10 @@ DB_USER=postgres
 DB_PASSWORD=your_password
 ```
 
-Then initialize the schema:
+Then run migrations to create the schema:
 
 ```bash
-psql -U postgres -d realworld -f database/schema-postgres.sql
+make migrate
 ```
 
 ### Adding Test Data
@@ -227,16 +227,40 @@ You can populate the database with test data using the seeder command:
 make seed
 ```
 
-Or directly via PHP:
+The seeder reads data from [database/data/seed.yaml](database/data/seed.yaml), which defines users, articles, comments, follows, and favorites in a human-readable YAML format. You can customize this file or create your own.
+
+### Migrations
+
+Database schema changes are managed with Doctrine Migrations:
 
 ```bash
-php database/seed.php
+make migrate          # Run pending migrations
+make migrate-status   # Show migration status
+make migrate-generate # Generate a new empty migration
 ```
 
-The seeder reads data from [database/data/seed.yaml](database/data/seed.yaml), which defines users, articles, comments, follows, and favorites in a human-readable YAML format. You can customize this file or create your own:
+Migration files live in `database/migrations/` and use the Schema Builder API:
+
+```php
+// database/migrations/Version20251211123456.php
+public function up(Schema $schema): void
+{
+    $table = $schema->createTable('example');
+    $table->addColumn('id', 'integer', ['autoincrement' => true]);
+    $table->addColumn('name', 'string', ['length' => 255]);
+    $table->setPrimaryKey(['id']);
+}
+
+public function down(Schema $schema): void
+{
+    $schema->dropTable('example');
+}
+```
+
+For existing databases, mark the initial migration as executed:
 
 ```bash
-php database/seed.php path/to/custom-seed.yaml
+php app/migrations.php migrations:version --add 'App\Migrations\Version20251211000000'
 ```
 
 ## Architecture Highlights

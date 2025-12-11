@@ -58,9 +58,7 @@ realworld-ludicrous/
 │   ├── css/
 │   └── js/
 ├── database/                  # Database files
-│   ├── schema.sql
-│   ├── schema-mysql.sql
-│   ├── schema-postgres.sql
+│   ├── migrations/            # Doctrine migrations
 │   └── data/seed.yaml
 └── docs/                      # Documentation assets
 ```
