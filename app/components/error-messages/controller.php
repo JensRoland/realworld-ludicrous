@@ -11,16 +11,7 @@ use App\Lib\View;
  */
 function render(string|array|null $errors): void
 {
-    if ($errors === null) {
-        return;
+    if (!empty($errors)) {
+        View::component(__DIR__ . '/template.latte', ['errors' => (array) $errors]);
     }
-
-    // Normalize to array
-    $errorList = is_array($errors) ? $errors : [$errors];
-
-    if (empty($errorList)) {
-        return;
-    }
-
-    View::component(__DIR__ . '/template.latte', ['errors' => $errorList]);
 }
