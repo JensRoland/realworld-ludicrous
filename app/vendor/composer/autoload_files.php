@@ -28,6 +28,7 @@ return array(
     'bfb6695eea842385662e037334eae4d2' => $baseDir . '/components/navbar/controller.php',
     'b46d5a215efbb81490ae928540bc74cb' => $baseDir . '/components/pagination/controller.php',
     '59fabed0f7fadb6182048865dca004d2' => $baseDir . '/components/profile-tabs/controller.php',
+    'd484881d15d758de25d437d4d01567d8' => $baseDir . '/components/tag-input/controller.php',
     '6a9fa8cabc61c962487221ae0bf760bb' => $baseDir . '/components/tag-list/controller.php',
     'fd9a84035579e01a701dda8ecbf5b4a7' => $baseDir . '/components/user-info/controller.php',
 );

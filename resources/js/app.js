@@ -1,5 +1,7 @@
 import '../css/fonts.css'
 import '../css/main.css'
 import '../css/icons.css'
+import '../css/tag-input.css'
 import './boosti.min.js'
 import './yolomode.min.js'
+import './tag-input.js'

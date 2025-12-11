@@ -38,10 +38,16 @@ export default defineConfig({
       safelist: {
         // Keep dynamically-used classes
         standard: [
-          /^btn-/,       // Button variants
-          /^ion-/,       // Ionicons
-          /^active$/,    // Active states
-          /^disabled$/,  // Disabled states
+          /^btn-/,         // Button variants
+          /^ion-/,         // Ionicons
+          /^active$/,      // Active states
+          /^disabled$/,    // Disabled states
+          /^tag-input/,    // Tag input web component
+          'visible',       // JS-toggled visibility
+          'highlighted',   // JS-toggled highlight
+        ],
+        deep: [
+          /tag-input/,     // Keep all tag-input selectors including compound
         ],
       },
     }),

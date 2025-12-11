@@ -378,7 +378,7 @@ See `database/data/seed.yaml` for test accounts.
 
 ### Required / Expected Features
 
-- [ ] Tag input UI component with autocompletion
+- [x] Tag input UI component with autocompletion (Web Component)
 - [x] Paginator with page numbers (using Nette Paginator)
 
 ### Performance Improvements

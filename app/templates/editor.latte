@@ -16,7 +16,7 @@
                             <textarea class="form-control" rows="8" name="body" placeholder="Write your article (in markdown)" required>{$article['body'] ?? ''}</textarea>
                         </fieldset>
                         <fieldset class="form-group">
-                            <input type="text" class="form-control" name="tags" placeholder="Enter tags" value="{isset($article['tagList']) ? implode(',', $article['tagList']) : ''}"><div class="tag-list"></div>
+                            {TagInput('tags', $article['tagList'] ?? [])}
                         </fieldset>
                         <input type="hidden" name="csrf_token" value="{csrf_token()}">
                         <button class="btn btn-lg pull-xs-right btn-primary" type="submit">

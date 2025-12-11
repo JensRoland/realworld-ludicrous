@@ -26,6 +26,7 @@
             "components/navbar/controller.php",
             "components/pagination/controller.php",
             "components/profile-tabs/controller.php",
+            "components/tag-input/controller.php",
             "components/tag-list/controller.php",
             "components/user-info/controller.php"
         ]

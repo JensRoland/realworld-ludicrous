@@ -1,0 +1,123 @@
+/* Tag Input Component Styles */
+
+tag-input {
+  display: block;
+}
+
+.tag-input-container {
+  position: relative;
+}
+
+.tag-input-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.5rem;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  min-height: 2.5rem;
+  cursor: text;
+  transition: border-color 0.15s ease-in-out;
+}
+
+.tag-input-tags:focus-within {
+  border-color: #66afe9;
+  outline: none;
+}
+
+.tag-input-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.125rem 0.5rem;
+  background-color: #5cb85c;
+  color: #fff;
+  border-radius: 10rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.tag-input-tag-text {
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tag-input-tag-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  margin-left: 0.125rem;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+
+.tag-input-tag-remove:hover {
+  opacity: 1;
+}
+
+.tag-input-field {
+  flex: 1 1 auto;
+  min-width: 80px;
+  padding: 0.25rem 0;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  line-height: 1.25;
+  background: transparent;
+}
+
+.tag-input-field::placeholder {
+  color: #999;
+}
+
+/* Suggestions dropdown */
+.tag-input-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: none;
+  max-height: 200px;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tag-input-suggestions.visible {
+  display: block;
+}
+
+.tag-input-suggestions li {
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.tag-input-suggestions li:hover,
+.tag-input-suggestions li.highlighted {
+  background-color: #f5f5f5;
+}
+
+.tag-input-suggestions li strong {
+  color: #5cb85c;
+  font-weight: 600;
+}

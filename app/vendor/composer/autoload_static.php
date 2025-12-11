@@ -29,6 +29,7 @@ class ComposerStaticInita0b240a62be7e80b22da626737eca357
         'bfb6695eea842385662e037334eae4d2' => __DIR__ . '/../..' . '/components/navbar/controller.php',
         'b46d5a215efbb81490ae928540bc74cb' => __DIR__ . '/../..' . '/components/pagination/controller.php',
         '59fabed0f7fadb6182048865dca004d2' => __DIR__ . '/../..' . '/components/profile-tabs/controller.php',
+        'd484881d15d758de25d437d4d01567d8' => __DIR__ . '/../..' . '/components/tag-input/controller.php',
         '6a9fa8cabc61c962487221ae0bf760bb' => __DIR__ . '/../..' . '/components/tag-list/controller.php',
         'fd9a84035579e01a701dda8ecbf5b4a7' => __DIR__ . '/../..' . '/components/user-info/controller.php',
     );
