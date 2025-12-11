@@ -13,8 +13,7 @@ use App\Lib\View;
  */
 function render(array $profile, bool $isFollowing = false): void
 {
-    $currentUserId = Auth::userId();
-    $isOwnProfile = $currentUserId && $currentUserId == $profile['id'];
+    $isOwnProfile = Auth::isUser($profile['id']);
     $isLoggedIn = Auth::check();
 
     $props = [

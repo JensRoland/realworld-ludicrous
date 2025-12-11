@@ -16,13 +16,12 @@ use App\Models\User;
  */
 function render(array $article, ?bool $isFavorited = null, ?bool $isFollowing = null): void
 {
-    $currentUserId = Auth::userId();
-    $isAuthor = $currentUserId && $currentUserId == $article['author_id'];
+    $isAuthor = Auth::isUser($article['author_id']);
     $isLoggedIn = Auth::check();
 
     // Auto-detect following status if not provided
     if ($isFollowing === null && $isLoggedIn && !$isAuthor) {
-        $isFollowing = User::isFollowing($currentUserId, $article['author_id']);
+        $isFollowing = User::isFollowing(Auth::userId(), $article['author_id']);
     }
 
     // Get favorites count if not in article data

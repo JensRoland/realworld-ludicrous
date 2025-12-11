@@ -23,7 +23,7 @@ function render(array $comment, string $articleSlug): void
         'authorImageThumb' => View::thumbnail($authorImage),
         'date' => date('F jS', strtotime($comment['created_at'])),
         'articleSlug' => $articleSlug,
-        'canDelete' => Auth::check() && Auth::userId() == $comment['author_id'],
+        'canDelete' => Auth::isUser($comment['author_id']),
     ];
 
     View::component(__DIR__ . '/template.latte', $props);

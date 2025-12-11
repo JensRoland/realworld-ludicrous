@@ -78,6 +78,14 @@ class Auth
         return self::user() !== null;
     }
 
+    /**
+     * Check if the current user is logged in and matches the given user ID.
+     */
+    public static function isUser(?int $userId): bool
+    {
+        return $userId !== null && self::userId() === $userId;
+    }
+
     public static function require(): void
     {
         if (!self::check()) {
