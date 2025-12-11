@@ -260,7 +260,7 @@ public function down(Schema $schema): void
 For existing databases, mark the initial migration as executed:
 
 ```bash
-php app/migrations.php migrations:version --add 'App\Migrations\Version20251211000000'
+php database/migrations.php migrations:version --add 'App\Migrations\Version20251211000000'
 ```
 
 ## Architecture Highlights

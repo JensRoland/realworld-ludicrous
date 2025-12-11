@@ -9,7 +9,7 @@
  *   php migrations.php migrations:generate
  */
 
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/../app/vendor/autoload.php';
 
 use App\Lib\Database;
 use Doctrine\Migrations\Configuration\Connection\ExistingConnection;
