@@ -89,7 +89,7 @@ class Router
             return null;
         }
 
-        $segment = array_shift($segments);
+        $segment = urldecode(array_shift($segments));
         $remaining = $segments;
 
         // Try exact match for this segment
