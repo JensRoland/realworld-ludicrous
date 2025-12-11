@@ -20,21 +20,45 @@ class User
     public static function findByEmail(string $email): ?array
     {
         $db = Database::getConnection();
-        $result = $db->fetchAssociative("SELECT * FROM users WHERE email = ?", [$email]);
+        $qb = $db->createQueryBuilder();
+
+        $result = $qb->select('*')
+            ->from('users')
+            ->where('email = :email')
+            ->setParameter('email', $email)
+            ->executeQuery()
+            ->fetchAssociative();
+
         return $result ?: null;
     }
 
     public static function findByUsername(string $username): ?array
     {
         $db = Database::getConnection();
-        $result = $db->fetchAssociative("SELECT * FROM users WHERE username = ?", [$username]);
+        $qb = $db->createQueryBuilder();
+
+        $result = $qb->select('*')
+            ->from('users')
+            ->where('username = :username')
+            ->setParameter('username', $username)
+            ->executeQuery()
+            ->fetchAssociative();
+
         return $result ?: null;
     }
 
     public static function findById(int $id): ?array
     {
         $db = Database::getConnection();
-        $result = $db->fetchAssociative("SELECT * FROM users WHERE id = ?", [$id]);
+        $qb = $db->createQueryBuilder();
+
+        $result = $qb->select('*')
+            ->from('users')
+            ->where('id = :id')
+            ->setParameter('id', $id)
+            ->executeQuery()
+            ->fetchAssociative();
+
         return $result ?: null;
     }
 
@@ -82,10 +106,17 @@ class User
     public static function isFollowing(int $followerId, int $followedId): bool
     {
         $db = Database::getConnection();
-        $result = $db->fetchOne(
-            "SELECT 1 FROM follows WHERE follower_id = ? AND followed_id = ?",
-            [$followerId, $followedId]
-        );
+        $qb = $db->createQueryBuilder();
+
+        $result = $qb->select('1')
+            ->from('follows')
+            ->where('follower_id = :followerId')
+            ->andWhere('followed_id = :followedId')
+            ->setParameter('followerId', $followerId)
+            ->setParameter('followedId', $followedId)
+            ->executeQuery()
+            ->fetchOne();
+
         return (bool) $result;
     }
 }

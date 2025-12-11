@@ -32,26 +32,41 @@ class Comment
     public static function findByArticle(int $articleId): array
     {
         $db = Database::getConnection();
-        $sql = "
-            SELECT c.*, u.username as author_username, u.image as author_image, u.bio as author_bio
-            FROM comments c
-            JOIN users u ON c.author_id = u.id
-            WHERE c.article_id = ?
-            ORDER BY c.created_at DESC
-        ";
-        return $db->fetchAllAssociative($sql, [$articleId]);
+        $qb = $db->createQueryBuilder();
+
+        return $qb->select(
+            'c.*',
+            'u.username as author_username',
+            'u.image as author_image',
+            'u.bio as author_bio'
+        )
+            ->from('comments', 'c')
+            ->join('c', 'users', 'u', 'c.author_id = u.id')
+            ->where('c.article_id = :articleId')
+            ->orderBy('c.created_at', 'DESC')
+            ->setParameter('articleId', $articleId)
+            ->executeQuery()
+            ->fetchAllAssociative();
     }
 
     public static function findById(int $id): ?array
     {
         $db = Database::getConnection();
-        $sql = "
-            SELECT c.*, u.username as author_username, u.image as author_image, u.bio as author_bio
-            FROM comments c
-            JOIN users u ON c.author_id = u.id
-            WHERE c.id = ?
-        ";
-        $comment = $db->fetchAssociative($sql, [$id]);
+        $qb = $db->createQueryBuilder();
+
+        $comment = $qb->select(
+            'c.*',
+            'u.username as author_username',
+            'u.image as author_image',
+            'u.bio as author_bio'
+        )
+            ->from('comments', 'c')
+            ->join('c', 'users', 'u', 'c.author_id = u.id')
+            ->where('c.id = :id')
+            ->setParameter('id', $id)
+            ->executeQuery()
+            ->fetchAssociative();
+
         return $comment ?: null;
     }
 }

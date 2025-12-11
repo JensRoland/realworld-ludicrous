@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Lib\Database;
+use Doctrine\DBAL\ArrayParameterType;
 
 class Article
 {
@@ -13,6 +14,63 @@ class Article
         $parsedown = new \Parsedown();
         $parsedown->setSafeMode(true);
         return $parsedown->text($body);
+    }
+
+    /**
+     * Fetch tags for a list of article IDs and return as [article_id => [tag1, tag2, ...]]
+     */
+    private static function fetchTagsForArticles(array $articleIds): array
+    {
+        if (empty($articleIds)) {
+            return [];
+        }
+
+        $db = Database::getConnection();
+        $qb = $db->createQueryBuilder();
+
+        $rows = $qb->select('at.article_id', 't.name')
+            ->from('article_tags', 'at')
+            ->join('at', 'tags', 't', 'at.tag_id = t.id')
+            ->where($qb->expr()->in('at.article_id', ':ids'))
+            ->orderBy('t.name')
+            ->setParameter('ids', $articleIds, ArrayParameterType::INTEGER)
+            ->executeQuery()
+            ->fetchAllAssociative();
+
+        $tagsByArticle = [];
+        foreach ($rows as $row) {
+            $tagsByArticle[$row['article_id']][] = $row['name'];
+        }
+
+        return $tagsByArticle;
+    }
+
+    /**
+     * Attach tagList to each article in the array
+     */
+    private static function attachTags(array $articles): array
+    {
+        $articleIds = array_column($articles, 'id');
+        $tagsByArticle = self::fetchTagsForArticles($articleIds);
+
+        foreach ($articles as &$article) {
+            $article['tagList'] = $tagsByArticle[$article['id']] ?? [];
+        }
+
+        return $articles;
+    }
+
+    /**
+     * Build subquery for favorites count
+     */
+    private static function favoritesCountSubquery(): string
+    {
+        $db = Database::getConnection();
+        $sub = $db->createQueryBuilder();
+        return '(' . $sub->select('COUNT(*)')
+            ->from('favorites', 'f')
+            ->where('f.article_id = a.id')
+            ->getSQL() . ')';
     }
 
     public static function create(string $title, string $description, string $body, array $tags, int $authorId): ?string
@@ -42,7 +100,13 @@ class Article
                 $tagName = trim($tagName);
                 if (empty($tagName)) continue;
 
-                $tagId = $db->fetchOne("SELECT id FROM tags WHERE name = ?", [$tagName]);
+                $qb = $db->createQueryBuilder();
+                $tagId = $qb->select('id')
+                    ->from('tags')
+                    ->where('name = :name')
+                    ->setParameter('name', $tagName)
+                    ->executeQuery()
+                    ->fetchOne();
 
                 if (!$tagId) {
                     $db->insert('tags', ['name' => $tagName]);
@@ -87,10 +151,13 @@ class Article
                 }
             }
 
-            $db->executeStatement(
-                "UPDATE articles SET slug = ?, title = ?, description = ?, body = ?, body_html = ?, updated_at = CURRENT_TIMESTAMP WHERE slug = ?",
-                [$newSlug, $title, $description, $body, self::compileMarkdown($body), $slug]
-            );
+            $db->update('articles', [
+                'slug' => $newSlug,
+                'title' => $title,
+                'description' => $description,
+                'body' => $body,
+                'body_html' => self::compileMarkdown($body),
+            ], ['slug' => $slug]);
 
             if ($tags !== null) {
                 $db->delete('article_tags', ['article_id' => $articleId]);
@@ -100,7 +167,14 @@ class Article
                     if ($tagName === '') {
                         continue;
                     }
-                    $tagId = $db->fetchOne("SELECT id FROM tags WHERE name = ?", [$tagName]);
+
+                    $qb = $db->createQueryBuilder();
+                    $tagId = $qb->select('id')
+                        ->from('tags')
+                        ->where('name = :name')
+                        ->setParameter('name', $tagName)
+                        ->executeQuery()
+                        ->fetchOne();
 
                     if (!$tagId) {
                         $db->insert('tags', ['name' => $tagName]);
@@ -129,10 +203,7 @@ class Article
     public static function delete(string $slug, int $authorId): bool
     {
         $db = Database::getConnection();
-        return $db->executeStatement(
-            "DELETE FROM articles WHERE slug = ? AND author_id = ?",
-            [$slug, $authorId]
-        ) > 0;
+        return $db->delete('articles', ['slug' => $slug, 'author_id' => $authorId]) > 0;
     }
 
     public static function favorite(int $userId, int $articleId): bool
@@ -161,97 +232,95 @@ class Article
     public static function isFavorited(int $userId, int $articleId): bool
     {
         $db = Database::getConnection();
-        $result = $db->fetchOne(
-            "SELECT 1 FROM favorites WHERE user_id = ? AND article_id = ?",
-            [$userId, $articleId]
-        );
+        $qb = $db->createQueryBuilder();
+
+        $result = $qb->select('1')
+            ->from('favorites')
+            ->where('user_id = :userId')
+            ->andWhere('article_id = :articleId')
+            ->setParameter('userId', $userId)
+            ->setParameter('articleId', $articleId)
+            ->executeQuery()
+            ->fetchOne();
+
         return (bool) $result;
     }
 
     public static function favoritesCount(int $articleId): int
     {
         $db = Database::getConnection();
-        return (int) $db->fetchOne(
-            "SELECT COUNT(*) FROM favorites WHERE article_id = ?",
-            [$articleId]
-        );
+        $qb = $db->createQueryBuilder();
+
+        return (int) $qb->select('COUNT(*)')
+            ->from('favorites')
+            ->where('article_id = :articleId')
+            ->setParameter('articleId', $articleId)
+            ->executeQuery()
+            ->fetchOne();
     }
 
     public static function getGlobalFeed(int $limit = 20, int $offset = 0, ?string $tag = null, ?int $authorId = null): array
     {
         $db = Database::getConnection();
+        $qb = $db->createQueryBuilder();
 
-        $platform = $db->getDatabasePlatform();
-        $groupConcat = $platform instanceof \Doctrine\DBAL\Platforms\PostgreSQLPlatform
-            ? "STRING_AGG(t.name, ',')"
-            : "GROUP_CONCAT(t.name)";
-
-        $sql = "
-            SELECT a.*, u.username as author_username, u.image as author_image,
-            (SELECT {$groupConcat} FROM tags t JOIN article_tags at ON t.id = at.tag_id WHERE at.article_id = a.id) as tagList,
-            (SELECT COUNT(*) FROM favorites f WHERE f.article_id = a.id) as favoritesCount
-            FROM articles a
-            JOIN users u ON a.author_id = u.id
-        ";
-
-        $params = [];
-        $where = [];
+        $qb->select(
+            'a.*',
+            'u.username as author_username',
+            'u.image as author_image',
+            self::favoritesCountSubquery() . ' as favoritesCount'
+        )
+            ->from('articles', 'a')
+            ->join('a', 'users', 'u', 'a.author_id = u.id')
+            ->orderBy('a.created_at', 'DESC')
+            ->setMaxResults($limit)
+            ->setFirstResult($offset);
 
         if ($tag) {
-            $where[] = "a.id IN (SELECT at.article_id FROM article_tags at JOIN tags t ON at.tag_id = t.id WHERE t.name = ?)";
-            $params[] = $tag;
+            $tagSubquery = $db->createQueryBuilder()
+                ->select('at.article_id')
+                ->from('article_tags', 'at')
+                ->join('at', 'tags', 't', 'at.tag_id = t.id')
+                ->where('t.name = :tag')
+                ->getSQL();
+
+            $qb->andWhere("a.id IN ({$tagSubquery})")
+                ->setParameter('tag', $tag);
         }
 
         if ($authorId) {
-            $where[] = "a.author_id = ?";
-            $params[] = $authorId;
+            $qb->andWhere('a.author_id = :authorId')
+                ->setParameter('authorId', $authorId);
         }
 
-        if (!empty($where)) {
-            $sql .= " WHERE " . implode(' AND ', $where);
-        }
+        $articles = $qb->executeQuery()->fetchAllAssociative();
 
-        $sql .= " ORDER BY a.created_at DESC LIMIT ? OFFSET ?";
-        $params[] = $limit;
-        $params[] = $offset;
-
-        $articles = $db->fetchAllAssociative($sql, $params);
-
-        foreach ($articles as &$article) {
-            $article['tagList'] = $article['tagList'] ? explode(',', $article['tagList']) : [];
-        }
-
-        return $articles;
+        return self::attachTags($articles);
     }
 
     public static function getFeed(int $userId, int $limit = 20, int $offset = 0): array
     {
         $db = Database::getConnection();
+        $qb = $db->createQueryBuilder();
 
-        $platform = $db->getDatabasePlatform();
-        $groupConcat = $platform instanceof \Doctrine\DBAL\Platforms\PostgreSQLPlatform
-            ? "STRING_AGG(t.name, ',')"
-            : "GROUP_CONCAT(t.name)";
+        $articles = $qb->select(
+            'a.*',
+            'u.username as author_username',
+            'u.image as author_image',
+            self::favoritesCountSubquery() . ' as favoritesCount'
+        )
+            ->from('articles', 'a')
+            ->join('a', 'users', 'u', 'a.author_id = u.id')
+            ->join('a', 'follows', 'fo', 'fo.followed_id = a.author_id')
+            ->where('fo.follower_id = :userId')
+            ->orderBy('a.created_at', 'DESC')
+            ->setMaxResults($limit)
+            ->setFirstResult($offset)
+            ->setParameter('userId', $userId)
+            ->executeQuery()
+            ->fetchAllAssociative();
 
-        $sql = "
-            SELECT a.*, u.username as author_username, u.image as author_image,
-            (SELECT {$groupConcat} FROM tags t JOIN article_tags at ON t.id = at.tag_id WHERE at.article_id = a.id) as tagList,
-            (SELECT COUNT(*) FROM favorites f WHERE f.article_id = a.id) as favoritesCount
-            FROM articles a
-            JOIN users u ON a.author_id = u.id
-            JOIN follows f ON f.followed_id = a.author_id
-            WHERE f.follower_id = ?
-            ORDER BY a.created_at DESC
-            LIMIT ? OFFSET ?
-        ";
-
-        $articles = $db->fetchAllAssociative($sql, [$userId, $limit, $offset]);
-
-        foreach ($articles as &$article) {
-            $article['tagList'] = $article['tagList'] ? explode(',', $article['tagList']) : [];
-        }
-
-        return $articles;
+        return self::attachTags($articles);
     }
 
     public static function getAllTags(int $minArticleCount = 1): array
@@ -262,16 +331,19 @@ class Article
         }
 
         $db = Database::getConnection();
-        $minCount = (int) $minArticleCount;
-        $sql = "
-            SELECT t.name
-            FROM tags t
-            JOIN article_tags at ON t.id = at.tag_id
-            GROUP BY t.id, t.name
-            HAVING COUNT(DISTINCT at.article_id) >= {$minCount}
-            ORDER BY COUNT(DISTINCT at.article_id) DESC, t.name ASC
-        ";
-        $result = $db->fetchAllAssociative($sql);
+        $qb = $db->createQueryBuilder();
+
+        $result = $qb->select('t.name')
+            ->from('tags', 't')
+            ->join('t', 'article_tags', 'at', 't.id = at.tag_id')
+            ->groupBy('t.id', 't.name')
+            ->having('COUNT(DISTINCT at.article_id) >= :minCount')
+            ->orderBy('COUNT(DISTINCT at.article_id)', 'DESC')
+            ->addOrderBy('t.name', 'ASC')
+            ->setParameter('minCount', $minArticleCount, \Doctrine\DBAL\ParameterType::INTEGER)
+            ->executeQuery()
+            ->fetchAllAssociative();
+
         $tags = array_column($result, 'name');
 
         self::$tagsCache[$cacheKey] = $tags;
@@ -281,59 +353,72 @@ class Article
     public static function getFavoritedByUser(int $userId, int $limit = 20, int $offset = 0): array
     {
         $db = Database::getConnection();
+        $qb = $db->createQueryBuilder();
 
-        $platform = $db->getDatabasePlatform();
-        $groupConcat = $platform instanceof \Doctrine\DBAL\Platforms\PostgreSQLPlatform
-            ? "STRING_AGG(t.name, ',')"
-            : "GROUP_CONCAT(t.name)";
+        // Subquery for favorites count (different alias to avoid conflict with main query's 'f')
+        $favCountSub = $db->createQueryBuilder();
+        $favCountSubquery = '(' . $favCountSub->select('COUNT(*)')
+            ->from('favorites', 'f2')
+            ->where('f2.article_id = a.id')
+            ->getSQL() . ')';
 
-        $sql = "
-            SELECT a.*, u.username as author_username, u.image as author_image,
-                   (SELECT {$groupConcat} FROM tags t
-                        JOIN article_tags at ON t.id = at.tag_id
-                    WHERE at.article_id = a.id) as tagList,
-                   (SELECT COUNT(*) FROM favorites f2 WHERE f2.article_id = a.id) as favoritesCount
-            FROM favorites f
-            JOIN articles a ON f.article_id = a.id
-            JOIN users u ON a.author_id = u.id
-            WHERE f.user_id = ?
-            ORDER BY a.created_at DESC
-            LIMIT ? OFFSET ?
-        ";
+        $articles = $qb->select(
+            'a.*',
+            'u.username as author_username',
+            'u.image as author_image',
+            $favCountSubquery . ' as favoritesCount'
+        )
+            ->from('favorites', 'f')
+            ->join('f', 'articles', 'a', 'f.article_id = a.id')
+            ->join('a', 'users', 'u', 'a.author_id = u.id')
+            ->where('f.user_id = :userId')
+            ->orderBy('a.created_at', 'DESC')
+            ->setMaxResults($limit)
+            ->setFirstResult($offset)
+            ->setParameter('userId', $userId)
+            ->executeQuery()
+            ->fetchAllAssociative();
 
-        $articles = $db->fetchAllAssociative($sql, [$userId, $limit, $offset]);
-
-        foreach ($articles as &$article) {
-            $article['tagList'] = $article['tagList'] ? explode(',', $article['tagList']) : [];
-        }
-        return $articles;
+        return self::attachTags($articles);
     }
 
     public static function findBySlug(string $slug): ?array
     {
         $db = Database::getConnection();
+        $qb = $db->createQueryBuilder();
 
-        $platform = $db->getDatabasePlatform();
-        $groupConcat = $platform instanceof \Doctrine\DBAL\Platforms\PostgreSQLPlatform
-            ? "STRING_AGG(t.name, ',')"
-            : "GROUP_CONCAT(t.name)";
+        $article = $qb->select(
+            'a.*',
+            'u.username as author_username',
+            'u.image as author_image',
+            'u.bio as author_bio',
+            self::favoritesCountSubquery() . ' as favoritesCount'
+        )
+            ->from('articles', 'a')
+            ->join('a', 'users', 'u', 'a.author_id = u.id')
+            ->where('a.slug = :slug')
+            ->setParameter('slug', $slug)
+            ->executeQuery()
+            ->fetchAssociative();
 
-        $sql = "
-            SELECT a.*, u.username as author_username, u.image as author_image, u.bio as author_bio,
-            (SELECT {$groupConcat} FROM tags t JOIN article_tags at ON t.id = at.tag_id WHERE at.article_id = a.id) as tagList,
-            (SELECT COUNT(*) FROM favorites f WHERE f.article_id = a.id) as favoritesCount
-            FROM articles a
-            JOIN users u ON a.author_id = u.id
-            WHERE a.slug = ?
-        ";
-
-        $article = $db->fetchAssociative($sql, [$slug]);
-
-        if ($article) {
-            $article['tagList'] = $article['tagList'] ? explode(',', $article['tagList']) : [];
+        if (!$article) {
+            return null;
         }
 
-        return $article ?: null;
+        // Fetch tags for single article
+        $tagsQb = $db->createQueryBuilder();
+        $tags = $tagsQb->select('t.name')
+            ->from('tags', 't')
+            ->join('t', 'article_tags', 'at', 't.id = at.tag_id')
+            ->where('at.article_id = :articleId')
+            ->orderBy('t.name')
+            ->setParameter('articleId', $article['id'])
+            ->executeQuery()
+            ->fetchAllAssociative();
+
+        $article['tagList'] = array_column($tags, 'name');
+
+        return $article;
     }
 
     private static function slugify(string $text): string

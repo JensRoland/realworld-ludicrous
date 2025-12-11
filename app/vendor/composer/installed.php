@@ -3,7 +3,7 @@
         'name' => 'realworld/ludicrous',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '69da19f65221d65581eef73a0146749ebcd2b6ef',
+        'reference' => '90ed7426ee3737346813edec1660ccef23373873',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -76,7 +76,7 @@
         'realworld/ludicrous' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '69da19f65221d65581eef73a0146749ebcd2b6ef',
+            'reference' => '90ed7426ee3737346813edec1660ccef23373873',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

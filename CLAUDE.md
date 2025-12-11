@@ -381,7 +381,7 @@ See `database/data/seed.yaml` for test accounts.
 ### Required / Expected Features
 
 - [ ] Tag input UI component with autocompletion
-- [ ] Paginator with page numbers (consider Nette Paginator)
+- [ ] Paginator with page numbers (consider Nette Paginator - <https://doc.nette.org/en/utils/paginator>)
 
 ### Performance Improvements
 
