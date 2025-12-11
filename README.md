@@ -299,10 +299,10 @@ Components are auto-registered as functions from `app/components/`:
 
 ### Components
 
-Reusable UI components live in `app/components/`. Each component has:
+Reusable UI components live in `app/components/`. Components can be:
 
-- `controller.php` - Logic and data preparation
-- `template.latte` - Latte template
+- **Full components**: `controller.php` + `template.latte` (for components with logic)
+- **Template-only**: Just `template.latte` (for simple, static components)
 
 ```latte
 {* Usage in Latte templates *}

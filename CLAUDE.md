@@ -132,10 +132,16 @@ Components are auto-registered as functions from `app/components/`:
 
 ### Components
 
-Reusable UI components in `app/components/`. Each has:
+Reusable UI components in `app/components/`. Components can be:
+
+**Full components** (with logic):
 
 - `controller.php` - Logic, data preparation, calls View::component()
-- `template.php` - Pure HTML with simple control flow only
+- `template.latte` - Latte template with the markup
+
+**Template-only components** (no logic needed):
+
+- Just `template.latte` - Rendered directly, receives props as an array
 
 ```php
 // Controller pattern

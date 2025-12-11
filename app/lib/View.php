@@ -41,7 +41,9 @@ class View
 
             // Register component extension for auto-discovery
             $componentsDir = dirname(self::$templatesDir) . '/components';
-            self::$latte->addExtension(new ComponentExtension($componentsDir));
+            $componentExtension = new ComponentExtension($componentsDir);
+            $componentExtension->setLatte(self::$latte);
+            self::$latte->addExtension($componentExtension);
 
             // Add useful global functions
             self::$latte->addFunction('thumbnail', [self::class, 'thumbnail']);

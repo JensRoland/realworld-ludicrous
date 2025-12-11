@@ -6,8 +6,8 @@ declare(strict_types=1);
 
 use Latte\Runtime as LR;
 
-/** source: /app/app/components/footer/template.latte */
-final class Template_b20f7ef443 extends Latte\Runtime\Template
+/** source: /app/app/public/../components/footer/template.latte */
+final class Template_59f1bc7008 extends Latte\Runtime\Template
 {
 
 	public function main(array $ʟ_args): void
