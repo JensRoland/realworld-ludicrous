@@ -15,13 +15,16 @@ if (!$profile) {
 
 $activeTab = (isset($_GET['tab']) && $_GET['tab'] === 'favorites') ? 'favorites' : 'my';
 
-$offset = isset($_GET['offset']) ? (int)$_GET['offset'] : 0;
-$limit = 20;
+$page = isset($_GET['page']) ? max(1, (int)$_GET['page']) : 1;
+$limit = 10;
+$offset = ($page - 1) * $limit;
 
 if ($activeTab === 'favorites') {
     $articles = Article::getFavoritedByUser((int)$profile['id'], $limit, $offset);
+    $totalItems = Article::getFavoritedByUserCount((int)$profile['id']);
 } else {
     $articles = Article::getGlobalFeed($limit, $offset, null, (int)$profile['id']);
+    $totalItems = Article::getGlobalFeedCount(null, (int)$profile['id']);
 }
 
 $isFollowing = false;
@@ -35,6 +38,7 @@ View::renderLayout('profile', [
     'articles' => $articles,
     'isFollowing' => $isFollowing,
     'activeTab' => $activeTab,
-    'offset' => $offset,
-    'limit' => $limit
+    'page' => $page,
+    'limit' => $limit,
+    'totalItems' => $totalItems
 ]);

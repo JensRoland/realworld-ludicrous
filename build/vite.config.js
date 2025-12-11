@@ -30,7 +30,9 @@ export default defineConfig({
     purgecss({
       content: [
         resolve(root, 'app/templates/**/*.php'),
+        resolve(root, 'app/templates/**/*.latte'),
         resolve(root, 'app/components/**/*.php'),
+        resolve(root, 'app/components/**/*.latte'),
         resolve(root, 'app/pages/**/*.php'),
       ],
       safelist: {

@@ -17,25 +17,81 @@ final class Template_506ac99bfc extends Latte\Runtime\Template
 
 		echo '<nav>
     <ul class="pagination">
-';
-		if ($hasPrevious) /* pos 3:13 */ {
-			echo '        <li class="page-item">
-            <a fx-yolo-deep class="page-link"';
-			echo LR\HtmlHelpers::formatAttribute(' href', ($this->filters->checkUrl)($previousUrl)) /* pos 4:54 */;
-			echo '>Previous</a>
-        </li>
-';
+        <li class="page-item';
+		if ($isFirst) /* pos 3:29 */ {
+			echo ' disabled';
 		}
-		if ($hasNext) /* pos 6:13 */ {
-			echo '        <li class="page-item">
-            <a fx-yolo-deep class="page-link"';
-			echo LR\HtmlHelpers::formatAttribute(' href', ($this->filters->checkUrl)($nextUrl)) /* pos 7:54 */;
-			echo '>Next</a>
-        </li>
-';
+		echo '">
+            <a class="page-link"';
+		echo LR\HtmlHelpers::formatAttribute(' href', ($this->filters->checkUrl)($previousUrl)) /* pos 4:41 */;
+		echo ' ';
+		if (!$isFirst) /* pos 4:56 */ {
+			echo 'fx-yolo-deep';
 		}
-		echo '    </ul>
+		echo ' aria-label="Previous">⏴</a>
+        </li>
+
+';
+		foreach ($pages as $page) /* pos 7:13 */ {
+			echo '        <li class="page-item';
+			if ($page['isCurrent']) /* pos 7:57 */ {
+				echo ' active';
+			}
+			echo '">
+';
+			if ($page['isEllipsis']) /* pos 8:13 */ {
+				echo '                <span class="page-link">...</span>
+';
+			} elseif ($page['isCurrent']) /* pos 10:13 */ {
+				echo '                <a class="page-link"';
+				echo LR\HtmlHelpers::formatAttribute(' href', ($this->filters->checkUrl)($page['url'])) /* pos 11:45 */;
+				echo '>';
+				echo LR\HtmlHelpers::escapeText($page['number']) /* pos 11:60 */;
+				echo '</a>
+';
+			} else /* pos 12:13 */ {
+				echo '                <a fx-yolo-deep class="page-link"';
+				echo LR\HtmlHelpers::formatAttribute(' href', ($this->filters->checkUrl)($page['url'])) /* pos 13:58 */;
+				echo '>';
+				echo LR\HtmlHelpers::escapeText($page['number']) /* pos 13:73 */;
+				echo '</a>
+';
+			}
+
+			echo '        </li>
+';
+
+		}
+
+		echo '
+        <li class="page-item';
+		if ($isLast) /* pos 17:29 */ {
+			echo ' disabled';
+		}
+		echo '">
+            <a class="page-link"';
+		echo LR\HtmlHelpers::formatAttribute(' href', ($this->filters->checkUrl)($nextUrl)) /* pos 18:41 */;
+		echo ' ';
+		if (!$isLast) /* pos 18:52 */ {
+			echo 'fx-yolo-deep';
+		}
+		echo ' aria-label="Next">⏵</a>
+        </li>
+    </ul>
 </nav>
 ';
+	}
+
+
+	public function prepare(): array
+	{
+		extract($this->params);
+
+		if (!$this->getReferringTemplate() || $this->getReferenceType() === 'extends') {
+			foreach (array_intersect_key(['page' => '7'], $this->params) as $ʟ_v => $ʟ_l) {
+				trigger_error("Variable \$$ʟ_v overwritten in foreach on line $ʟ_l");
+			}
+		}
+		return get_defined_vars();
 	}
 }

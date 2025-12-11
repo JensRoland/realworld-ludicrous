@@ -30,7 +30,7 @@ final class Template_ec16add81f extends Latte\Runtime\Template
 		echo LR\HtmlHelpers::escapeText(($this->global->fn->ArticleList)($this, $articles)) /* pos 8:17 */;
 		echo '
                 ';
-		echo LR\HtmlHelpers::escapeText(($this->global->fn->Pagination)($this, $offset, $limit, count($articles), '/', ['feed' => $activeFeed, 'tag' => $activeTag])) /* pos 9:17 */;
+		echo LR\HtmlHelpers::escapeText(($this->global->fn->Pagination)($this, $page, $limit, $totalItems, '/', ['feed' => $activeFeed, 'tag' => $activeTag])) /* pos 9:17 */;
 		echo '
             </div>
 

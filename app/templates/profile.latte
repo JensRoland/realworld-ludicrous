@@ -6,7 +6,7 @@
             <div class="col-xs-12 col-md-10 offset-md-1">
                 {ProfileTabs($profile['username'], $activeTab ?? 'my')}
                 {ArticleList($articles)}
-                {Pagination($offset ?? 0, $limit ?? 20, count($articles), '/profile/' . $profile['username'], [tab => $activeTab ?? 'my'])}
+                {Pagination($page ?? 1, $limit ?? 20, $totalItems ?? 0, '/profile/' . $profile['username'], [tab => $activeTab ?? 'my'])}
             </div>
         </div>
     </div>

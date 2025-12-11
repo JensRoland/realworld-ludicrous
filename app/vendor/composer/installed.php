@@ -3,7 +3,7 @@
         'name' => 'realworld/ludicrous',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '5e46ee38b7fdfcf2eb238e6cce3197475d67d10d',
+        'reference' => '2c0b13c140152789dbaaa472b02db62ace3efd87',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -73,6 +73,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'nette/utils' => array(
+            'pretty_version' => 'v4.1.0',
+            'version' => '4.1.0.0',
+            'reference' => 'fa1f0b8261ed150447979eb22e373b7b7ad5a8e0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../nette/utils',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'psr/cache' => array(
             'pretty_version' => '3.0.0',
             'version' => '3.0.0.0',
@@ -109,7 +118,7 @@
         'realworld/ludicrous' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '5e46ee38b7fdfcf2eb238e6cce3197475d67d10d',
+            'reference' => '2c0b13c140152789dbaaa472b02db62ace3efd87',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

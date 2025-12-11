@@ -1,3 +1,5 @@
+.PHONY: install build serve setup seed optimize clean migrate migrate-status migrate-generate profile-home profile-tag profile-page
+
 install:
 	bun install
 	cd app && composer install

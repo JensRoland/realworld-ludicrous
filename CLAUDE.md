@@ -115,7 +115,7 @@ Templates use the [Latte](https://latte.nette.org/) templating engine with auto-
     <div class="container">
         {FeedToggle($activeFeed, $activeTag)}
         {ArticleList($articles)}
-        {Pagination($offset, $limit, count($articles), '/', [feed => $activeFeed])}
+        {Pagination($page, $limit, $totalItems, '/', [feed => $activeFeed])}
     </div>
 
     {TagList($tags, 'sidebar')}
@@ -158,7 +158,7 @@ function render(array $article, bool $isFavorited): void
 {* Usage in Latte templates *}
 {FavoriteButton($article, $isFavorited)}
 {ArticleList($articles)}
-{Pagination($offset, $limit, count($articles), '/', [feed => $feed])}
+{Pagination($page, $limit, $totalItems, '/', [feed => $feed])}
 ```
 
 ```php
@@ -180,7 +180,7 @@ function render(array $article, bool $isFavorited): void
 | `ArticlePreview` | Single article card | `$article` |
 | `ArticleMeta` | Author info | `$article` |
 | `ArticleActions` | Edit/Delete/Follow/Favorite | `$article`, `$isFavorited` |
-| `Pagination` | Prev/Next links | `$offset`, `$limit`, `$count`, `$baseUrl`, `$params` |
+| `Pagination` | Page numbers | `$page`, `$itemsPerPage`, `$totalItems`, `$baseUrl`, `$params` |
 | `CommentForm` | Comment input | `$articleSlug` |
 | `CommentList` | Comments container | `$comments`, `$articleSlug` |
 | `Comment` | Single comment | `$comment`, `$articleSlug` |
@@ -379,7 +379,7 @@ See `database/data/seed.yaml` for test accounts.
 ### Required / Expected Features
 
 - [ ] Tag input UI component with autocompletion
-- [ ] Paginator with page numbers (consider Nette Paginator - <https://doc.nette.org/en/utils/paginator>)
+- [x] Paginator with page numbers (using Nette Paginator)
 
 ### Performance Improvements
 

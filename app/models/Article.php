@@ -259,7 +259,7 @@ class Article
             ->fetchOne();
     }
 
-    public static function getGlobalFeed(int $limit = 20, int $offset = 0, ?string $tag = null, ?int $authorId = null): array
+    public static function getGlobalFeed(int $limit = 10, int $offset = 0, ?string $tag = null, ?int $authorId = null): array
     {
         $db = Database::getConnection();
         $qb = $db->createQueryBuilder();
@@ -298,7 +298,35 @@ class Article
         return self::attachTags($articles);
     }
 
-    public static function getFeed(int $userId, int $limit = 20, int $offset = 0): array
+    public static function getGlobalFeedCount(?string $tag = null, ?int $authorId = null): int
+    {
+        $db = Database::getConnection();
+        $qb = $db->createQueryBuilder();
+
+        $qb->select('COUNT(*)')
+            ->from('articles', 'a');
+
+        if ($tag) {
+            $tagSubquery = $db->createQueryBuilder()
+                ->select('at.article_id')
+                ->from('article_tags', 'at')
+                ->join('at', 'tags', 't', 'at.tag_id = t.id')
+                ->where('t.name = :tag')
+                ->getSQL();
+
+            $qb->andWhere("a.id IN ({$tagSubquery})")
+                ->setParameter('tag', $tag);
+        }
+
+        if ($authorId) {
+            $qb->andWhere('a.author_id = :authorId')
+                ->setParameter('authorId', $authorId);
+        }
+
+        return (int) $qb->executeQuery()->fetchOne();
+    }
+
+    public static function getFeed(int $userId, int $limit = 10, int $offset = 0): array
     {
         $db = Database::getConnection();
         $qb = $db->createQueryBuilder();
@@ -321,6 +349,20 @@ class Article
             ->fetchAllAssociative();
 
         return self::attachTags($articles);
+    }
+
+    public static function getFeedCount(int $userId): int
+    {
+        $db = Database::getConnection();
+        $qb = $db->createQueryBuilder();
+
+        return (int) $qb->select('COUNT(*)')
+            ->from('articles', 'a')
+            ->join('a', 'follows', 'fo', 'fo.followed_id = a.author_id')
+            ->where('fo.follower_id = :userId')
+            ->setParameter('userId', $userId)
+            ->executeQuery()
+            ->fetchOne();
     }
 
     public static function getAllTags(int $minArticleCount = 1): array
@@ -350,7 +392,7 @@ class Article
         return $tags;
     }
 
-    public static function getFavoritedByUser(int $userId, int $limit = 20, int $offset = 0): array
+    public static function getFavoritedByUser(int $userId, int $limit = 10, int $offset = 0): array
     {
         $db = Database::getConnection();
         $qb = $db->createQueryBuilder();
@@ -380,6 +422,19 @@ class Article
             ->fetchAllAssociative();
 
         return self::attachTags($articles);
+    }
+
+    public static function getFavoritedByUserCount(int $userId): int
+    {
+        $db = Database::getConnection();
+        $qb = $db->createQueryBuilder();
+
+        return (int) $qb->select('COUNT(*)')
+            ->from('favorites', 'f')
+            ->where('f.user_id = :userId')
+            ->setParameter('userId', $userId)
+            ->executeQuery()
+            ->fetchOne();
     }
 
     public static function findBySlug(string $slug): ?array

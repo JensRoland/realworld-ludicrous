@@ -3394,6 +3394,7 @@ input[type="button"].btn-block {
   border: 1px solid #ddd; }
   .page-link:focus, .page-link:hover {
     color: #3d8b3d;
+    text-decoration: none;
     background-color: #eceeef;
     border-color: #ddd; }
 

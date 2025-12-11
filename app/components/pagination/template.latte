@@ -1,10 +1,21 @@
 <nav>
     <ul class="pagination">
-        <li n:if="$hasPrevious" class="page-item">
-            <a fx-yolo-deep class="page-link" href="{$previousUrl}">Previous</a>
+        <li class="page-item{if $isFirst} disabled{/if}">
+            <a class="page-link" href="{$previousUrl}" {if !$isFirst}fx-yolo-deep{/if} aria-label="Previous">⏴</a>
         </li>
-        <li n:if="$hasNext" class="page-item">
-            <a fx-yolo-deep class="page-link" href="{$nextUrl}">Next</a>
+
+        <li n:foreach="$pages as $page" class="page-item{if $page['isCurrent']} active{/if}">
+            {if $page['isEllipsis']}
+                <span class="page-link">...</span>
+            {elseif $page['isCurrent']}
+                <a class="page-link" href="{$page['url']}">{$page['number']}</a>
+            {else}
+                <a fx-yolo-deep class="page-link" href="{$page['url']}">{$page['number']}</a>
+            {/if}
+        </li>
+
+        <li class="page-item{if $isLast} disabled{/if}">
+            <a class="page-link" href="{$nextUrl}" {if !$isLast}fx-yolo-deep{/if} aria-label="Next">⏵</a>
         </li>
     </ul>
 </nav>

@@ -6,7 +6,7 @@
             <div class="col-md-9">
                 {FeedToggle($activeFeed, $activeTag)}
                 {ArticleList($articles)}
-                {Pagination($offset, $limit, count($articles), '/', [feed => $activeFeed, tag => $activeTag])}
+                {Pagination($page, $limit, $totalItems, '/', [feed => $activeFeed, tag => $activeTag])}
             </div>
 
             <div class="col-md-3">
