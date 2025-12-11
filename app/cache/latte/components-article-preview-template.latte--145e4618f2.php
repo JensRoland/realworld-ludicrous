@@ -53,19 +53,25 @@ final class Template_145e4618f2 extends Latte\Runtime\Template
         <p>';
 		echo LR\HtmlHelpers::escapeText($description) /* pos 16:12 */;
 		echo '</p>
-        <span>Read more...</span>
+    </a>
+    <div class="preview-footer">
+        <a fx-yolo-deep href="/article/';
+		echo LR\HtmlHelpers::escapeAttr($slug) /* pos 19:40 */;
+		echo '" class="read-more">Read more...</a>
         <ul class="tag-list">
 ';
-		foreach ($tagList as $tag) /* pos 19:17 */ {
-			echo '            <li class="tag-default tag-pill tag-outline">';
-			echo LR\HtmlHelpers::escapeText($tag) /* pos 19:87 */;
-			echo '</li>
+		foreach ($tagList as $tag) /* pos 21:17 */ {
+			echo '            <li><a href="/?tag=';
+			echo LR\HtmlHelpers::escapeAttr($tag) /* pos 21:61 */;
+			echo '" class="tag-default tag-pill tag-outline">';
+			echo LR\HtmlHelpers::escapeText($tag) /* pos 21:110 */;
+			echo '</a></li>
 ';
 
 		}
 
 		echo '        </ul>
-    </a>
+    </div>
 </div>
 ';
 	}
@@ -76,7 +82,7 @@ final class Template_145e4618f2 extends Latte\Runtime\Template
 		extract($this->params);
 
 		if (!$this->getReferringTemplate() || $this->getReferenceType() === 'extends') {
-			foreach (array_intersect_key(['tag' => '19'], $this->params) as $ʟ_v => $ʟ_l) {
+			foreach (array_intersect_key(['tag' => '21'], $this->params) as $ʟ_v => $ʟ_l) {
 				trigger_error("Variable \$$ʟ_v overwritten in foreach on line $ʟ_l");
 			}
 		}

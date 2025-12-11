@@ -4961,7 +4961,12 @@ a.text-danger:focus, a.text-danger:hover {
   .tag-default.tag-outline {
     border: 1px solid #ddd;
     color: #aaa !important;
-    background: none !important; }
+    background: none !important;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease; }
+  .tag-default.tag-outline:hover {
+    background-color: #5cb85c !important;
+    border-color: #5cb85c;
+    color: #fff !important; }
 
 ul.tag-list {
   padding-left: 0px !important;
@@ -5083,17 +5088,22 @@ footer {
     margin-bottom: 15px;
     font-size: 1rem;
     line-height: 1.3rem; }
-  .article-preview .preview-link span {
-    max-width: 30%;
+  .article-preview .preview-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
+  .article-preview .preview-footer .read-more {
     font-size: 0.8rem;
     font-weight: 300;
-    color: #bbb;
-    vertical-align: middle; }
-  .article-preview .preview-link ul {
-    float: right;
+    color: #bbb; }
+    .article-preview .preview-footer .read-more:hover {
+      color: #5cb85c;
+      text-decoration: none; }
+  .article-preview .preview-footer ul.tag-list {
+    display: block;
     max-width: 50%;
-    vertical-align: top; }
-    .article-preview .preview-link ul li {
+    text-align: right; }
+    .article-preview .preview-footer ul.tag-list li {
       font-weight: 300;
       font-size: 0.8rem !important;
       padding-top: 0px !important;

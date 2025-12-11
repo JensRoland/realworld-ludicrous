@@ -5,5 +5,5 @@
     </div>
 </div>
 <ul n:if="$variant !== 'sidebar'" class="tag-list">
-    <li n:foreach="$tags as $tag" class="tag-default tag-pill tag-outline">{$tag}</li>
+    <li n:foreach="$tags as $tag"><a href="/?tag={$tag}" class="tag-default tag-pill tag-outline">{$tag}</a></li>
 </ul>

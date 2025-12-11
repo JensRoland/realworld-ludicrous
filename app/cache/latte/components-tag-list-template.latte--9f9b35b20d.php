@@ -38,9 +38,11 @@ final class Template_9f9b35b20d extends Latte\Runtime\Template
 			echo '<ul class="tag-list">
 ';
 			foreach ($tags as $tag) /* pos 8:9 */ {
-				echo '    <li class="tag-default tag-pill tag-outline">';
-				echo LR\HtmlHelpers::escapeText($tag) /* pos 8:76 */;
-				echo '</li>
+				echo '    <li><a href="/?tag=';
+				echo LR\HtmlHelpers::escapeAttr($tag) /* pos 8:50 */;
+				echo '" class="tag-default tag-pill tag-outline">';
+				echo LR\HtmlHelpers::escapeText($tag) /* pos 8:99 */;
+				echo '</a></li>
 ';
 
 			}

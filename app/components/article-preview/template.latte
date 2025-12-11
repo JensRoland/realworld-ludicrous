@@ -14,9 +14,11 @@
             {$title}
         </h1>
         <p>{$description}</p>
-        <span>Read more...</span>
-        <ul class="tag-list">
-            <li n:foreach="$tagList as $tag" class="tag-default tag-pill tag-outline">{$tag}</li>
-        </ul>
     </a>
+    <div class="preview-footer">
+        <a fx-yolo-deep href="/article/{$slug}" class="read-more">Read more...</a>
+        <ul class="tag-list">
+            <li n:foreach="$tagList as $tag"><a href="/?tag={$tag}" class="tag-default tag-pill tag-outline">{$tag}</a></li>
+        </ul>
+    </div>
 </div>
