@@ -7,19 +7,30 @@ use App\Services\Seeder;
 
 // Parse command-line arguments
 $dataFile = null;
-if ($argc > 1) {
-    $dataFile = $argv[1];
-    if (!is_readable($dataFile)) {
-        echo "Error: Cannot read data file: {$dataFile}\n";
+$reset = false;
+
+$args = array_slice($argv, 1);
+foreach ($args as $arg) {
+    if ($arg === '--reset') {
+        $reset = true;
+        continue;
+    }
+    if (!is_readable($arg)) {
+        echo "Error: Cannot read data file: {$arg}\n";
         exit(1);
     }
+    $dataFile = $arg;
     echo "Using custom data file: {$dataFile}\n";
+}
+
+if ($reset) {
+    echo "Reset mode: truncating all tables before seeding.\n";
 }
 
 echo "Running database seeder...\n\n";
 
 try {
-    $summary = Seeder::seed($dataFile);
+    $summary = Seeder::seed($dataFile, $reset);
 
     echo "Seeding completed successfully!\n\n";
     echo "Summary:\n";

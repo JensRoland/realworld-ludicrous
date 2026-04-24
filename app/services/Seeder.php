@@ -7,14 +7,19 @@ use App\Models\User;
 use App\Models\Article;
 use App\Models\Comment;
 use Doctrine\DBAL\Connection;
+use Doctrine\DBAL\Platforms\SqlitePlatform;
 use Symfony\Component\Yaml\Yaml;
 
 class Seeder
 {
-    public static function seed(?string $dataFile = null): array
+    public static function seed(?string $dataFile = null, bool $reset = false): array
     {
         $db = Database::getConnection();
         self::ensureSchema($db);
+
+        if ($reset) {
+            self::truncateAll($db);
+        }
 
         $summary = [
             'users_before' => (int) self::count($db, 'users'),
@@ -166,6 +171,37 @@ class Seeder
         $summary['follows_added'] = $summary['follows_after'] - $summary['follows_before'];
 
         return $summary;
+    }
+
+    private static function truncateAll(Connection $db): void
+    {
+        // Child → parent order so FK cascades are never the actor.
+        $tables = ['follows', 'favorites', 'article_tags', 'comments', 'articles', 'tags', 'users'];
+
+        $db->executeStatement('PRAGMA foreign_keys = OFF');
+        try {
+            $db->beginTransaction();
+            foreach ($tables as $table) {
+                $db->executeStatement("DELETE FROM {$table}");
+            }
+            // Reset autoincrement counters so reseeds start from id=1.
+            // sqlite_sequence is an internal table Doctrine's schema manager hides,
+            // so probe sqlite_master directly.
+            if ($db->getDatabasePlatform() instanceof SqlitePlatform) {
+                $exists = $db->fetchOne(
+                    "SELECT 1 FROM sqlite_master WHERE type='table' AND name='sqlite_sequence'"
+                );
+                if ($exists) {
+                    $db->executeStatement('DELETE FROM sqlite_sequence');
+                }
+            }
+            $db->commit();
+        } catch (\Throwable $e) {
+            $db->rollBack();
+            throw $e;
+        } finally {
+            $db->executeStatement('PRAGMA foreign_keys = ON');
+        }
     }
 
     private static function ensureSchema(Connection $db): void
